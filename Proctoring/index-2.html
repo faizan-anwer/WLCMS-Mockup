@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Proctoring</title>
+
+	<!-- BEGIN CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/plugins/threesixty/styles.css" />
+	
+		<!-- BEGIN PAGE SPECIFIC CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/css/pages/chats.css" />
+		<link rel="stylesheet" type="text/css" href='assets/plugins/toggle-switch-master/css/toggleswitch.css' />
+		<!-- <link rel="stylesheet" type="text/css" href="assets/plugins/aciTree/css/aciTree.css" />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/DT_bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" />
+		END PAGE SPECIFIC CSS -->
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style-metronic.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/header.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- END CSS -->
+	
+    <!-- BEGIN SCRIPTS -->
+    <script type="text/javascript" src="assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/html5shiv.js"></script>
+    <script type="text/javascript" src="assets/plugins/respond.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/BrowserDetect.js"></script>
+	<script type="text/javascript" src="assets/plugins/skrollr/skrollr.js"></script>
+	<script type="text/javascript" src="assets/plugins/imagesloaded.js"></script>
+	
+		<!-- BEGIN PAGE LEVEL PLUGINS -->
+		<script type="text/javascript" src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+		<script type='text/javascript' src='assets/plugins/toggle-switch-master/js/jquery.toggleswitch.min.js'></script>
+		<!-- <script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciPlugin.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.dom.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.core.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.selectable.js"></script>
+		<script type='text/javascript' src='assets/plugins/jquery.corner.js'></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+		<script type='text/javascript' src="assets/scripts/table-managed.js"></script>
+		<script type="text/javascript" src="assets/plugins/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+		END PAGE LEVEL PLUGINS -->
+	
+    <script type='text/javascript' src="assets/scripts/core.js"></script>
+	<!-- END SCRIPTS -->
+    
+</head>
+
+<body>
+    <div class="wrapper">
+		
+		<!-- Preload Images Begin
+		<div id="preload">
+	       	<img src="assets/img/bcg_slide-1.png">
+	       	<img src="assets/img/bcg_slide-2.jpg">
+	       	<img src="assets/img/bcg_slide-3.jpg">
+	       	<img src="assets/img/bcg_slide-4.jpg">
+       	</div>
+		Preload Images End -->
+		
+        <!-- Header Begin -->
+        <div class="header-content">
+			
+			<!-- Top Bar Begin -->
+            <div class="push-down">
+                <div class="container-fluid">
+                    <div class="pull-left logo"></div>
+                    <ul class="top-right-nav">
+						<li><i class="icon-time"></i> Time <span class="badge badge-default"><strong>00:00</strong></span></li>
+						<li class="divider"></li>
+						<li>
+							<a href="javascript:;">Logout</a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+            
+            <!-- Navigation Bar Begin -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+				
+                  <!-- Brand and toggle get grouped for better mobile display -->
+					<a class="btn btn-lg header-menu" data-toggle="collapse" data-target="#header-navbar-collapse"><i class="icon-reorder"></i></a>
+					
+					<ul class="nav collapse" id="header-navbar-collapse">
+						
+						
+                    
+					</ul>
+                </div>
+            </nav>
+            <!-- Navigation Bar End -->
+			
+        </div>
+        <!-- Header End -->
+        
+        <!-- Main Content Begin -->
+        <div class="main-content">
+            
+			<!-- Left Panel Begin -->
+            <div id="leftNavPanel" class="left-nav-panel">
+                <div class="thumb-btn">
+                    <a class="collapse-btn-icon" onClick="toggle_leftNavPanel()"></a>
+                </div>
+                
+                <div class="list-holder">
+                    <ul class="list-group only-icon-panel">
+						
+                        <!-- Setting -->
+                        <li class="list-group-item">
+                            <a>
+                                <i class="icon-gear gray-text"></i>
+                                <span>Share Screen Settings</span>
+                            </a>
+                            
+                            <div class="list-sub-group zero-padding" style="display:block">
+								<div class="regular-padding clearfix">
+									<div class="pull-right">
+										<input type='checkbox' name='VEToggle' id='VEToggle' value='1' class='toggleswitch' checked='checked' />
+									</div>
+								</div>
+                            </div>
+                        </li>
+                        
+						<!-- Chats -->
+                        <li class="list-group-item">
+                            <a>
+                                <i class="icon-comments gray-text"></i>
+                                <span>Student Name</span>
+                            </a>
+                            
+                            <div class="list-sub-group" style="display:block; padding: 0 10px;">
+								<hr class="zero-margin">
+								<div class="regular-margin">Student Video</div>
+								<hr class="zero-margin">
+								<div class="media">
+								  <div class="media-left media-middle">
+									<img class="img-responsive" src="assets/img/posts/300x200.gif" alt="">
+								  </div>
+								</div>
+								
+								<hr>
+								
+								<div class="regular-margin" style="padding-bottom: 10px">Student Chat</div>
+								<hr class="zero-margin">
+                                <div class="scroller" id="chats">
+									<ul class="chats">
+									   <li class="in">
+										  <div class="message regular-margin">
+											 <span class="arrow"></span>
+											 <a href="#" class="name">Bob Nilson</a>
+											 <span class="datetime">- Jul 25, 2012 11:09</span>
+											 <span class="body">
+											 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+											 </span>
+										  </div>
+									   </li>
+									   <li class="out">
+										  <div class="message regular-margin">
+											 <span class="arrow"></span>
+											 <a href="#" class="name">Lisa Wong</a>
+											 <span class="datetime">- Jul 25, 2012 11:09</span>
+											 <span class="body">
+											 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+											 </span>
+										  </div>
+									   </li>
+									   <li class="in">
+										  <div class="message regular-margin">
+											 <span class="arrow"></span>
+											 <a href="#" class="name">Bob Nilson</a>
+											 <span class="datetime">- Jul 25, 2012 11:09</span>
+											 <span class="body">
+											 Lorem ipsum dolor sit amet.
+											 </span>
+										  </div>
+									   </li>
+									   <li class="out">
+										  <div class="message regular-margin">
+											 <span class="arrow"></span>
+											 <a href="#" class="name">Richard Doe</a>
+											 <span class="datetime">- Jul 25, 2012 11:09</span>
+											 <span class="body">
+											 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+											 </span>
+										  </div>
+									   </li>
+									   <li class="in">
+										  <div class="message regular-margin">
+											 <span class="arrow"></span>
+											 <a href="#" class="name">Richard Doe</a>
+											 <span class="datetime">- Jul 25, 2012 11:09</span>
+											 <span class="body">
+											 Lorem ipsum dolor sit amet.
+											 </span>
+										  </div>
+									   </li>
+									   <li class="out">
+										  <div class="message regular-margin">
+											 <span class="arrow"></span>
+											 <a href="#" class="name">Bob Nilson</a>
+											 <span class="datetime">- Jul 25, 2012 11:09</span>
+											 <span class="body">
+											 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+											 </span>
+										  </div>
+									   </li>
+									   <li class="in">
+										  <div class="message regular-margin">
+											 <span class="arrow"></span>
+											 <a href="#" class="name">Richard Doe</a>
+											 <span class="datetime">- Jul 25, 2012 11:09</span>
+											 <span class="body">
+											 Lorem ipsum dolor sit amet.
+											 </span>
+										  </div>
+									   </li>
+									   <li class="out">
+										  <div class="message regular-margin">
+											 <span class="arrow"></span>
+											 <a href="#" class="name">Bob Nilson</a>
+											 <span class="datetime gray-text">- Jul 25, 2012 11:09</span>
+											 <span class="body">
+											 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+											 </span>
+										  </div>
+									   </li>
+									</ul>
+								</div>
+								<hr class="zero-margin">
+								<div class="chat-form">
+									<div class="input-cont">   
+									   <input class="form-control" type="text" placeholder="Type a message here..." />
+									</div>
+									<div class="btn-cont"> 
+									   <span class="arrow"></span>
+									   <a href="" class="btn blue icn-only"><i class="icon-ok icon-white"></i></a>
+									</div>
+								</div>
+                            </div>
+                        </li>
+                    
+					</ul>
+                </div>
+            </div>
+            <!-- Left Panel End -->
+			
+            <!-- Workspace Begin -->
+            <div id="contentHolder" class="content-holder">
+				
+				<!-- BEGIN BREADCRUMB BAR CONTENT -->
+                <div>
+                	<!-- Breadcrumb -->
+                    <div class="col-xs-8">
+                        <ol class="breadcrumb">
+                        	<li>Student Exam</li>
+                        </ol>
+                    </div>
+					
+                </div>
+                <!-- END BEGIN BREADCRUMB BAR CONTENT -->
+				
+                <div class="clearfix"></div> 
+				
+                <!-- BEGIN PAGE CONTENT -->
+                <div class="page-content">
+				
+					<!-- BEGIN TOP CONTENT --
+					<div class="container-fluid">
+						<h1>Student Exam</h1> 
+						<hr/>
+					</div>
+					!-- END TOP CONTENT -->
+					
+					<!-- BEGIN IFRAME -->
+					<div class="table-scrollable bg-gray-3">
+						<iframe style="border:none; width:100%; height:710px;" src="https://player.360training.com/ICP4/CoursePlayer.aspx?SESSION=17b17482-ac0a-46bf-b38c-ca03090942e9&ts=1417170898804#"></iframe>
+					</div>
+					<!-- END IFRAME -->
+					
+				</div>
+                <!-- END PAGE CONTENT -->
+				
+            </div>
+            <!-- Workspace End -->
+			
+        </div>
+        <!-- Main Content End -->
+		
+        <hr class="zero-margin"/>
+		
+		<!-- Footer Begin -->
+		<div class="footer-content">
+			<div class="footer">
+				<div class="col-xs-8">© 2014 360training.com. All rights reserved.</div>
+				<div class="col-xs-4 text-right">
+					<a target="_blank" href="http://www.facebook.com/360training"><i class="icon-facebook"></i></a>
+					<a target="_blank" href="http://twitter.com/#!/360training"><i class="icon-twitter"></i></a>
+					<a target="_blank" href="http://www.linkedin.com/company/360training"><i class="icon-linkedin"></i></a>
+					<a target="_blank" href="http://plus.google.com/u/0/?tab=wX#104888494914299325457/posts"><i class="icon-google-plus"></i></a>
+				</div>
+			</div>
+		</div>
+		<!-- Footer End -->
+    </div>
+	
+	<!-- <div class="loading"></div> -->
+	
+	<script>
+		$(document).ready(function ()
+		{
+			//	BEGIN APP **************************************************************
+			APP.INIT_SLIM_SCROLLBAR("#chats","200");
+			APP.PLACEHOLDER_FIX();
+			APP.EDIT_OR_VIEW_TOGGLE();
+			
+			APP.LEFT_NAV.width = "300px";
+			APP.LEFT_NAV.init("OPEN");
+			
+			/*APP.PARALLAX();
+			APP.PRELOAD();
+			APP.LEFT_NAV_COURSE_OUTLINE();
+			APP.BODY_COLLAPSES();
+			APP.APPLY_ROUNDED_CORNERS();
+			APP.CKEDITOR("title-ckeditor", "TITLE");
+			APP.CKEDITOR("cc-ckeditor", "CC");
+			APP.CKEDITOR("text-ckeditor", "TEXT");
+			APP.DATAGRID('#sample_1',true,true,true,true);*/
+			//	END APP **************************************************************
+		});
+	</script>
+</body>
+</html>

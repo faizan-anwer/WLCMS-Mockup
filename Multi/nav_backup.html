@@ -1,0 +1,2237 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>System Components</title>
+
+	<!-- BEGIN CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
+
+		<!-- BEGIN PAGE SPECIFIC CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/plugins/aciTree/css/aciTree.css" />
+		<link rel="stylesheet" type="text/css" href='assets/plugins/toggle-switch-master/css/toggleswitch.css' />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/DT_bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" />
+		<!-- END PAGE SPECIFIC CSS -->
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style-metronic.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- END CSS -->
+	
+    <!-- BEGIN SCRIPTS -->
+    <script type="text/javascript" src="assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/html5shiv.js"></script>
+    <script type="text/javascript" src="assets/plugins/respond.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/BrowserDetect.js"></script>
+	
+		<!-- BEGIN PAGE LEVEL PLUGINS -->
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciPlugin.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.dom.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.core.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.selectable.js"></script>
+		<script type='text/javascript' src='assets/plugins/toggle-switch-master/js/jquery.toggleswitch.min.js'></script>
+		<script type='text/javascript' src='assets/plugins/jquery.corner.js'></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+		<script type='text/javascript' src="assets/scripts/table-managed.js"></script>
+		<script type="text/javascript" src="assets/plugins/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+		<!-- END PAGE LEVEL PLUGINS -->
+	
+    <script type='text/javascript' src="assets/scripts/core.js"></script>
+	<!-- END SCRIPTS -->
+    
+</head>
+
+<body>
+    <div class="wrapper">
+    
+        <!-- Header Begin -->
+        <div class="header-content">
+            <!-- Top Bar Begin -->
+            <div class="push-down">
+                <div class="container-fluid">
+                    <div class="pull-left logo"></div>
+                    <ul class="nav top-right-nav">
+                        <li class="nav-ph">888-360-8764</li>
+                        <li class="divider"></li>
+                        <li class="support-a"><a href="javascript:;">Support</a></li>
+                        <li class="divider"></li>
+                        <li class="media-divider"><a href="javascript:;">Chat Now</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="javascript:;" style="display:none">Log In</a>
+                            <div class="dp-box lady-icon">
+							  <ul>
+								<li><a href="#">My Profile</a></li>
+								<li><a href="#">Log Out</a></li>
+							  </ul>
+							</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+            
+            <!-- Navigation Bar Begin -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                  <ul class="nav">
+                  
+                    <!-- Go To -->
+                    <li class="dropdown">
+                      <a title="Go To" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons goto-icon"></div><span>Go To</span> <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-cat">Website</li>
+                        <li><a href="http://www.360training.com/">Home – U.S.</a></li>
+                        <li><a href="http://www.360training.com/apac/">Home – Asia Pacific</a></li>
+                        <li><a href="http://www.360training.com/enterprise/">Corporate</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/">Author and Teach</a></li>
+                        <li><a href="http://www.360training.com/partner-program/">Partner</a></li>
+                        <li class="dropdown-cat">Software</li>
+                        <li><a href="javascript:;">Learner</a></li>
+                        <li><a href="javascript:;">Manager</a></li>
+                        <li><a href="javascript:;">Instructor</a></li>
+                        <li><a href="javascript:;">Author</a></li>
+                        <li><a href="javascript:;">Accreditation</a></li>
+                        <li><a href="javascript:;">Admin</a></li>
+                      </ul>
+                    </li>
+                    
+                    <!-- Store -->
+                    <li class="dropdown">
+                      <a title="Store" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons store-icon"></div><span>Store</span> <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="http://www.360training.com/authoring-program/author-starter/">Free Software and Packages</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/author-lcms-software/">Course Creation Software and Upgrades</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/author-lms-software">Learning Management Software and Upgrades</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/author-storefront-software">Storefront Software and Upgrades</a></li>
+                      </ul>
+                    </li>
+                    
+                    <!-- Create -->
+                    <li class="dropdown">
+                      <a title="Create" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons create-icon"></div><span>Create</span> <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li class="dropdown-cat">Posting to 360</li>
+                        <li><a href="http://www.360training.com/authoring-program/submit-webinar-course/">Webinar Course</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/submit-classroom-course/">Classroom Course</a></li>
+                        <li class="dropdown-cat">Course on Your Author Account</li>
+                        <li><a href="javascript:;">QuickBuild</a></li>
+                        <li><a href="javascript:;">Standard</a></li>
+                        <li><a href="javascript:;">Full-featured</a></li>
+                      </ul>
+                    </li>
+                    
+                    <!-- Manage -->
+                    <li class="dropdown">
+                      <a title="Manage" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons manage-icon"></div><span>Manage</span> <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:;">Authoring Account</a></li>
+                        <li><a href="javascript:;">Assessment Item Banks</a></li>
+                        <li><a href="javascript:;">Global Reports</a></li>
+                      </ul>
+                    </li>
+                    
+                    <!-- Explore -->
+                    <li class="dropdown">
+                      <a title="Explore" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons community-icon"></div><span>Explore</span> <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                      	<li class="dropdown-cat">Support</li>
+                        <li><a href="javascript:;">User Guide for Web-based LCMS</a></li>
+                        <li><a href="https://player.360training.com/ICPFilesystem/LCMSManual/LCMS_Training_Manual_v124.pdf">User Guide for Installed LCMS</a></li>
+                        <li><a href="https://player.360training.com/ICP4/CoursePlayerPreviewer.aspx?COURSEID=74692&VARIANT=En-US&BRANDCODE=DEFAULT&PREVIEW=true&SESSION=bd5d5a7d-7fad-4203-b185-72d00247f2af">Quick Start Videos</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/author-support/">Author Support</a></li>
+
+
+                      	<li class="dropdown-cat">FAQs</li>
+                        <li><a href="http://www.360training.com/authoring-program/faq-software-terms/">Software Purchases and Terms</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/tools/">More About Tools</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/faq-360-author/">Life as a 360 Author</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/faq-storefront/">Managing Your Own Storefront</a></li>
+
+
+                      	<li class="dropdown-cat">Community</li>
+                        <li><a href="http://www.360training.com/authoring-program/whats-new/">What’s New</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/author-whitepapers/">White Papers</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/author-blog/">Blogs</a></li>
+                        <li><a href="https://www.facebook.com/pages/360trainingcom-Authoring/378754678842234">Facebook</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/author-showcase/">Showcase</a></li>
+                        <li><a href="http://www.360training.com/authoring-program/author-opportunities/">Opportunities</a></li>
+                      </ul>
+                    </li>
+                    
+                    <!-- Search -->
+                    <li class="search-box">
+                        <form title="Search" class="pull-left" role="search">
+                          <div class="pull-left">
+                                <input type="text" placeholder="Search">
+                          </div>
+                          <div class="pull-left">
+                            <button class="btn btn-default search-btn" type="submit"><i class="search-icon"></i></button>
+                          </div>
+                        </form>
+                        
+                        <div class="pull-left advance-search">
+                            <a href="javascript:;"><i></i><span>Advanced Search</span></a>
+                        </div>
+                    </li>
+                    
+                  </ul>
+                </div>
+            </nav>
+            <!-- Navigation Bar End -->
+        </div>
+        <!-- Header End -->
+        
+        <!-- Main Content Begin -->
+        <div class="main-content">
+		
+            <!-- Left Panel Begin -->
+            <div id="leftNavPanel" class="left-nav-panel">
+                <div class="thumb-btn">
+                    <a class="collapse-btn-icon" onClick="toggle_leftNavPanel()"></a>
+                </div>
+                
+                <div class="list-holder" style="width:42px">
+                    <ul class="list-group only-icon-panel">
+
+                        <!-- Summary -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group" id="nav_accordion_0">
+                                <i class="glyphicon glyphicon-file"></i>
+                                <span>Summary 0</span>
+                            </a>
+                        </li>
+					
+                        <!-- Summary -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group" id="nav_accordion_1">
+                                <i class="glyphicon glyphicon-file"></i>
+                                <span>Summary</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Configurations -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group open-sign" id="nav_accordion_2">
+                                <i class="icon-cogs"></i>
+                                <span>Configurations</span>
+								<b></b>
+                            </a>
+                            
+                            <ul class="list-sub-group">
+                                <!-- start - testing sub group -->
+                                <li class="list-group-item">
+                                    <a href="javascript:;" class="sub-menu open-sign">
+                                        <i></i>
+                                        <span>Sub Menu A</span>
+                                        <b></b>
+                                    </a>
+                                    <ul class="list-sub-group">
+                                        <li class="list-group-item">
+                                           <a href="javascript:;" class="sub-menu open-sign">
+                                                <i></i>
+                                                <span>Sub Item A</span>
+                                                <b></b>
+                                            </a>
+                                            <ul class="list-sub-group">
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item A</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item B</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item C</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item D</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item E</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item F</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item B</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item C</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item D</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item E</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item F</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;" class="sub-menu open-sign">
+                                        <i></i>
+                                        <span>Sub Menu B</span>
+                                        <b></b>
+                                    </a>
+                                    <ul class="list-sub-group">
+                                        <li class="list-group-item">
+                                            <a href="javascript:;" class="sub-menu open-sign">
+                                                <i></i>
+                                                <span>Sub Item A</span>
+                                                <b></b>
+                                            </a>
+                                            <ul class="list-sub-group">
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item A</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item B</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item C</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item D</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item E</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <a href="javascript:;">
+                                                        <i></i>
+                                                        <span>Item F</span>
+                                                        <b></b>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item B</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item C</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item D</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item E</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="javascript:;">
+                                                <i></i>
+                                                <span>Item F</span>
+                                                <b></b>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- end - testing sub group -->
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Select Quick Configuration</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Set Custom Configuration</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Course Structure -->
+                        <li class="list-group-item tree-li">
+                            <a class="btn-sub-group open-sign" id="nav_accordion_3">
+                                <i class="glyphicon glyphicon-book"></i>
+                                <span>Course Structure</span>
+                                <b></b>
+                            </a>
+    
+                            <ul class="list-sub-group zero-padding">
+                                <li class="list-group-item">
+                                    <div id="tree" class="aciTree">
+                                    
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Components -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group open-sign" id="nav_accordion_4">
+                                <i class="glyphicon glyphicon-retweet"></i>
+                                <span>Components</span>
+                                <b></b>
+                            </a>
+                            
+                            <ul class="list-sub-group">
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Scene Assets</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Assessments</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Course Materials</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Glossary</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Course Evaluation</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Special Evaluation</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Publishing -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group open-sign" id="nav_accordion_5">
+                                <i class="glyphicon glyphicon-download-alt"></i>
+                                <span>Publishing</span>
+                                <b></b>
+                            </a>
+                            
+                            <ul class="list-sub-group">
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Availability</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Royalties</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Core Pricing</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Core Marketing</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>360 Marketplace</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Publish</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Retire</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Reports -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group open-sign" id="nav_accordion_6">
+                                <i class="glyphicon glyphicon-list-alt"></i>
+                                <span>Reports</span>
+                                <b></b>
+                            </a>
+                            
+                            <ul class="list-sub-group">
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Course Outline</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Assessment Items</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Course Evaluation</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Special Evaluation</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="javascript:;">
+                                        <i></i>
+                                        <span>Financial Performance</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <!-- Left Panel End -->
+            
+            <!-- Workspace Begin -->
+            <div id="contentHolder" class="content-holder">
+			
+				<!-- BEGIN BREADCRUMB BAR CONTENT -->
+                <div>
+                	<!-- Breadcrumb -->
+                    <div class="col-xs-8">
+                        <ol class="breadcrumb">
+                        	<li><a href="javascript:;">Author and Tech</a></li>
+                        	<li><a href="javascript:;">Create</a></li>
+                            <li><a href="javascript:;">My Course</a></li>
+                        	<li id="breadcrumb_3" style="display:none"><a href="javascript:;"></a></li>
+                        </ol>
+                    </div>
+                    
+                    <!-- Edit/View Toggle -->
+                    <div class="col-xs-4 zero-right-padding">
+                        <span class="pull-right">
+                        	<input type='checkbox' name='VEToggle' id='VEToggle' value='1' class='toggleswitch' checked='checked' />
+                        </span>
+                    </div>
+                </div>
+                <!-- END BEGIN BREADCRUMB BAR CONTENT -->
+				
+                <div class="clearfix"></div>
+
+                <!-- BEGIN PAGE CONTENT -->
+                <div class="page-content">
+				
+				   <!-- BEGIN SCREEN NAVIGATION BAR -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Structure Navigation">
+                         <div class="caption">
+                         	Structure Navigation
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body">
+
+                           <div class="well str-navigator">
+                                <ul>
+                                    <li><a href="javascript:;"><i class="icon-folder-open"></i> Lesson</a></li>
+                                    <li><a href="javascript:;"><i class="icon-file"></i> Scene</a></li>
+                                    <li><a href="javascript:;">Third Page</a></li>
+                                    <li><a href="javascript:;">Most Recent Page</a></li>
+                                    <li class="go-back">
+                                        <a href="javascript:;"><i class="icon-arrow-left"></i></a>
+                                    </li>
+                                </ul>
+                           </div>
+                         
+                      </div>
+                   </div>
+                   <!-- END SCREEN NAVIGATION BAR -->
+				
+				   <!-- BEGIN ONLINE COURSE TYPE -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Dashboard">
+                         <div class="caption">
+                         	Online Course Type
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body">
+						<h1>What type will it be?</h1>
+						<br/>
+						<div class="tiles">
+							<div class="col-md-offset-2">
+								<div class="tile box bg-gray">
+								   <div class="tile-body text-center">
+										<h4>Quick Build Course.</h4>
+										<img src="assets/img/icons/q_b_course.png" alt="Quick Build Course" class="box-image">
+								   </div>
+								   <div class="tile-object">
+										<div>
+										   Turn a PowerPoint or a video into a complete course in a couple of clicks-quick as can be!
+										</div>
+								   </div>
+								</div>
+								<div class="tile box bg-gray">
+								   <div class="tile-body text-center">
+										<h4>Online Course.</h4>
+										<img src="assets/img/icons/o_course.png" alt="Online Course" class="box-image">
+								   </div>
+								   <div class="tile-object">
+										<div>
+										   Crank up the learning with a fresh new online course supporting multiple pages, activities, and assessments.
+										</div>
+								   </div>
+								</div>
+								<div class="tile box bg-gray">
+								   <div class="tile-body text-center">
+										<h4>Traditional Course.</h4>
+										<img src="assets/img/icons/t_course.png" alt="Traditional Course" class="box-image">
+								   </div>
+								   <div class="tile-object">
+										<div>
+										   Love our old desktop system for creating courses, or need its power? Access it here.
+										</div>
+								   </div>
+								</div>
+							</div>
+						</div>
+                      </div>
+                   </div>
+                   <!-- END ONLINE COURSE TYPE -->
+				
+				   <!-- BEGIN DASHBOARD -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Dashboard">
+                         <div class="caption">
+                         	Dashboard
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body">
+						<h1>What would you like to do?</h1>
+						<br/>
+						<div class="tiles">
+							<div class="col-md-5 zero-padding">
+								<div class="tile double-right bg-gray">
+								   <div class="tile-body">
+										<img src="assets/img/icons/create-large.png" alt="">
+										<h2>Create a new online course.</h2>
+								   </div>
+								</div>
+								<!-- <div class="tile double-right bg-gray">
+								   <div class="tile-body">
+										<img class="pull-right" src="assets/img/icons/cup.png" alt="">
+										<h2>Find out about scorecards.</h2>
+								   </div>
+								</div> -->
+								<div class="tile double-right bg-gray">
+								   <div class="tile-body">
+										<img src="assets/img/icons/recent-search.png" alt="">
+										<h2>Find recent updates.</h2>
+								   </div>
+								</div>
+								<div class="tile double-right bg-gray">
+								   <div class="tile-body">
+										<img src="assets/img/icons/two-mans.png" alt="">
+										<h2>Earn points through peer review.</h2>
+								   </div>
+								</div>
+							</div>
+							<div class="col-md-7 zero-padding">
+								<div class="pull-left">
+									<div class="tile tri bg-gray">
+										<div class="tile-body">
+											<img class="pull-right" src="assets/img/icons/cup.png" alt="">
+											<h2>Check out my scorecard.</h2>
+											<br/>
+											<h1>1,302</h1>
+										</div>
+									</div>
+								</div>
+								<div class="pull-left">
+									<div class="tile box bg-gray">
+									   <div class="tile-body text-center">
+											<h5>View published courses.</h5>
+											<i class="number">5</i>
+									   </div>
+									</div>
+									<div class="tile box bg-gray">
+									   <div class="tile-body text-center">
+											<h5>View my top courses.</h5>
+											<i class="icon-star-empty"></i>
+									   </div>
+									   <div class="tile-object">
+											<div class="text-center">
+											   4.45
+											</div>
+									   </div>
+									</div>
+								</div>
+							</div>
+						</div>
+                      </div>
+                   </div>
+                   <!-- END DASHBOARD PAGE -->
+				
+				   <!-- BEGIN LOGIN PAGE -->                   
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Log In Page">
+                         <div class="caption">
+                         	Log In Page
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body">
+                        <h1>We're so glad you're here!</h1><br/>
+                        <br/>
+						<div class="row">
+							<div class="col-sm-4">
+								<h2>Log in to your account.</h2>
+								<form role="form" class="form-horizontal">
+								  <div class="form-body">
+									<div class="form-group">
+									  <div class="input-icon">
+										<i class="icon-user"></i>
+										<input type="text" placeholder="Username" class="form-control">
+									  </div>
+									</div>
+									<div class="form-group">
+									  <div class="input-icon">
+										<i class="icon-lock"></i>
+										<input type="text" placeholder="Password" class="form-control">
+									  </div>
+									</div>
+									<div class="form-group">
+									  <div class="pull-left">
+										  <label>
+											<input type="checkbox" class="form-chkbox">
+											Remember me.
+										  </label>
+									  </div>
+									  <div class="pull-right">
+										<button class="btn blue" type="submit" style="min-width:80px">Log in</button>
+									  </div>
+									</div>
+								  </div>
+								</form>
+								<br/><br/>
+								<div>
+									<label>Forgot your password?</label>
+								</div>
+								<div>
+									<label>No worries. Click <a href="#" class="blue-text"><u>here</u></a> to reset your password. </label>
+								</div>
+							</div>
+							<div class="col-sm-8">
+								<div class='login-page-bg'></div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+                      </div>
+                   </div>
+                   <!-- END LOGIN PAGE -->
+				
+				   <!-- BEGIN WELCOME PAGE -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Welcome Page">
+                         <div class="caption">
+                         	Welcome Page
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body">
+
+                        <h1>Welcome to your new course!</h1><br/>
+                        
+                        <p>Complete each section in the left navigation panel to build your course and publish it.<br/>Then come back to check in on it and see how it is doing.</p>
+                        <br/>
+						<div class="row">
+							<span class="col-md-2"><strong>Completions</strong></span>
+							<span class="col-md-4 text-right zero-padding" style="font-size:20px">0</span>
+						</div>
+						<div class="row">
+							<span class="col-md-2"><strong>Rating pending</strong></span>
+							<span class="welcome-stars col-md-4 text-right zero-padding">
+								<i class="icon-star"></i>
+								<i class="icon-star"></i>
+								<i class="icon-star-empty"></i>
+								<i class="icon-star-empty"></i>
+								<i class="icon-star-empty"></i>
+							</span>
+						</div>
+						<div class="clearfix"></div>
+                      </div>
+                   </div>
+                   <!-- END WELCOME PAGE -->
+				
+				   <!-- BEGIN ABOUT SCORECARDS PAGE -->                   
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="About Scorecards Page">
+                         <div class="caption">
+                         	About Scorecards Page
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body">
+                        <h1>About Scorecards</h1>
+						<h5>MAKE YOUR COURSES THE VERY BEST THEY CAN BE!</h5>
+                        <br/>
+                        <p>For each lesson, once you earn 100 points building out that lesson—or choose to apply some of your saved points towards that lesson—you can request ﬁve peer reviews on it.
+						<br />Take that feedback, perfect the course, then release it to your learners and watch the results. Win points every time an end-user gives you a neutral to positive rating—and lose points if the ratings are negative.
+						 No ratings are tallied until there are at least twenty votes on the course.</p>
+						<p>Prestige and earnings can rocket up as you hone your skills in the marketplace!</p>
+						<br /><br />
+						<div class="portlet">
+						  <div class="portlet-title portlet-btn" title="Create Courses">
+							 <div class="caption">
+								Create Courses
+							 </div>
+							 <div class="tools">
+								<a href="" class="collapse"></a>
+							 </div>
+						  </div>
+						  <div class="portlet-body">
+							<div>
+								<table class="table table-hover score-td">
+									<thead>
+									   <tr>
+										  <th></th>
+										  <th class="text-right">POINTS</th>
+										  <th></th>
+									   </tr>
+									</thead>
+									<tbody>
+									   <tr>
+										  <td><strong>Add lesson objective</strong></td>
+										  <td class="text-right">5</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td>
+											  <div><strong>Add presentation page</strong></div><br />
+											  <div>0 - 20 pages</div>
+											  <div>21 - 50 pages</div>
+											  <div>more than 50 pages</div>
+										  </td>
+										  <td class="text-right">
+											<br /><br />
+											<div>3</div>
+											<div>2</div>
+											<div>1</div>
+										  </td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Add activity</strong></td>
+										  <td class="text-right">5</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Add game</strong></td>
+										  <td class="text-right">10</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Add recall or comprehension question</strong></td>
+										  <td class="text-right">1</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Add application or analysis question</strong></td>
+										  <td class="text-right">2</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Get perfect “great job” ratings on ﬁve lesson peer review</strong></td>
+										  <td class="text-right">50</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Receive for each end-user awarded rating of 5 on a course</strong></td>
+										  <td class="text-right">30</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Receive for each end-user awarded rating of 4 on a course</strong></td>
+										  <td class="text-right">2</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Receive for each end-user awarded rating of 3 on a course</strong></td>
+										  <td class="text-right">1</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Receive for each end-user awarded rating of 2 on a course</strong></td>
+										  <td class="text-right">-1</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Receive for each end-user awarded rating of 1 on a course</strong></td>
+										  <td class="text-right">-1</td>
+										  <td></td>
+									   </tr>
+									</tbody>
+								</table>
+							</div>
+						  </div>
+					   </div>
+					   <div class="portlet">
+						  <div class="portlet-title portlet-btn" title="Help Others">
+							 <div class="caption">
+								Help Others
+							 </div>
+							 <div class="tools">
+								<a href="" class="collapse"></a>
+							 </div>
+						  </div>
+						  <div class="portlet-body">
+							<div>
+								<table class="table table-hover score-td">
+									<thead>
+									   <tr>
+										  <th></th>
+										  <th class="text-right">POINTS</th>
+										  <th></th>
+									   </tr>
+									</thead>
+									<tbody>
+									   <tr>
+										  <td><strong>Do a peer review for another author</strong></td>
+										  <td class="text-right">20</td>
+										  <td></td>
+									   </tr>
+									   <tr>
+										  <td><strong>Receive bonus for particularly useful feedback</strong></td>
+										  <td class="text-right">up to 10</td>
+										  <td></td>
+									   </tr>
+									</tbody>
+								</table>
+							</div>
+						  </div>
+					   </div>
+                      </div>
+                   </div>
+                   <!-- END ABOUT SCORECARDS PAGE -->
+				
+				   <!-- BEGIN UPLOAD ASSET SCREEN -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Upload Asset Screen">
+                         <div class="caption">
+                         	Upload Asset Screen
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body form">
+                         
+						  <div class="well">
+								<div class='vertical-divot'></div>
+								<div class='well-body'>
+									<div class='well-title'><h3>Upload Audio Asset and Attach to Scene</h3></div>
+									<form class="form-horizontal" role="form">
+										<div class="form-body">
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Asset Name<span class="required">*</span></label>
+											  <div class="col-md-6">
+												<input type="text" class="form-control"  placeholder="Enter Asset Name">
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Keywords</label>
+											  <div class="col-md-6">
+												<input type="text" class="form-control"  placeholder="Enter Keywords">
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Description</label>
+											  <div class="col-md-6">
+												 <textarea class="form-control" rows="3"></textarea>
+											  </div>
+										   </div>
+										   <div class="form-group temp-icons">
+											  <label  class="col-md-3 control-label">Asset Type</label>
+											  <div class="col-md-6">
+												 <label class='temp-label gray-text'>Audio Clip (MP3)</label>
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">File Path<span class="required">*</span></label>
+											  <div class="col-md-6">
+												 <div class="fileupload fileupload-new" data-provides="fileupload">
+													<span class="btn blue btn-file">
+													<span class="fileupload-new"><i class="glyphicon glyphicon-paperclip"></i> Browser</span>
+													<span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+													<input type="file" class="default" />
+													</span>
+													<span class="fileupload-preview" style="margin-left:5px;"></span>
+													<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+												 </div>
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label"></label>
+											  <div class="col-md-6">
+												 <div class="checkbox-list">
+													<label>
+													<input type="checkbox" class="form-chkbox"> Attach this asset to this scene.
+													</label>
+													<label>
+													<input type="checkbox" class="form-chkbox"> Attach this asset to this course's asset group.
+													</label>
+												 </div>
+											  </div>
+										   </div>
+										</div>
+										<div class="form-actions fluid">
+										   <div class="col-md-offset-5">
+											  <button type="submit" class="btn blue">Accept</button>
+											  <button type="button" class="btn default">Cancel</button>                              
+										   </div>
+										</div>
+									</form>
+								</div>
+						  </div>
+                         
+                      </div>
+                   </div>
+                   <!-- END UPLOAD ASSET SCREEN -->
+				
+				   <!-- BEGIN VISUAL ASSET SCREEN -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Visual Asset Screen">
+                         <div class="caption">
+                         	Visual Asset Screen
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body form">
+                         
+						  <div class="well">
+								<div class='vertical-divot'></div>
+								<div class='well-body'>
+									<div class='well-title'><h3>Find Visual Asset and Attach to Scene</h3></div>
+									<form class="form-horizontal" role="form">
+										<div class="form-body">							
+										   <div class="form-group">
+												<div>
+													<div class="btn-group pull-right zero-padding col-md-6">
+														<div class="input-group">
+														  <span class="input-group-btn">
+															<label>Search<span class="search-required">*</span></label>
+														  </span>
+														  <input type="text" class="form-control"  placeholder="Search Visual Asset">
+														  <span class="input-group-btn">
+															<button type="submit" class="btn blue"><i class="search-icon-white"></i> Find</button>
+														  </span>
+														</div>
+													</div>
+												</div>
+												<br /><br />
+												<div class="table-scrollable">
+													<table class="table table-str-border table-hover table-bordered white-bg">
+														<thead>
+														   <tr class="td-header-bottom-border">
+															  <th></th>
+															  <th>Asset Name</th>
+															  <th>Type</th>
+															  <th>Dimension</th>
+															  <th>Size</th>
+															  <th>Version</th>
+															  <th>Description</th>
+															  <th>Preview</th>
+														   </tr>
+														</thead>
+														<tbody height="100">
+														   <tr>
+															  <td><input type="radio" name='g1' value='1'/></td>
+															  <td>Asset Name A</td>
+															  <td>Image</td>
+															  <td>250 x 250</td>
+															  <td>1MB</td>
+															  <td>1</td>
+															  <td>Photo shows one match being used to light another.</td>
+															  <td><img src="assets/img/icons/templates/icon_22.png"></img></td>
+														   </tr>
+															<tr>
+															  <td><input type="radio" name='g1' value='2'/></td>
+															  <td>Asset Name B</td>
+															  <td>Image</td>
+															  <td>250 x 250</td>
+															  <td>1MB</td>
+															  <td>1</td>
+															  <td>Photo shows one match being used to light another.</td>
+															  <td><img src="assets/img/icons/templates/icon_23.png"></img></td>
+														   </tr>
+														</tbody>
+													</table>
+												</div>
+										   </div>
+										</div>
+										<div class="form-actions fluid">
+										   <div class="col-md-offset-5">
+											  <button type="submit" class="btn blue">Accept</button>
+											  <button type="button" class="btn default">Cancel</button>                              
+										   </div>
+										</div>
+									 </form>
+								</div>
+						  </div>
+                         
+                      </div>
+                   </div>
+                   <!-- END VISUAL ASSET SCREEN -->
+				
+                   <!-- BEGIN SCENE COMPONENTS FORM -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Scene Components">
+                         <div class="caption">
+                         	Scene Components
+                         </div>
+                         <div class="tools">
+							<i class="text-icon"></i>
+							<i class="camera-icon"></i>
+							<i class="audio-icon"></i>
+							<i class="cc-icon"></i>
+							<i class="media-icon"></i>
+							<i class="mouse-icon"></i>
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body form">
+                         
+						  <form class="form-horizontal" role="form">
+                            <div class="form-body">
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Text</label>
+                                  <div class="col-md-6">
+									<textarea id='text-ckeditor' class="ckeditor form-control" name="text-ckeditor" rows="4"></textarea>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+								  <label class="col-md-3 control-label">Visual<br><span style="font-weight:normal">1 asset</span></label>
+                                  <div class="col-md-6">
+									  <div class="table-scrollable">
+										<table class="table table-str-border table-hover table-bordered">
+										  <thead>
+											<tr class="td-header">
+											  <th colspan="8">
+												<div class='btn-group pull-left'>
+													<a class="btn btn-default pencil-btn" href="#" title='Edit Selected Asset'><i class="icon-pencil"></i></a>
+												</div>
+												<div class='btn-group pull-right'>
+													<a class="btn btn-default" href="#" title='Find Asset and Attach to Scene'><i class="glyphicon glyphicon-new-window"></i></a>
+													<a class="btn btn-default" href="#" title="Upload Asset and Attach to Scene"><i class="icon-plus blue-text"></i></a>
+													<a class="btn btn-default" href="#" title="De-Attach Selected Asset"><i class="icon-minus red-text"></i></a>
+												</div>
+											  </th>
+											</tr>
+											<tr class="td-header-bottom-border">
+											  <th></th>
+											  <th>Asset</th>
+											  <th>Name</th>
+											  <th>Type</th>
+											  <th>Dimension</th>
+											  <th>Size</th>
+											  <th>Version</th>
+											  <th>Description</th>
+											</tr>
+										  </thead>
+										  <tbody height="100">
+											<tr>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											</tr>
+										  </tbody>
+										</table>
+									  </div>
+                                  </div>
+                               </div>
+							   <div class="form-group">
+                                  <label  class="col-md-3 control-label">Audio<br><span style="font-weight:normal">1 asset</span></label>
+                                  <div class="col-md-6">
+									<div class="table-scrollable">
+										<table class="table table-str-border table-hover table-bordered">
+										  <thead>
+											<tr class="td-header">
+											  <th colspan="8">
+												<div class='btn-group pull-left'>
+													<a class="btn btn-default pencil-btn" href="#" title='Edit Selected Asset'><i class="icon-pencil"></i></a>
+												</div>
+												<div class='btn-group pull-right'>
+													<a class="btn btn-default" href="#" title='Find Asset and Attach to Scene'><i class="glyphicon glyphicon-new-window"></i></a>
+													<a class="btn btn-default" href="#" title="Upload Asset and Attach to Scene"><i class="icon-plus blue-text"></i></a>
+													<a class="btn btn-default" href="#" title="De-Attach Selected Asset"><i class="icon-minus red-text"></i></a>
+												</div>
+											  </th>
+											</tr>
+											<tr class="td-header-bottom-border">
+											  <th></th>
+											  <th>Asset</th>
+											  <th>Name</th>
+											  <th>Type</th>
+											  <th>Duration</th>
+											  <th>Size</th>
+											  <th>Version</th>
+											  <th>Description</th>
+											</tr>
+										  </thead>
+										  <tbody height="100">
+											<tr>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											  <td></td>
+											</tr>
+										  </tbody>
+										</table>
+									</div>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Closed Captioning</label>
+                                  <div class="col-md-6">
+                                     <textarea id="cc-ckeditor" class="ckeditor form-control" name="cc-ckeditor" rows="4"></textarea>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="form-actions fluid">
+                               <div class="col-md-offset-3 col-md-9">
+								  <button type="submit" class="btn blue"><i class="icon-desktop"></i> Preview Scene</button>
+                                  <button type="submit" class="btn blue">Save</button>
+                                  <button type="button" class="btn default">Cancel</button>                              
+                               </div>
+                            </div>
+                         </form>
+                         
+                      </div>
+                   </div>
+                   <!-- END SCENE COMPONENTS FORM -->
+				
+                   <!-- BEGIN SELECT TEMPLATE -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Select Scene Template">
+                         <div class="caption">
+                         	Select Scene Template
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body">
+							<div class="well">
+								<div class='vertical-divot'></div>
+								<div class='well-body'>
+									<div class='well-title'><h3>Select Scene Template</h3></div>
+									<div class='col-md-8 temp-icons'>
+										<div>
+											<h5>Presentation Templates</h5>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-0"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-1"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-2"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-3"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-4"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-5"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-6"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-7"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-8"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-9"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-10"></i></a>
+										</div>
+										<br />
+										<div>
+											<h5>Activity Templates</h5>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-11"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-12"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-13"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-14"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-15"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-16"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-17"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-18"></i></a>
+										</div>
+										<br />
+										<div>
+											<h5>Game Templates</h5>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-19"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-20"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-21"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-22"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-23"></i></a>
+											<a class="btn btn-default" href="javascript:;"><i class="temp-icon-24"></i></a>
+										</div>
+									</div>
+									
+									<div class='col-md-4 temp-desc'>
+										<h3>Visual Right Template</h3>
+										<div><img src="assets/img/icons/templates/icon_19b.png"></img></div>
+										<p>This template puts text on the left and a single visual element, such as a picture (JPG, GIF, PNG) or animation (SWF) on the right.</p>
+									</div>
+									
+									<div class='clearfix'></div>
+								</div>
+								
+								<div class="form-actions fluid">
+									<div class="col-md-offset-5">
+										<button class="btn blue" type="submit">Accept</button>
+										<button class="btn default" type="button">Cancel</button>                              
+									</div>
+								</div>
+							
+							</div>
+                      </div>
+                   </div>
+                   <!-- END SELECT TEMPLATE -->
+				
+                   <!-- BEGIN SCENE SETUP FORM -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Scene Setup">
+                         <div class="caption">
+                         	Scene Setup
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body form">
+                         
+						  <form class="form-horizontal" role="form">
+                            <div class="form-body">
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+                                  <div class="col-md-6">
+									<textarea id="title-ckeditor" class="ckeditor form-control" name="title-ckeditor" rows="4"></textarea>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Display title on page</label>
+                                  <div class="col-md-6">
+                                     <div class="checkbox-list">
+                                        <label>
+                                        <input type="checkbox" class="form-chkbox"> 
+                                        </label>
+                                     </div>
+                                  </div>
+                               </div>
+							   <div class="form-group temp-icons">
+                                  <label  class="col-md-3 control-label">Template<span class="required">*</span></label>
+                                  <div class="col-md-6">
+                                     <a href="#" class="btn btn-default pull-left" title="Select Scene Template"><i class="icon-question"></i></a>
+									 <label class='temp-label gray-text'>None Selected</label>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+								  <label  class="col-md-3 control-label">Duration (seconds)</label>
+                                  <div class="col-md-6">
+                                     <input type="text" class="form-control"  placeholder="Enter Duration in Seconds">
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Notes</label>
+                                  <div class="col-md-6">
+                                     <textarea class="form-control" rows="3"></textarea>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="form-actions fluid">
+                               <div class="col-md-offset-3 col-md-9">
+                                  <button type="submit" class="btn blue">Save</button>
+                                  <button type="button" class="btn default">Cancel</button>                              
+                               </div>
+                            </div>
+                         </form>
+                         
+                      </div>
+                   </div>
+                   <!-- END SCENE SETUP FORM -->
+				   
+				   <!-- BEGIN PAGE HEADINGS PORTLET -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Page Headings">
+                         <div class="caption">
+                         	Page Headings
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body">
+						
+						<div class="page-heading">
+							<div class="pull-left">
+								<i class="icon-folder-open"></i>
+							</div>
+							<div class="col-xs-10">
+								<h1>New Folder</h1>
+								<h2>Sub-Heading</h2>
+								<div>
+									<a href="javascript:;">HELP</a>
+									<a href="javascript:;">STRATEGY</a>
+									<a href="javascript:;">LESSON SCORECARD 00</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<br/>
+						
+						<div class="page-heading">
+							<div class="pull-left">
+								<i class="icon-file-text"></i>
+							</div>
+							<div class="col-xs-10">
+								<h1>New Scene</h1>
+								<h2>Sub-Heading</h2>
+								<div>
+									<a href="javascript:;">HELP</a>
+									<a href="javascript:;">STRATEGY</a>
+									<a href="javascript:;">LESSON SCORECARD 00</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+                        <br/>
+                        
+						<div class="page-heading">
+							<div class="pull-left">
+								<i class="icon-file-pdf-2"></i>
+							</div>
+							<div class="col-xs-10">
+								<h1>New Support Materials</h1>
+								<h2>Sub-Heading</h2>
+								<div>
+									<a href="javascript:;">HELP</a>
+									<a href="javascript:;">STRATEGY</a>
+									<a href="javascript:;">LESSON SCORECARD 00</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<br/>
+                        
+						<div class="page-heading">
+							<div class="pull-left">
+								<i class="icon-file-quiz-2"></i>
+							</div>
+							<div class="col-xs-10">
+								<h1>New Quiz</h1>
+								<h2>Sub-Heading</h2>
+								<div>
+									<a href="javascript:;">HELP</a>
+									<a href="javascript:;">STRATEGY</a>
+									<a href="javascript:;">LESSON SCORECARD 00</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						
+						<br/>
+						
+						<div class="page-heading">
+							<div class="pull-left">
+								<i class="icon-file-quiz-2"></i>
+							</div>
+							<div class="col-xs-10">
+								<h1>New Exam</h1>
+								<h2>Sub-Heading</h2>
+								<div>
+									<a href="javascript:;">HELP</a>
+									<a href="javascript:;">STRATEGY</a>
+									<a href="javascript:;">LESSON SCORECARD 00</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+                        
+                      </div>
+                   </div>
+                   <!-- END PAGE HEADINGS PORTLET-->
+					
+                   <!-- BEGIN INSTRUCTION BAR -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Instruction Bars">
+                         <div class="caption">
+                         	Instruction Bars
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      
+                      <div class="portlet-body">
+					  
+						<div role="alert" class="alert alert-info">
+						  <i class="glyphicon glyphicon-question-sign"></i><strong> Heads up!</strong> This alert needs your attention, but it's not super important.
+						</div>
+
+						<div class="alert alert-warning" role="alert">
+                            <i class="icon-warning-sign"></i><strong> Instruction!</strong> Better check yourself, you're not looking too good.
+                        </div>
+
+						<div class="alert alert-success" role="alert">
+                            <i class="icon-ok-sign"></i><strong> Success!</strong> You successfully read this important alert message.
+                        </div>
+                   
+						<div class="alert alert-danger" role="alert">
+                            <i class="icon-remove-sign"></i><strong> Alert!</strong> Change a few things up and try submitting again.
+                        </div>
+                        
+					  </div>
+                   </div>
+                   <!-- END INSTRUCTION BAR -->
+                   
+                   <!-- BEGIN DATA GRID TABLE -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Data Grid">
+                         <div class="caption">
+                         	Data Grid
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body">
+                         <table class="table table-striped table-bordered table-hover" id="sample_1">
+                            <thead>
+                               <tr class="dataTable-head">
+                                  <th></th>
+                                  <th>Sequence</th>
+                                  <th>Folder Name</th>
+                                  <th>Scenes</th>
+                                  <th>Quiz Setup</th>
+                                  <th>Demo Setup</th>
+								  <th>Move</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+                               <tr>
+                                  <td><input type="checkbox" class="checkboxes" value="1" /></td>
+                                  <td>1</td>
+                                  <td><a href="javascript:;" class='edit'>Lesson 1</a></td>
+                                  <td>10</td>
+                                  <td>Pending</td>
+                                  <td>Off</td>
+								  <td>
+									<a class="btn btn-default move-up" title="Move Up"><i class="icon-move-up"></i></a>
+									<a class="btn btn-default move-down" title="Move Down"><i class="icon-move-down"></i></a>
+								  </td>
+                               </tr>
+							   <tr>
+                                  <td><input type="checkbox" class="checkboxes" value="2" /></td>
+                                  <td>2</td>
+                                  <td><a href="javascript:;" class='edit'>Lesson 2</a></td>
+                                  <td>10</td>
+                                  <td>Ready</td>
+                                  <td>On</td>
+								  <td>
+									<a class="btn btn-default move-up" title="Move Up"><i class="icon-move-up"></i></a>
+									<a class="btn btn-default move-down" title="Move Down"><i class="icon-move-down"></i></a>
+								  </td>
+                               </tr>
+							   <tr>
+                                  <td><input type="checkbox" class="checkboxes" value="3" /></td>
+                                  <td>3</td>
+                                  <td><a href="javascript:;" class='edit'>Lesson 3</a></td>
+                                  <td>30</td>
+                                  <td>Ready</td>
+                                  <td>On</td>
+								  <td>
+									<a class="btn btn-default move-up" title="Move Up"><i class="icon-move-up"></i></a>
+									<a class="btn btn-default move-down" title="Move Down"><i class="icon-move-down"></i></a>
+								  </td>
+                               </tr>
+							   <tr>
+                                  <td><input type="checkbox" class="checkboxes" value="4" /></td>
+                                  <td>4</td>
+                                  <td><a href="javascript:;" class='edit'>Lesson 4</a></td>
+                                  <td>40</td>
+                                  <td>Pending</td>
+                                  <td>On</td>
+								  <td>
+									<a class="btn btn-default move-up" title="Move Up"><i class="icon-move-up"></i></a>
+									<a class="btn btn-default move-down" title="Move Down"><i class="icon-move-down"></i></a>
+								  </td>
+                               </tr>
+                            </tbody>
+                         </table>
+                      </div>
+                   </div>
+                   <!-- END DATA GRID TABLE -->					
+
+				   <!-- BEGIN COMPONENTS PORTLET -->                   
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Components">
+                         <div class="caption">
+                         	Components
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body text-center">
+
+                         <!-- Folder -->
+                         <a class="big-icon-btn" href="#">
+                                <i class="icon-folder-open"></i>
+                                <div>Folders</div>
+                                <p>Click here to organize your course content into lesson folders. You must create at least one folder for your course.</p>
+                                <span class="badge badge-success"><strong>3</strong></span>
+                         </a>
+                                                  
+                         <!-- Scenes -->
+                         <a class="big-icon-btn" href="#">
+                                <i class="icon-file-text"></i>
+                                <div>Scenes</div>
+                                <p>Click here to create scenes or pages for your course content.
+You must create at least one scene for this folder.</p>
+                                <span class="badge badge-important"><strong>!</strong></span>
+                         </a>
+                         
+                         <!-- Support Materials -->
+                         <a class="big-icon-btn" href="#">
+                                <i class="icon-file-pdf"></i>
+                                <div>Support Materials</div>
+                                <p>If you would like to provide the learner with support materials or hand-outs for this lesson, click here to manage those documents.</p>
+                                <span class="badge badge-default"><strong>0</strong></span>
+                         </a>
+                         
+                         <!-- Quiz -->
+                         <a class="big-icon-btn" href="#">
+                                <i class="icon-file-quiz"></i>
+                                <div>Quiz</div>
+                                <p>This folder is set up to have a quiz at the end of the lesson.
+Click here work on the quiz.</p>
+                                <span class="badge badge-important"><strong>!</strong></span>
+                         </a>
+
+                         <!-- Exam -->
+                         <a class="big-icon-btn" href="#">
+                                <i class="icon-file-quiz"></i>
+                                <div>Exam</div>
+                                <p>Your configurations are set to have an exam at the end of the course. Click here to work on the exam.</p>
+                                <span class="badge badge-important"><strong>!</strong></span>
+                         </a>
+                         
+                      </div>
+                   </div>
+                   <!-- END COMPONENTS PORTLET -->
+                   
+				   <!-- BEGIN FOLDER SETUP FORM PORTLET -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Folder Setup">
+                         <div class="caption">
+                         	Folder Setup
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body form">
+                         
+						  <form class="form-horizontal" role="form">
+                            <div class="form-body">
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+                                  <div class="col-md-6">
+                                     <input type="text" class="form-control"  placeholder="Enter Folder Title">
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label"></label>
+                                  <div class="col-md-6">
+                                     <div class="checkbox-list">
+                                        <label>
+                                        <input type="checkbox"> Show folder name in the course table of contents.
+                                        </label>
+                                        <label>
+                                        <input type="checkbox"> Enable quiz at the end of the scenes in this folder.
+                                        </label>
+                                        <label>
+                                        <input type="checkbox"> Show the scenes in this folder as a demo sample for marketing.
+                                        </label>
+                                     </div>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Description</label>
+                                  <div class="col-md-6">
+                                     <textarea class="form-control" rows="3"></textarea>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="form-actions fluid">
+                               <div class="col-md-offset-3 col-md-9">
+                                  <button type="submit" class="btn blue">Save</button>
+                                  <button type="button" class="btn default">Cancel</button>                              
+                               </div>
+                            </div>
+                         </form>
+                         
+                      </div>
+                   </div>
+                   <!-- END FOLDER SETUP FORM PORTLET -->
+                   
+                   <!-- BEGIN SUMMARY FORM PORTLET --> 
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Summary">
+                         <div class="caption">
+                         	Summary
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body form">
+                         <form class="form-horizontal" role="form">
+                            <div class="form-body">
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+                                  <div class="col-md-6">
+                                     <input type="text" class="form-control"  placeholder="Enter Course Title">
+                                  </div>
+                               </div>
+							   <div class="form-group">
+                                  <label  class="col-md-3 control-label">Course ID</label>
+                                  <div class="col-md-6">
+                                     <p class="form-control-static">360-123456-001</p>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Course Status</label>
+                                  <div class="col-md-6">
+                                     <p class="form-control-static">Active</p>
+                                  </div>
+                               </div>
+							   <div class="form-group">
+                                  <label  class="col-md-3 control-label">Publish Status</label>
+                                  <div class="col-md-6">
+                                     <p class="form-control-static">Unpublished</p>
+                                  </div>
+                               </div>
+							   <div class="form-group">
+                                  <label  class="col-md-3 control-label">Rating</label>
+                                  <div class="col-md-6">
+                                     <p class="form-control-static">Pending</p>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Description</label>
+                                  <div class="col-md-6">
+                                     <textarea class="form-control" rows="3"></textarea>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Language<span class="required">*</span></label>
+                                  <div class="col-md-6">
+                                     <select  class="form-control">
+                                        <option>English</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                        <option>Option 5</option>
+                                     </select>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Duration (Hours)<span class="required">*</span></label>
+                                  <div class="col-md-6">
+                                     <input type="text" class="form-control"  placeholder="Enter Course Duration">
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Keywords</label>
+                                  <div class="col-md-6">
+                                     <input type="text" class="form-control"  placeholder="Enter Keywords">
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="form-actions fluid">
+                               <div class="col-md-offset-3 col-md-9">
+                                  <button type="submit" class="btn blue">Save</button>
+                                  <button type="button" class="btn default">Cancel</button>                              
+                               </div>
+                            </div>
+                         </form>
+                      </div>
+                   </div>
+                   <!-- END SUMMARY FORM PORTLET -->
+                   
+				   <!-- BEGIN CONFIGURATIONS FORM PORTLET -->
+                   <div class="portlet">
+                      <div class="portlet-title portlet-btn" title="Configurations">
+                         <div class="caption">
+                            Configurations
+                         </div>
+                         <div class="tools">
+                            <a href="" class="collapse"></a>
+                         </div>
+                      </div>
+                      <div class="portlet-body form">
+                         <form class="form-horizontal" role="form">
+                            <div class="form-body">
+                            
+							   <!-- BEGIN ACCORDION PORTLET-->
+                               <div class="portlet">
+                                  <div class="portlet-body">
+                                     <div class="panel-group accordion" id="accordion1">
+                                        <div class="panel panel-default">
+                                           <div class="panel-heading">
+                                              <h4 class="panel-title">
+                                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_1">
+                                                 Course Completion Criteria
+                                                 </a>
+                                              </h4>
+                                           </div>
+                                           <div id="collapse_1" class="panel-collapse collapse">
+                                              <div class="panel-body">
+                                                 
+                                                 
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Must pass all quizzes</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox">
+                                                      </div>
+                                                   </div>
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Must attempt exam</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox">
+                                                      </div>
+                                                   </div>
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Must pass exam</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox">
+                                                      </div>
+                                                   </div>
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Must agree with specified text</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" class="form-chkbox" value="option1" checked>
+                                                      </div>
+                                                   </div>
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label gray-text">Specified text</label>
+                                                      <div class="col-md-6">
+                                                         <textarea class="form-control" rows="3"></textarea>
+                                                      </div>
+                                                   </div>
+
+                                                 
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                           <div class="panel-heading">
+                                              <h4 class="panel-title">
+                                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_2">
+                                                 Quiz Policies
+                                                 </a>
+                                              </h4>
+                                           </div>
+                                           <div id="collapse_2" class="panel-collapse collapse">
+                                              <div class="panel-body">
+                                                 
+                                                 
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Enable quiz</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+                                                 
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Number of questions to ask per quiz</label>
+                                                      <div class="col-md-6">
+                                                         <input type="text" class="form-control"  placeholder="00">
+                                                         <span class="help-block">(Quizzes throughout the course must all be the same length.)</span>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Randomize questions</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Randomize answers</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Ask unique questions in retakes</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Time permitted for quiz (minutes)</label>
+                                                      <div class="col-md-6">
+                                                         <input type="text" class="form-control"  placeholder="00">
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Grade questions</label>
+                                                      <div class="col-md-6">
+                                                         <select  class="form-control">
+                                                            <option>After each question is answered</option>
+                                                            <option>Option 2</option>
+                                                            <option>Option 3</option>
+                                                            <option>Option 4</option>
+                                                            <option>Option 5</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Allow review after grading</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Score required to pass quiz</label>
+                                                      <div class="col-md-6">
+                                                         <input type="text" class="form-control"  placeholder="00">
+                                                      </div>
+                                                   </div>
+                                                   
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Number of attempts permitted</label>
+                                                      <div class="col-md-6">
+                                                         <input type="text" class="form-control"  placeholder="00">
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Action to take if fail to pass</label>
+                                                      <div class="col-md-6">
+                                                         <select  class="form-control">
+                                                            <option>Retake lesson</option>
+                                                            <option>Option 2</option>
+                                                            <option>Option 3</option>
+                                                            <option>Option 4</option>
+                                                            <option>Option 5</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+                                                 
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                           <div class="panel-heading">
+                                              <h4 class="panel-title">
+                                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapse_3">
+                                                 Exam Policies
+                                                 </a>
+                                              </h4>
+                                           </div>
+                                           <div id="collapse_3" class="panel-collapse collapse">
+                                              <div class="panel-body">
+                                                 
+                                                 
+												   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Enable exam</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+                                                 
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Number of questions to ask per exam</label>
+                                                      <div class="col-md-6">
+                                                         <input type="text" class="form-control"  placeholder="00">
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Randomize questions</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Randomize answers</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Ask unique questions in retakes</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Time permitted for exam (minutes)</label>
+                                                      <div class="col-md-6">
+                                                         <input type="text" class="form-control"  placeholder="00">
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Grade questions</label>
+                                                      <div class="col-md-6">
+                                                         <select  class="form-control">
+                                                            <option>After exam is submitted</option>
+                                                            <option>Option 2</option>
+                                                            <option>Option 3</option>
+                                                            <option>Option 4</option>
+                                                            <option>Option 5</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Allow review after grading</label>
+                                                      <div class="col-md-6">
+                                                            <input type="checkbox" value="option1" class="form-chkbox" checked>
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Score required to pass exam</label>
+                                                      <div class="col-md-6">
+                                                         <input type="text" class="form-control"  placeholder="00">
+                                                      </div>
+                                                   </div>
+                                                   
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Number of attempts permitted</label>
+                                                      <div class="col-md-6">
+                                                         <input type="text" class="form-control"  placeholder="00">
+                                                      </div>
+                                                   </div>
+
+                                                   <div class="form-group">
+                                                      <label  class="col-md-3 control-label">Action to take if fail to pass</label>
+                                                      <div class="col-md-6">
+                                                         <select  class="form-control">
+                                                            <option>Retake course</option>
+                                                            <option>Option 2</option>
+                                                            <option>Option 3</option>
+                                                            <option>Option 4</option>
+                                                            <option>Option 5</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+                                                 
+                                                 
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                               <!-- END ACCORDION PORTLET-->
+                            </div>
+                            <div class="form-actions fluid">
+                               <div class="col-md-offset-3 col-md-9">
+                                  <button type="submit" class="btn blue">Save</button>
+                                  <button type="button" class="btn default">Cancel</button>                              
+                               </div>
+                            </div>
+                         </form>
+                      </div>
+                   </div>
+                   <!-- END CONFIGURATIONS FORM PORTLET -->
+                   
+                </div>
+                <!-- END PAGE CONTENT -->
+            </div>
+            <!-- Workspace End -->
+        </div>
+        <!-- Main Content End -->
+        
+    </div>
+	
+	<script>
+		$(document).ready(function ()
+		{
+			//	BEGIN APP **************************************************************
+			APP.EDIT_OR_VIEW_TOGGLE();
+			APP.LEFT_NAV.init();
+			APP.LEFT_NAV_COURSE_OUTLINE();
+			APP.BODY_COLLAPSES();
+			APP.APPLY_ROUNDED_CORNERS();
+			APP.CKEDITOR("title-ckeditor", "TITLE");
+			APP.CKEDITOR("cc-ckeditor", "CC");
+			APP.CKEDITOR("text-ckeditor", "TEXT");
+			APP.DATAGRID('#sample_1',true,true,true,true);
+			//	END APP **************************************************************
+		});
+	</script>
+</body>
+</html>

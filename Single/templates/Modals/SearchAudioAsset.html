@@ -1,0 +1,82 @@
+<!-- BEGIN HTML -->
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	<h3 class="modal-title" id="dynamic-modal-label">
+		
+		Find Audio Asset and Attach to Slide
+		
+	</h3>
+</div>
+<div class="modal-body">
+
+	<!-- BEGIN GRID TABLE -->
+	<div class="form-body">
+	   <div class="form-group">
+			<div>
+				<div class="btn-group pull-right zero-padding col-md-6">
+					<div class="input-group">
+					  <span class="input-group-btn">
+						<label>Search<span class="search-required">*</span></label>
+					  </span>
+					  <input type="text" class="form-control"  placeholder="Search Asset">
+					  <span class="input-group-btn">
+						<button type="submit" class="btn blue"><i class="search-icon-white"></i> Find</button>
+					  </span>
+					</div>
+				</div>
+			</div>
+			<br /><br />
+			<div class="table-scrollable">
+				<table class="table table-str-border table-hover table-bordered white-bg">
+					<thead>
+					   <tr class="td-header-bottom-border">
+						  <th></th>
+						  <th>Asset Name</th>
+						  <th>Type</th>
+						  <th>Duration</th>
+						  <th>Size</th>
+						  <th>Version</th>
+						  <th>Description</th>
+						  <th>Preview</th>
+					   </tr>
+					</thead>
+					<tbody height="100">
+					   <tr>
+						  <td><input type="radio" name='g1' value='1'/></td>
+						  <td>Asset Name A</td>
+						  <td>MP3</td>
+						  <td>00:00:20</td>
+						  <td>1MB</td>
+						  <td>1</td>
+						  <td>Description.</td>
+						  <td><a href="javascript:;" class="btn blue-text"><i class="glyphicon glyphicon-play"></i></a></td>
+					   </tr>
+						<tr>
+						  <td><input type="radio" name='g1' value='2'/></td>
+						  <td>Asset Name B</td>
+						  <td>MP3</td>
+						  <td>00:01:00</td>
+						  <td>1MB</td>
+						  <td>1</td>
+						  <td>Description.</td>
+						  <td><a href="javascript:;" class="btn blue-text"><i class="glyphicon glyphicon-play"></i></a></td>
+					   </tr>
+					</tbody>
+				</table>
+			</div>
+	   </div>
+	</div>
+	<!-- END GRID TABLE -->
+	
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn blue" onclick="TEMPLATE.RETURN_DYNAMIC_MODAL('Asset Name','1','path/asset')">Accept</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+</div>
+<!-- END HTML -->
+
+<!-- BEGIN SCRIPT -->
+<script>
+
+</script>
+<!-- END SCRIPT -->

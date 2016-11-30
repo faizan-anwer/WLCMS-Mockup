@@ -1,0 +1,82 @@
+<!-- BEGIN HTML -->
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	<h3 class="modal-title" id="dynamic-modal-label">
+		
+		Find Visual Asset and Attach to Slide
+		
+	</h3>
+</div>
+<div class="modal-body">
+
+	<!-- BEGIN GRID TABLE -->
+	<div class="form-body">
+	   <div class="form-group">
+			<div>
+				<div class="btn-group pull-right zero-padding col-md-6">
+					<div class="input-group">
+					  <span class="input-group-btn">
+						<label>Search<span class="search-required">*</span></label>
+					  </span>
+					  <input type="text" class="form-control" placeholder="Search Visual Asset">
+					  <span class="input-group-btn">
+						<button type="submit" class="btn blue" id="search-btn-1" data-loading-text="Loading..."><i class="search-icon-white"></i> Find</button>
+					  </span>
+					</div>
+				</div>
+			</div>
+			<br /><br />
+			<div class="table-scrollable">
+				<table class="table table-str-border table-hover table-bordered white-bg">
+					<thead>
+					   <tr class="td-header-bottom-border">
+						  <th></th>
+						  <th>Asset Name</th>
+						  <th>Type</th>
+						  <th>Dimension</th>
+						  <th>Size</th>
+						  <th>Version</th>
+						  <th>Description</th>
+						  <th>Preview</th>
+					   </tr>
+					</thead>
+					<tbody height="100">
+					   <tr>
+						  <td><input type="radio" name='g1' value='1'/></td>
+						  <td>Asset Name A</td>
+						  <td>Image</td>
+						  <td>250 x 250</td>
+						  <td>1MB</td>
+						  <td>1</td>
+						  <td>Photo shows one match being used to light another.</td>
+						  <td><img src="assets/img/icons/templates/icon_22.png"></img></td>
+					   </tr>
+						<tr>
+						  <td><input type="radio" name='g1' value='2'/></td>
+						  <td>Asset Name B</td>
+						  <td>Image</td>
+						  <td>250 x 250</td>
+						  <td>1MB</td>
+						  <td>1</td>
+						  <td>Photo shows one match being used to light another.</td>
+						  <td><img src="assets/img/icons/templates/icon_23.png"></img></td>
+					   </tr>
+					</tbody>
+				</table>
+			</div>
+	   </div>
+	</div>
+	<!-- END GRID TABLE -->
+	
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn blue" onclick="TEMPLATE.RETURN_DYNAMIC_MODAL('Asset Name','1','path/asset')">Accept</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+</div>
+<!-- END HTML -->
+
+<!-- BEGIN SCRIPT -->
+<script type="text/javascript">
+
+</script>
+<!-- END SCRIPT -->

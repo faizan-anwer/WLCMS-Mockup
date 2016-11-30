@@ -1,0 +1,4784 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Course Structure</title>
+
+	<!-- BEGIN CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/plugins/iosOverlay-js/css/iosOverlay.css" />
+	<link rel="stylesheet" type="text/css" href="assets/plugins/threesixty/styles.css" />
+
+		<!-- BEGIN SLIDE SPECIFIC CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/plugins/aciTree/css/aciTree.css" />
+		<link rel="stylesheet" type="text/css" href='assets/plugins/toggle-switch-master/css/toggleswitch.css' />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/DT_bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" />
+		<!-- END SLIDE SPECIFIC CSS -->
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style-metronic.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/header.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- END CSS -->
+	
+    <!-- BEGIN SCRIPTS -->
+    <script type="text/javascript" src="assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/html5shiv.js"></script>
+    <script type="text/javascript" src="assets/plugins/respond.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/BrowserDetect.js"></script>
+	<script type="text/javascript" src="assets/plugins/iosOverlay-js/js/iosOverlay.js"></script>
+	<script type="text/javascript" src="assets/plugins/iosOverlay-js/js/spin.min.js"></script>
+
+		<!-- BEGIN SLIDE LEVEL PLUGINS -->
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciPlugin.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.dom.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.core.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.selectable.js"></script>
+		<script type='text/javascript' src='assets/plugins/toggle-switch-master/js/jquery.toggleswitch.min.js'></script>
+		<script type='text/javascript' src='assets/plugins/jquery.corner.js'></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+		<script type='text/javascript' src="assets/scripts/table-managed.js"></script>
+		<script type="text/javascript" src="assets/plugins/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+		<!-- END SLIDE LEVEL PLUGINS -->
+	
+    <script type='text/javascript' src="assets/scripts/core.js"></script>
+	<!-- END SCRIPTS -->
+    
+</head>
+
+<body>
+    <div class="wrapper">
+	
+		<!-- BEGIN MESSAGE BAR -->
+		<div class="messages">
+			<!-- <div class="msg" id="contentSaveMsg">
+				<div class="alert alert-success alert-dismissible" role="alert">
+				  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				  <strong>Success!</strong> The content has been saved.
+				</div>
+			</div> -->
+		</div>
+		<!-- END MESSAGE BAR -->
+		
+		<!-- BEGIN MODALS -->
+		<div class="modals">
+		
+			<!-- BEGIN ADD LESSON -->
+			<div class="modal fade" id="addLessonModal" tabindex="-1" role="dialog" aria-labelledby="add-lesson-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="add-lesson-label"><i class="icon-folder-open"></i> Add New Lesson</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<!-- BEGIN FORM -->
+					<form class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+							  <div class="col-md-7">
+								 <input type="text" class="form-control"  placeholder="Enter lesson title." value=""/>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Developer Notes</label>
+							  <div class="col-md-7">
+								 <textarea class="form-control" rows="3"></textarea>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">
+								Lesson Learning Objectives
+							  </label>
+							  <div class="col-md-7 top-margin">
+								What are the 3-5 key things your learners should be able to do at the end of this lesson? Add these things as lesson learning objective.
+							  </div>
+						   </div>
+						   <div class="form-group">
+								<div class="col-md-offset-3 col-md-7">
+								  <div class="table-scrollable">
+									<table class="table table-bordered">
+									  <thead>
+										<tr class="td-header">
+										  <th colspan="2">
+											<div class='btn-group'>
+												<a class="btn btn-default" href="javascript:;" onclick="APP.LLO(this,true)" title="Add lesson learning objective"><i class="icon-plus blue-text"></i></a>
+												<a class="btn btn-default" href="javascript:;" title="Delete" onclick="APP.LLO(this,false)"><i class="icon-minus red-text"></i></a>
+											</div>
+										  </th>
+										</tr>
+										<tr class="td-header-bottom-border bg-gray-2">
+										  <th width="10"><input type="checkbox" class="checker" onclick="APP.CHECKBOX(this,true)" /></th>
+										  <th>Type lesson learning objective.</th>
+										</tr>
+									  </thead>
+									  <tbody>
+										
+									  </tbody>
+									</table>
+								</div>
+							    </div>
+						   </div>
+						</div>
+					</form>
+					<!-- END FORM -->
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ADD LESSON -->
+			
+			<!-- BEGIN ADD Slide -->
+			<div class="modal fade" id="addSlideModal" tabindex="-1" role="dialog" aria-labelledby="add-slide-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="add-slide-label"><i class="icon-file"></i> Add New Slide</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<form class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+							  <div class="col-md-7">
+								<textarea id="title-ckeditor-model" class="ckeditor form-control" name="title-ckeditor" rows="4"></textarea>
+							  </div>
+						   </div>
+						   <div class="form-group temp-icons">
+							  <label  class="col-md-3 control-label">Template<span class="required">*</span></label>
+							  <div class="col-md-7">
+								 <a data-toggle="modal" data-target="#selectTemplateModal" href="javascript:;" class="btn btn-default pull-left" title="Select Template"><i class="icon-question"></i></a>
+								 <label class='temp-label gray-text'>None Selected</label>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Duration (seconds)</label>
+							  <div class="col-md-7">
+								 <input type="text" class="form-control" placeholder="Enter the slide duration (expected seat time for this slide)." value=""/>
+							  </div>
+						   </div>
+						</div>
+					</form>
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ADD SLIDE -->
+			
+			<!-- BEGIN ADD EXAM -->
+			<div class="modal fade" id="addExamModal" tabindex="-1" role="dialog" aria-labelledby="add-exam-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="add-exam-label"><i class="glyphicon glyphicon-file inside-icon-exam"></i> Add Final Exam</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<form class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Number of target questions per exam</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" placeholder="Enter value in numeric" value="0" readonly="readonly">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Randomize questions</label>
+							  <div class="col-md-6">
+								<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Randomize answers</label>
+							  <div class="col-md-6">
+								<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Time permitted for exam (minutes)</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" placeholder="Enter value in numeric" value="15">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Grade questions</label>
+							  <div class="col-md-6">
+								<select class="form-control">
+									<option>After each question is answered</option>
+									<option>After exam is submitted</option>
+								</select>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Allow review after grading</label>
+							  <div class="col-md-6">
+								<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Score required to pass exam</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" placeholder="Enter value in numeric" value="70">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Number of attempts permitted</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" placeholder="Enter value in numeric" value="3">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Action to take if fail to pass</label>
+							  <div class="col-md-6">
+								<select class="form-control">
+									<option>Retake course</option>
+									<option>Go to next lesson</option>
+									<option>Lock course</option>
+								</select>
+							  </div>
+						   </div>
+						</div>
+					</form>
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ADD EXAM -->
+			
+			<!-- BEGIN ADD SUPPORT MATERIAL -->
+			<div class="modal fade" id="addSMModal" tabindex="-1" role="dialog" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					
+					<div id="accordionSM" class="multi-panels">
+					  <div class="panel">
+						<div id="collapseTypeSM" class="panel-collapse collapse in">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<h3 class="modal-title"><i class="glyphicon glyphicon-file inside-icon-plus-lg"></i> Add Support Material</h3>
+						  </div>
+						  <div class="modal-body text-center">
+						
+							<!-- BEGIN CREATE -->
+							<a data-toggle="collapse" data-parent="#accordionSM" href="#collapseAddSM" class="big-icon-btn">
+								<i class="icon-plus"></i>
+								<div>Create</div>
+								<p>Click here to create support material and attach to lesson.</p>
+							</a>
+							<!-- END CREATE -->
+							
+							<!-- BEGIN FIND -->
+							<a data-toggle="collapse" data-parent="#accordionSM" href="#collapseFindSM" class="big-icon-btn">
+								<i class="icon-search"></i>
+								<div>Find</div>
+								<p>Click here to find support material and attach to lesson.</p>
+							</a>
+							<!-- END FIND -->
+							
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel">
+						<div id="collapseAddSM" class="panel-collapse collapse">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<h3 class="modal-title"><i class="glyphicon glyphicon-file inside-icon-plus-lg"></i> Upload Support Material and Attach to Lesson</h3>
+						  </div>
+						  <div class="modal-body">
+							
+							<!-- BEGIN FORM -->
+							<div class="form-horizontal">
+								<div class="form-body">
+								   <div class="form-group">
+									  <label  class="col-md-3 control-label">Asset Name<span class="required">*</span></label>
+									  <div class="col-md-6">
+										<input type="text" class="form-control" placeholder="Enter asset name.">
+									  </div>
+								   </div>
+								   <div class="form-group">
+									  <label  class="col-md-3 control-label">Keywords</label>
+									  <div class="col-md-6">
+										<input type="text" class="form-control" data-role="tagsinput" placeholder=" Enter keywords.">
+									  </div>
+								   </div>
+								   <div class="form-group">
+									  <label  class="col-md-3 control-label">Description</label>
+									  <div class="col-md-6">
+										 <textarea class="form-control" rows="3"></textarea>
+									  </div>
+								   </div>
+								   <div class="form-group temp-icons">
+									  <label  class="col-md-3 control-label">Asset Type</label>
+									  <div class="col-md-6">
+										 <label class='temp-label gray-text'>Document / Image <br/>( .doc / .docx / .pdf / .ppt / .pptx / .xls / .xlsx / .png / .jpeg / .gif )</label>
+									  </div>
+								   </div>
+								   <div class="form-group">
+									  <label  class="col-md-3 control-label">File Path<span class="required">*</span></label>
+									  <div class="col-md-6">
+										 <div class="fileupload fileupload-new" data-provides="fileupload">
+											<span class="btn blue btn-file">
+											<span class="fileupload-new"><i class="glyphicon glyphicon-paperclip"></i> Browser</span>
+											<span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+											<input type="file" class="default" />
+											</span>
+											<span class="fileupload-preview" style="margin-left:5px;"></span>
+											<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+										 </div>
+									  </div>
+								   </div>
+								   <div class="form-group">
+									  <label  class="col-md-3 control-label"></label>
+									  <div class="col-md-6">
+										 <div class="checkbox-list">
+											<label>
+											<input type="checkbox" class="form-chkbox" checked="checked"> Attach this asset to this course's asset group.
+											</label>
+										 </div>
+									  </div>
+								   </div>
+								</div>
+							</div>
+							<!-- END FORM -->
+							
+						  </div>
+						  <div class="modal-footer">
+							<a data-toggle="collapse" data-parent="#accordionSM" href="#collapseTypeSM" class="btn dark pull-left collapsed">Back</a>
+							<button type="button" class="btn blue">Save</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel">
+						<div id="collapseFindSM" class="panel-collapse collapse">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+							<h3 class="modal-title"><i class="glyphicon glyphicon-file inside-icon-plus-lg"></i> Find Support Material and Attach to Lesson</h3>
+						  </div>
+						  <div class="modal-body">
+							
+							<!-- BEGIN GRID TABLE -->
+							<div class="form-body">
+							   <div class="form-group">
+									<div>
+										<div class="btn-group pull-right zero-padding col-md-6">
+											<div class="input-group">
+											  <span class="input-group-btn">
+												<label>Search<span class="search-required">*</span></label>
+											  </span>
+											  <input type="text" class="form-control"  placeholder="Search Asset">
+											  <span class="input-group-btn">
+												<button type="submit" class="btn blue"><i class="search-icon-white"></i> Find</button>
+											  </span>
+											</div>
+										</div>
+									</div>
+									<br /><br />
+									<div class="table-scrollable">
+										<table class="table table-str-border table-hover table-bordered white-bg">
+											<thead>
+											   <tr class="td-header-bottom-border">
+												  <th></th>
+												  <th>Asset Name</th>
+												  <th>Type</th>
+												  <th>Size</th>
+												  <th>Version</th>
+												  <th>Description</th>
+												  <th>Preview</th>
+											   </tr>
+											</thead>
+											<tbody height="100">
+											   <tr>
+												  <td><input type="radio" name='g1' value='1'/></td>
+												  <td>Asset-Name-A.doc</td>
+												  <td>DOC</td>
+												  <td>11MB</td>
+												  <td>1</td>
+												  <td>Description.</td>
+												  <td><a href="javascript:;" class="btn blue-text"><i class="glyphicon glyphicon-play"></i></a></td>
+											   </tr>
+												<tr>
+												  <td><input type="radio" name='g1' value='2'/></td>
+												  <td>Asset-Name-B.xls</td>
+												  <td>XLS</td>
+												  <td>2MB</td>
+												  <td>1</td>
+												  <td>Description.</td>
+												  <td><a href="javascript:;" class="btn blue-text"><i class="glyphicon glyphicon-play"></i></a></td>
+											   </tr>
+											</tbody>
+										</table>
+									</div>
+							   </div>
+							</div>
+							<!-- END GRID TABLE -->
+							
+						  </div>
+						  <div class="modal-footer">
+							<a data-toggle="collapse" data-parent="#accordionSM" href="#collapseTypeSM" class="btn dark pull-left collapsed">Back</a>
+							<button type="button" class="btn blue">Save</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					
+				</div>
+			  </div>
+			</div>
+			<!-- END ADD SUPPORT MATERIAL -->
+			
+			<!-- BEGIN ADD QUIZ -->
+			<div class="modal fade" id="addQuizModal" tabindex="-1" role="dialog" aria-labelledby="add-quiz-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="add-quiz-label"><i class="glyphicon glyphicon-file inside-icon-exam"></i> Add New Quiz</h3>
+				  </div>
+				  <div class="modal-body">
+					
+					<form class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Number of target questions per quiz</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" placeholder="Enter value in numeric" value="0" readonly="readonly">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Randomize questions</label>
+							  <div class="col-md-6">
+								<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Randomize answers</label>
+							  <div class="col-md-6">
+								<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Time permitted for quiz (minutes)</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" placeholder="Enter value in numeric" value="15">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Grade questions</label>
+							  <div class="col-md-6">
+								<select class="form-control">
+									<option>After each question is answered</option>
+									<option>After quiz is submitted</option>
+								</select>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Allow review after grading</label>
+							  <div class="col-md-6">
+								<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Score required to pass quiz</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" placeholder="Enter value in numeric" value="70">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Number of attempts permitted</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" placeholder="Enter value in numeric" value="3">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Action to take if fail to pass</label>
+							  <div class="col-md-6">
+								<select class="form-control">
+									<option>Retake lesson</option>
+									<option>Go to next lesson</option>
+									<option>Lock course</option>
+								</select>
+							  </div>
+						   </div>
+						</div>
+					</form>
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ADD QUIZ -->
+
+			<!-- BEGIN ADD QUESTION -->
+			<div class="modal fade" id="addQuestionModal" tabindex="-1" role="dialog" aria-labelledby="add-question-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="add-question-label"><i class="icon-question-item"></i> Add New Question</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<form class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Complexity</label>
+							  <div class="col-md-6">
+								<select class="form-control">
+									<option>1 – Recall</option>
+									<option>Option 2</option>
+									<option>Option 3</option>
+								</select>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Question type<span class="required">*</span></label>
+							  <div class="col-md-6">
+								<select class="form-control">
+									<option>Multiple-choice Single Select</option>
+									<option>Option 2</option>
+									<option>Option 3</option>
+								</select>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Question<span class="required">*</span></label>
+							  <div class="col-md-8">
+								 <textarea id="q-ckeditor-2" class="ckeditor form-control" name="q-ckeditor" rows="4"></textarea>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <div class="col-md-offset-3 col-md-6">
+								<div class="form-list">
+									<div>
+										<input type="checkbox">
+										<span>Disable answer choice randomization</span>
+									</div>
+								</div>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Answer Choices<span class="required">*</span></label>
+							  <div class="col-md-8">
+								<div class="table-scrollable">
+									<table class="table table-str-border table-bordered">
+									  <thead>
+										<tr class="td-header">
+										  <th colspan="8">
+											<div class='btn-group'>
+												<a data-toggle="modal" data-target="#addAnsChoiceModal" class="btn btn-default" href="javascript:;" title="Add Answer Choice to Question"><i class="icon-plus blue-text"></i></a>
+												<a class="btn btn-default" href="javascript:;" title="Delete Selected Answer Choice"><i class="icon-minus red-text"></i></a>
+											</div>
+										  </th>
+										</tr>
+										<tr class="td-header-bottom-border">
+										  <th></th>
+										  <th>Choice</th>
+										  <th>Correct</th>
+										  <th>Feedback</th>
+										</tr>
+									  </thead>
+									  <tbody height="100">
+										<tr>
+										  <td></td>
+										  <td></td>
+										  <td></td>
+										  <td></td>
+										</tr>
+									  </tbody>
+									</table>
+								</div>
+							  </div>
+						   </div>
+						</div>
+					</form>
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Save</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ADD QUESTION -->
+			
+			<!-- BEGIN ADD ANSWER CHOICES -->
+			<div class="modal fade" id="addAnsChoiceModal" tabindex="-1" role="dialog" aria-labelledby="add-ans-choice-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="add-ans-choice-label">Add New Answer Choice</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<form class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group">
+							  <label class="col-md-3 control-label">Answer Choice<span class="required">*</span></label>
+							  <div class="col-md-8">
+								 <textarea id="ans-ckeditor-1" class="ckeditor form-control" name="ans-ckeditor" rows="4"></textarea>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label class="col-md-3 control-label">Correct</label>
+							  <div class="col-md-8">
+								<input type="checkbox" value="option1" class="form-chkbox">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label class="col-md-3 control-label">Feedback</label>
+							  <div class="col-md-8">
+								 <textarea id="feedback-ckeditor-1" class="ckeditor form-control" name="feedback-ckeditor" rows="4"></textarea>
+							  </div>
+						   </div>
+						</div>
+					</form>
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Accept</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ADD ANSWER CHOICES -->
+			
+			<!-- BEGIN ASSET ADD -->
+			<div class="modal fade" id="addAssetModal" tabindex="-1" role="dialog" aria-labelledby="upload-asset-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="upload-asset-label">Upload Asset and Attach to Slide</h3>
+				  </div>
+				  <div class="modal-body">
+					<!-- BEGIN FORM -->
+					<div class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Asset Name<span class="required">*</span></label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control"  placeholder="Enter asset name.">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Keywords</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" data-role="tagsinput" placeholder="Enter keywords.">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Description</label>
+							  <div class="col-md-6">
+								 <textarea class="form-control" rows="3"></textarea>
+							  </div>
+						   </div>
+						   <div class="form-group temp-icons">
+							  <label  class="col-md-3 control-label">Asset Type</label>
+							  <div class="col-md-6">
+								 <!-- <label class='temp-label gray-text'>Image (JPG)</label> -->
+								 <select class="form-control">
+									<option>Image</option>
+									<option>Movie Clip</option>
+									<option>Flash Object</option>
+								 </select>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">File Path<span class="required">*</span></label>
+							  <div class="col-md-6">
+								 <div class="fileupload fileupload-new" data-provides="fileupload">
+									<span class="btn blue btn-file">
+									<span class="fileupload-new"><i class="glyphicon glyphicon-paperclip"></i> Browser</span>
+									<span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+									<input type="file" class="default" />
+									</span>
+									<span class="fileupload-preview" style="margin-left:5px;"></span>
+									<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+								 </div>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label"></label>
+							  <div class="col-md-6">
+								 <div class="checkbox-list">
+									<label>
+									<input type="checkbox" class="form-chkbox"> Attach this asset to this slide.
+									</label>
+									<label>
+									<input type="checkbox" class="form-chkbox"> Attach this asset to this course's asset group.
+									</label>
+								 </div>
+							  </div>
+						   </div>
+						</div>
+					</div>
+					<!-- END FORM -->
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Accept</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ASSET ADD -->
+			
+			<!-- BEGIN ASSET SEARCH -->
+			<div class="modal fade" id="searchAssetModal" tabindex="-1" role="dialog" aria-labelledby="asset-search-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="asset-search-label">Find Asset and Attach to Slide</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<!-- BEGIN GRID TABLE -->
+					<div class="form-body">							
+					   <div class="form-group">
+							<div>
+								<div class="btn-group pull-right zero-padding col-md-6">
+									<div class="input-group">
+									  <span class="input-group-btn">
+										<label>Search<span class="search-required">*</span></label>
+									  </span>
+									  <input type="text" class="form-control" placeholder="Search Visual Asset">
+									  <span class="input-group-btn">
+										<button type="submit" class="btn blue" id="search-btn-1" data-loading-text="Loading..."><i class="search-icon-white"></i> Find</button>
+									  </span>
+									</div>
+								</div>
+							</div>
+							<br /><br />
+							<div class="table-scrollable">
+								<table class="table table-str-border table-hover table-bordered white-bg">
+									<thead>
+									   <tr class="td-header-bottom-border">
+										  <th></th>
+										  <th>Asset Name</th>
+										  <th>Type</th>
+										  <th>Dimension</th>
+										  <th>Size</th>
+										  <th>Version</th>
+										  <th>Description</th>
+										  <th>Preview</th>
+									   </tr>
+									</thead>
+									<tbody height="100">
+									   <tr>
+										  <td><input type="radio" name='g1' value='1'/></td>
+										  <td>Asset Name A</td>
+										  <td>Image</td>
+										  <td>250 x 250</td>
+										  <td>1MB</td>
+										  <td>1</td>
+										  <td>Photo shows one match being used to light another.</td>
+										  <td><img src="assets/img/icons/templates/icon_22.png"></img></td>
+									   </tr>
+										<tr>
+										  <td><input type="radio" name='g1' value='2'/></td>
+										  <td>Asset Name B</td>
+										  <td>Image</td>
+										  <td>250 x 250</td>
+										  <td>1MB</td>
+										  <td>1</td>
+										  <td>Photo shows one match being used to light another.</td>
+										  <td><img src="assets/img/icons/templates/icon_23.png"></img></td>
+									   </tr>
+									</tbody>
+								</table>
+							</div>
+					   </div>
+					</div>
+					<!-- END GRID TABLE -->
+					
+				  </div>
+				  <div class="modal-footer">
+					<button id="accept-btn-1" type="button" class="btn blue">Accept</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ASSET SEARCH -->
+			
+			<!-- BEGIN ASSET AUDIO ADD -->
+			<div class="modal fade" id="addAAssetModal" tabindex="-1" role="dialog" aria-labelledby="upload-a-asset-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="upload-a-asset-label">Upload Asset and Attach to Slide</h3>
+				  </div>
+				  <div class="modal-body">
+					<!-- BEGIN FORM -->
+					<div class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Asset Name<span class="required">*</span></label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control"  placeholder="Enter asset name.">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Keywords</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" data-role="tagsinput" placeholder="Enter keywords.">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Description</label>
+							  <div class="col-md-6">
+								 <textarea class="form-control" rows="3"></textarea>
+							  </div>
+						   </div>
+						   <div class="form-group temp-icons">
+							  <label  class="col-md-3 control-label">Asset Type</label>
+							  <div class="col-md-6">
+								 <label class='temp-label gray-text'>Audio Clip (MP3)</label>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">File Path<span class="required">*</span></label>
+							  <div class="col-md-6">
+								 <div class="fileupload fileupload-new" data-provides="fileupload">
+									<span class="btn blue btn-file">
+									<span class="fileupload-new"><i class="glyphicon glyphicon-paperclip"></i> Browser</span>
+									<span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+									<input type="file" class="default" />
+									</span>
+									<span class="fileupload-preview" style="margin-left:5px;"></span>
+									<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+								 </div>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label"></label>
+							  <div class="col-md-6">
+								 <div class="checkbox-list">
+									<label>
+									<input type="checkbox" class="form-chkbox"> Attach this asset to this slide.
+									</label>
+									<label>
+									<input type="checkbox" class="form-chkbox"> Attach this asset to this course's asset group.
+									</label>
+								 </div>
+							  </div>
+						   </div>
+						</div>
+					</div>
+					<!-- END FORM -->
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Accept</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ASSET AUDIO ADD -->
+			
+			<!-- BEGIN ASSET AUDIO SEARCH -->
+			<div class="modal fade" id="searchAAssetModal" tabindex="-1" role="dialog" aria-labelledby="asset-a-search-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="asset-a-search-label">Find Asset and Attach to Slide</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<!-- BEGIN GRID TABLE -->
+					<div class="form-body">							
+					   <div class="form-group">
+							<div>
+								<div class="btn-group pull-right zero-padding col-md-6">
+									<div class="input-group">
+									  <span class="input-group-btn">
+										<label>Search<span class="search-required">*</span></label>
+									  </span>
+									  <input type="text" class="form-control"  placeholder="Search Asset">
+									  <span class="input-group-btn">
+										<button type="submit" class="btn blue"><i class="search-icon-white"></i> Find</button>
+									  </span>
+									</div>
+								</div>
+							</div>
+							<br /><br />
+							<div class="table-scrollable">
+								<table class="table table-str-border table-hover table-bordered white-bg">
+									<thead>
+									   <tr class="td-header-bottom-border">
+										  <th></th>
+										  <th>Asset Name</th>
+										  <th>Type</th>
+										  <th>Duration</th>
+										  <th>Size</th>
+										  <th>Version</th>
+										  <th>Description</th>
+										  <th>Preview</th>
+									   </tr>
+									</thead>
+									<tbody height="100">
+									   <tr>
+										  <td><input type="radio" name='g1' value='1'/></td>
+										  <td>Asset Name A</td>
+										  <td>MP3</td>
+										  <td>00:00:20</td>
+										  <td>1MB</td>
+										  <td>1</td>
+										  <td>Description.</td>
+										  <td><a href="javascript:;" class="btn blue-text"><i class="glyphicon glyphicon-play"></i></a></td>
+									   </tr>
+										<tr>
+										  <td><input type="radio" name='g1' value='2'/></td>
+										  <td>Asset Name B</td>
+										  <td>MP3</td>
+										  <td>00:01:00</td>
+										  <td>1MB</td>
+										  <td>1</td>
+										  <td>Description.</td>
+										  <td><a href="javascript:;" class="btn blue-text"><i class="glyphicon glyphicon-play"></i></a></td>
+									   </tr>
+									</tbody>
+								</table>
+							</div>
+					   </div>
+					</div>
+					<!-- END GRID TABLE -->
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Accept</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ASSET AUDIO SEARCH -->
+			
+			<!-- BEGIN ASSET VIDEO ADD -->
+			<div class="modal fade" id="addVAssetModal" tabindex="-1" role="dialog" aria-labelledby="upload-a-asset-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="upload-a-asset-label">Upload Asset and Attach to Slide</h3>
+				  </div>
+				  <div class="modal-body">
+					<!-- BEGIN FORM -->
+					<div class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Asset Name<span class="required">*</span></label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control"  placeholder="Enter asset name.">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Keywords</label>
+							  <div class="col-md-6">
+								<input type="text" class="form-control" data-role="tagsinput" placeholder="Enter keywords.">
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">Description</label>
+							  <div class="col-md-6">
+								 <textarea class="form-control" rows="3"></textarea>
+							  </div>
+						   </div>
+						   <div class="form-group temp-icons">
+							  <label  class="col-md-3 control-label">Asset Type</label>
+							  <div class="col-md-6">
+								 <label class='temp-label gray-text'>Video Clip (MP4)</label>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">File Path<span class="required">*</span></label>
+							  <div class="col-md-6">
+								 <div class="fileupload fileupload-new" data-provides="fileupload">
+									<span class="btn blue btn-file">
+									<span class="fileupload-new"><i class="glyphicon glyphicon-paperclip"></i> Browser</span>
+									<span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+									<input type="file" class="default" />
+									</span>
+									<span class="fileupload-preview" style="margin-left:5px;"></span>
+									<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+								 </div>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label"></label>
+							  <div class="col-md-6">
+								 <div class="checkbox-list">
+									<label>
+									<input type="checkbox" class="form-chkbox"> Attach this asset to this slide.
+									</label>
+									<label>
+									<input type="checkbox" class="form-chkbox"> Attach this asset to this course's asset group.
+									</label>
+								 </div>
+							  </div>
+						   </div>
+						</div>
+					</div>
+					<!-- END FORM -->
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Accept</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ASSET VIDEO ADD -->
+			
+			<!-- BEGIN ASSET VIDEO SEARCH -->
+			<div class="modal fade" id="searchVAssetModal" tabindex="-1" role="dialog" aria-labelledby="asset-v-search-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="asset-v-search-label">Find Video Streaming Asset and Attach to Slide</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<!-- BEGIN GRID TABLE -->
+					<div class="form-body">							
+					   <div class="form-group">
+							<div>
+								<div class="btn-group pull-right zero-padding col-md-6">
+									<div class="input-group">
+									  <span class="input-group-btn">
+										<label>Search<span class="search-required">*</span></label>
+									  </span>
+									  <input type="text" class="form-control"  placeholder="Search Asset">
+									  <span class="input-group-btn">
+										<button type="submit" class="btn blue"><i class="search-icon-white"></i> Find</button>
+									  </span>
+									</div>
+								</div>
+							</div>
+							<br /><br />
+							<div class="table-scrollable">
+								<table class="table table-str-border table-hover table-bordered white-bg">
+									<thead>
+									   <tr class="td-header-bottom-border">
+										  <th></th>
+										  <th>Asset Name</th>
+										  <th>Type</th>
+										  <th>Duration</th>
+										  <th>Size</th>
+										  <th>Version</th>
+										  <th>Description</th>
+										  <th>Preview</th>
+									   </tr>
+									</thead>
+									<tbody height="100">
+									   <tr>
+										  <td><input type="radio" name='g1' value='1'/></td>
+										  <td>Asset Name A</td>
+										  <td>MP4</td>
+										  <td>00:00:20</td>
+										  <td>1MB</td>
+										  <td>1</td>
+										  <td>Description.</td>
+										  <td><a href="javascript:;" class="btn blue-text"><i class="glyphicon glyphicon-play"></i></a></td>
+									   </tr>
+										<tr>
+										  <td><input type="radio" name='g1' value='2'/></td>
+										  <td>Asset Name B</td>
+										  <td>MP4</td>
+										  <td>00:01:00</td>
+										  <td>1MB</td>
+										  <td>1</td>
+										  <td>Description.</td>
+										  <td><a href="javascript:;" class="btn blue-text"><i class="glyphicon glyphicon-play"></i></a></td>
+									   </tr>
+									</tbody>
+								</table>
+							</div>
+					   </div>
+					</div>
+					<!-- END GRID TABLE -->
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Accept</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END ASSET VIDEO SEARCH -->
+			
+			<!-- BEGIN TEMPLATE SELECT -->
+			<div class="modal fade" id="selectTemplateModal" tabindex="-1" role="dialog" aria-labelledby="temp-select-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="temp-select-label">Select Template</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<div class='col-md-8 temp-icons'>
+						<div>
+							<h5>Presentation Templates</h5>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-0"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-1"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-2"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-3"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-4"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-5"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-6"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-7"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-8"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-9"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-10"></i></a>
+						</div>
+						<br />
+						<div>
+							<h5>Activity Templates</h5>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-11"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-12"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-13"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-14"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-15"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-16"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-17"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-18"></i></a>
+						</div>
+						<br />
+						<div>
+							<h5>Game Templates</h5>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-19"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-20"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-21"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-22"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-23"></i></a>
+							<a class="btn btn-default" href="javascript:;"><i class="temp-icon-24"></i></a>
+						</div>
+					</div>
+					
+					<div class='col-md-4 temp-desc'>
+						<h3>Visual Right Template</h3>
+						<div><img src="assets/img/icons/templates/icon_19b.png"></img></div>
+						<p>This template puts text on the left and a single visual element, such as a picture (JPG, GIF, PNG) or animation (SWF) on the right.</p>
+					</div>
+					
+					<div class='clearfix'></div>
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Accept</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END TEMPLATE SELECT -->
+			
+			<!-- BEGIN CONFIRMATION -->
+			<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmation-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="confirmation-label">
+						
+						<!-- Dynamic Title -->
+						
+					</h3>
+				  </div>
+				  <div class="modal-body">
+				
+					<!-- Dynamic Message -->
+					
+				  </div>
+				  <div class="modal-footer">
+				  
+					<!-- Dynamic Action Buttons -->
+					
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END CONFIRMATION -->
+			
+			<!-- BEGIN IMPORT PPT -->
+			<div class="modal fade" id="importPPTModal" tabindex="-1" role="dialog" aria-labelledby="import-ppt-label" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h3 class="modal-title" id="import-ppt-label"><i class="icon-upload"></i> Import PowerPoint</h3>
+				  </div>
+				  <div class="modal-body">
+					<!-- BEGIN FORM -->
+					<div class="form-horizontal" role="form">
+						<div class="form-body">
+						   <div class="form-group temp-icons">
+							  <label  class="col-md-3 control-label">Asset Type</label>
+							  <div class="col-md-6">
+								 <label class='temp-label gray-text'>Document ( .ppt / .pptx )</label>
+							  </div>
+						   </div>
+						   <div class="form-group">
+							  <label  class="col-md-3 control-label">File Path<span class="required">*</span></label>
+							  <div class="col-md-6">
+								 <div class="fileupload fileupload-new" data-provides="fileupload">
+									<span class="btn blue btn-file">
+									<span class="fileupload-new"><i class="glyphicon glyphicon-paperclip"></i> Browse</span>
+									<span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+									<input type="file" class="default" />
+									</span>
+									<span class="fileupload-preview" style="margin-left:5px;"></span>
+									<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+								 </div>
+							  </div>
+						   </div>
+						</div>
+					</div>
+					<!-- END FORM -->
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn blue">Accept</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<!-- END IMPORT PPT -->
+			
+		</div>
+		<!-- END MODALS -->
+		
+        <!-- Header Begin -->
+        <div class="header-content">
+            
+			<!-- Top Bar Begin -->
+            <div class="push-down">
+                <div class="container-fluid">
+                    <div class="pull-left logo"></div>
+                    <ul class="top-right-nav">
+                        <li class="nav-ph">888-360-8764</li>
+                        <li class="divider"></li>
+                        <li class="support-a"><a href="javascript:;">Support</a></li>
+                        <li class="divider"></li>
+                        <li><i style="font-size: 18px" class="icon threesixty-chat-now"></i> <a href="javascript:;">Chat Now</a></li>
+                        <li class="divider"></li>
+						<!-- <li><i class="glyphicon glyphicon-shopping-cart"></i> <a href="javascript:;">Cart <span class="badge"><strong>2</strong></span></a></li> -->
+						<li><i class="icon-comment"></i> <a href="javascript:;">Feedback</span></a></li>
+						<li class="divider"></li>
+						<li>
+							<div class="btn-group db-box-2">
+								<div class="pull-left mode-label">Manager</div>
+								<i class="pull-left lady-icon dp"></i>
+								<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+									<span class="caret"></span>
+								</button>
+								<ul role="menu" class="dropdown-menu dropdown-menu-right">
+									<li><a href="#">My Profile</a></li>
+									<li><a href="index.html">Log Out</a></li>
+									<li class="divider"></li>
+									<li><a id="lnr_mode" href="../LMS/dashboard-1.html">Learner</a></li>
+									<li><a id="mgr_mode" href="../LMS/dashboard-2.html">Manager</a></li>
+									<li><a id="ins_mode" href="javascript:;" onclick="APP.MODE_CHANGE(this);">Instructor</a></li>
+									<li><a id="atr_mode" href="../Single/dashboard.html" >Author</a></li>
+									<li><a id="acr_mode" href="javascript:;" onclick="APP.MODE_CHANGE(this);">Accreditation</a></li>
+									<li><a id="admin_mode" href="javascript:;" onclick="APP.MODE_CHANGE(this);">Administrator</a></li>
+								</ul>
+							</div>
+						</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+            
+            <!-- Navigation Bar Begin -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+				
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="btn btn-lg header-menu" data-toggle="collapse" data-target="#header-navbar-collapse"><i class="icon-reorder"></i></a>
+					
+					<ul class="nav collapse" id="header-navbar-collapse">
+					
+						<!-- Go To
+						<li class="dropdown">
+						  <a title="Go To" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons goto-icon"></div><span>Go To</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li class="dropdown-cat">Website</li>
+							<li><a href="http://www.360training.com/">Home – U.S.</a></li>
+							<li><a href="http://www.360training.com/apac/">Home – Asia Pacific</a></li>
+							<li><a href="http://www.360training.com/enterprise/">Corporate</a></li>
+							<li><a href="http://www.360training.com/authoring-program/">Author and Teach</a></li>
+							<li><a href="http://www.360training.com/partner-program/">Partner</a></li>
+							<li class="dropdown-cat">My Accounts</li>
+							<li><a href="javascript:;">Learn</a></li>
+							<li><a href="javascript:;">Manage Learners</a></li>
+							<li><a href="javascript:;">Teach Classes</a></li>
+							<li><a href="javascript:;">Author Courses</a></li>
+							<li><a href="javascript:;">Manage Accreditations</a></li>
+							<li><a href="javascript:;">Administrate Accounts</a></li>
+						  </ul>
+						</li> -->
+						
+						<!-- Store -->
+						<li class="dropdown">
+						  <a title="Store" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons store-icon"></div><span>Store</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<!-- <li><a href="../Authoring_Program/value_prop.html">Author and Trainer Solutions</a></li> -->
+							<li><a href="../Authoring_Program/author-starter.html">Free Software and Packages</a></li>
+							<li><a href="../Authoring_Program/author-lcms-software.html">Course Creation Software and Upgrades</a></li>
+							<li><a href="../Authoring_Program/author-lms-software.html">Learning Management Software and Upgrades</a></li>
+							<li><a href="../Authoring_Program/author-storefront-software.html">eCommerce Store Software and Upgrades</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Create -->
+						<li class="dropdown">
+						  <a title="Create" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons create-icon"></div><span>Create</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="javascript:;" style="padding:10px">Overview to Creation Options</a></li>
+							<li class="dropdown-cat">Account-free Courses</li>
+							<li><a href="http://www.360training.com/authoring-program/submit-webinar-course/">Submit a Webinar Course</a></li>
+							<li><a href="http://www.360training.com/authoring-program/submit-classroom-course/">Submit a Classroom Course</a></li>
+							<li class="dropdown-cat">Account-based Courses</li>
+							<li><a href="javascript:;">Create an Online Course</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Manage -->
+						<li class="dropdown">
+						  <a title="Manage" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons manage-icon"></div><span>Manage</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="javascript:;">Author Account</a></li>
+							<li><a href="javascript:;">Global Royalty Report</a></li>
+							<li><a href="javascript:;">Global Revenue Share Report</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Community -->
+						<li class="dropdown">
+						  <a title="Community" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons community-icon"></div><span>Community</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li class="dropdown-cat">Support</li>
+							<!-- <li><a href="https://player.360training.com/ICP4/CoursePlayerPreviewer.aspx?COURSEID=74692&VARIANT=En-US&BRANDCODE=DEFAULT&PREVIEW=true&SESSION=bd5d5a7d-7fad-4203-b185-72d00247f2af">Video Tutorials</a></li>
+							<li><a href="https://player.360training.com/ICPFilesystem/LCMSManual/LCMS_Training_Manual_v124.pdf">User Guides</a></li> -->
+							<li><a href="../Authoring_Program/support.html">Application Support</a></li>
+
+
+							<li class="dropdown-cat">FAQs</li>
+							<li><a href="../Authoring_Program/faqs.html">Software Purchases and Terms</a></li>
+							<li><a href="../Authoring_Program/faqs.html">More About Tools</a></li>
+							<li><a href="../Authoring_Program/faqs.html">Life as a 360 Author</a></li>
+							<li><a href="../Authoring_Program/faqs.html">Managing Your Own Storefront</a></li>
+
+
+							<li class="dropdown-cat">Community</li>
+							<li><a href="../Authoring_Program/news.html">What’s New</a></li>
+							<li><a href="../Authoring_Program/whitepapers.html">Whitepapers</a></li>
+							<li><a href="../Authoring_Program/blogs.html">Blogs</a></li>
+							<li><a href="https://www.facebook.com/pages/360trainingcom-Authoring/378754678842234">Facebook</a></li>
+							<li><a href="https://twitter.com/360trainingAuth">Twitter</a></li>
+							<li><a href="../Authoring_Program/showcase.html">Showcase</a></li>
+							<li><a href="../Authoring_Program/opportunities.html">Opportunities</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Search -->
+						<li class="search-box">
+							<form title="Search" class="pull-left" role="search" action="search_course.html">
+							  <div class="pull-left">
+									<input type="text" class="form-control field" placeholder="Search Authored Courses" value="">
+							  </div>
+							  <div class="pull-right">
+								<button class="btn btn-default search-btn" type="submit"><i class="search-icon"></i></button>
+							  </div>
+							</form>
+							
+							<div class="pull-left advance-search">
+								<a href="search_course.html" title="Advanced Search"><i></i><span>Advanced Search</span></a>
+							</div>
+						</li>
+                    
+					</ul>
+                </div>
+            </nav>
+            <!-- Navigation Bar End -->
+			
+        </div>
+        <!-- Header End -->
+		
+        <!-- BEGIN MAIN CONTENT -->
+        <div class="main-content">
+			
+            <!-- Left Panel Begin -->
+            <div id="leftNavPanel" class="left-nav-panel">
+                <div class="thumb-btn">
+                    <a class="collapse-btn-icon" onClick="toggle_leftNavPanel()"></a>
+                </div>
+                
+                <div class="list-holder">
+                    <ul class="list-group only-icon-panel">
+
+                        <!-- Overview -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group" id="nav_accordion_0">
+                                <i class="glyphicon glyphicon-book"></i>
+                                <span>Overview</span>
+                            </a>
+                        </li>
+					
+						<!-- Content -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group" id="nav_accordion_1">
+                                <i class="glyphicon glyphicon-list-alt"></i>
+                                <span>Content</span>
+                            </a>
+                        </li>
+						
+                        <!-- Settings -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group" id="nav_accordion_2">
+                                <i class="icon-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Publishing -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group open-sign" id="nav_accordion_3">
+                                <i class="glyphicon glyphicon-download-alt"></i>
+                                <span>Publishing</span>
+                                <b></b>
+                            </a>
+                            
+                            <ul class="list-sub-group">
+                                <li class="list-group-item">
+                                    <a href="course_availability.html">
+                                        <i></i>
+                                        <span>Set Availability</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="course_pricing.html">
+                                        <i></i>
+                                        <span>Set Pricing</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="course_marketing.html">
+                                        <i></i>
+                                        <span>Set Marketing</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+								<li class="list-group-item">
+                                    <a href="course_publish.html">
+                                        <i></i>
+                                        <span>Publish Course</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="course_offer.html">
+                                        <i></i>
+                                        <span>Offer on 360 Marketplace</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+						
+                    </ul>
+                </div>
+            </div>
+            <!-- Left Panel End -->
+            
+            <!-- Workspace Begin -->
+            <div id="contentHolder" class="content-holder">
+			
+				<!-- BEGIN BREADCRUMB BAR CONTENT -->
+                <div>
+                	<!-- Breadcrumb -->
+                    <div class="col-xs-8">
+                        <ol class="breadcrumb">
+                        	<li><a href="../Authoring_Program/">Author, Teach, and Sell</a></li>
+                        	<li><a href="dashboard.html">Dashboard</a></li>
+							<li><a href="course_type.html">Create</a></li>
+                            <li>Course Name (360-123456-001)</li>
+                        </ol>
+                    </div>
+                    
+                    <!-- Edit/View Toggle -->
+                    <div class="col-xs-4 zero-right-padding">
+                        <span class="pull-right">
+                        	<input type='checkbox' name='VEToggle' id='VEToggle' value='1' class='toggleswitch' checked='checked' />
+                        </span>
+                    </div>
+                </div>
+                <!-- END BEGIN BREADCRUMB BAR CONTENT -->
+				
+                <div class="clearfix"></div>
+
+                <!-- BEGIN MAIN CONTENT -->
+                <div class="page-content">
+					
+					<!-- BEGIN MAIN HEADINGS -->
+					<div class="panel-group">
+						<div class="page-heading">
+							<div>
+								<h1>Course Name</h1>
+								<div>
+									<a href="javascript:;" title="Best Practice">BEST PRACTICE</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END MAIN HEADINGS -->
+				
+					<!-- BEGIN ACTION BUTTONS -->
+					<div class="panel-group">
+						<div>
+							<button title="Preview Course" class="btn blue" type="button"><i class="icon-desktop"></i> Preview Course</button>
+							<button type="button" class="btn blue" id="gritterSave" title="Save" onclick="APP.SAVE_COURSE()"><i class="icon-save"></i> Save</button>
+						</div>
+					</div>
+					<!-- END ACTION BUTTONS -->
+				
+					<!-- BEGIN LESSON ACCORDIONS -->
+					<div class="panel-group accordion" id="lessons_accordion_0">
+					
+						<!-- BEGIN LESSON -->
+						<div class="panel panel-default">
+						   <div class="panel-heading">
+							
+								<div class="holder">
+								
+									<div class="anchors move-btn">
+										<a href="javascript:;" title="Move Up" class="up">
+											<i class="icon-arrow-up"></i>
+										</a>
+									
+										<a class="down" title="Move Down" href="javascript:;">
+											<i class="icon-arrow-down"></i>
+										</a>
+									</div>
+									
+									<div class="anchors">
+										<a href="#setup_0" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle" title="Lesson Setup">
+											<i class="icon-cog"></i>
+										</a>
+									</div>
+
+									<div class="panel-title">
+										<a href="#list_0" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle">
+											<i class="icon-folder-open"></i> Lesson 1
+										</a>
+									</div>
+
+									<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+										<i class="icon-remove"></i>
+									</div>
+									
+								</div>
+							
+						   </div>
+						   
+						   <!-- BEGIN PANEL SETUP FORM -->
+						   <div id="setup_0" class="panel-collapse collapse bg-gray-2 a1">
+							  <div class="panel-body">
+								
+								<!-- BEGIN LESSON SETUP FORM -->
+								<div class="portlet">
+								  <div class="portlet-title" title="Lesson Setup">
+									 <div class="caption">
+										Lesson Setup
+									 </div>
+									 <div class="tools">
+										<!-- <a href="" class="expand"></a> -->
+									 </div>
+								  </div>
+								  <div class="portlet-body form">
+								
+									<!-- BEGIN FORM -->
+									<form class="form-horizontal" role="form">
+										<div class="form-body">
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+											  <div class="col-md-6">
+												 <input type="text" class="form-control"  placeholder="Enter lesson title." value="Lesson 1"/>
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Developer Notes</label>
+											  <div class="col-md-6">
+												 <textarea class="form-control" rows="3">Fake description for a mockup flow testing.</textarea>
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">
+												Lesson Learning Objectives
+											  </label>
+											  <div class="col-md-6">
+												What are the 3-5 key things your learners should be able to do at the end of this lesson? Add these things as lesson learning objective.
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <div class="col-md-offset-3 col-md-6">
+												<div class="table-scrollable">
+													<table class="table table-bordered">
+													  <thead>
+														<tr class="td-header">
+														  <th colspan="2">
+															<div class='btn-group'>
+																<a class="btn btn-default" href="javascript:;" onclick="APP.LLO(this,true)" title="Add lesson learning objective"><i class="icon-plus blue-text"></i></a>
+																<a class="btn btn-default" href="javascript:;" title="Delete" onclick="APP.LLO(this,false)"><i class="icon-minus red-text"></i></a>
+															</div>
+														  </th>
+														</tr>
+														<tr class="td-header-bottom-border bg-gray-2">
+														  <th width="10"><input type="checkbox" class="checker" onclick="APP.CHECKBOX(this,true)" /></th>
+														  <th>Type lesson learning objective.</th>
+														</tr>
+													  </thead>
+													  <tbody>
+														
+													  </tbody>
+													</table>
+												</div>
+											  </div>
+										   </div>
+										</div>
+									</form>
+									<!-- END FORM -->
+									
+								  </div>
+								</div>
+								<!-- END LESSON SETUP FORM -->
+							
+								<!-- BEGIN CLOSE BUTTON -->
+								<div class="footer">
+									<a href="#setup_0" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE LESSON SETUP</a>
+								</div>
+								<!-- END CLOSE BUTTON -->
+								
+							  </div>
+						   </div>
+						   <!-- END PANEL SETUP FORM -->
+						   
+						   <!-- BEGIN PANEL BODY -->
+						   <div id="list_0" class="panel-collapse collapse bg-gray-2 a2">
+							  <div class="panel-body">
+								
+								<!-- BEGIN SLIDES PORTLET -->
+								<div class="portlet">
+								  <div class="portlet-title">
+									 <div class="caption">
+										Lesson Components
+									 </div>
+									 <div class="tools">
+										
+									 </div>
+								  </div>
+								  <div class="portlet-body">
+
+									<!-- BEGIN SLIDE ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="lesson_1">
+										
+										<!-- BEGIN SLIDE -->
+										<div class="panel panel-default">
+										   <div class="panel-heading">
+											  
+												<div class="holder">
+								
+													<div class="anchors move-btn">
+														<a href="javascript:;" title="Move Up" class="up">
+															<i class="icon-arrow-up"></i>
+														</a>
+													
+														<a class="down" title="Move Down" href="javascript:;">
+															<i class="icon-arrow-down"></i>
+														</a>
+													</div>
+													
+													<div class="anchors">
+														<a href="#setup_0_0" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle" title="Slide Setup">
+															<i class="icon-cog"></i>
+														</a>
+													</div>
+
+													<div class="panel-title">
+														<a href="#list_0_0" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle">
+															<i class="icon-file"></i> Slide 1
+														</a>
+													</div>
+
+													<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+														<i class="icon-remove"></i>
+													</div>
+													
+												</div>
+											  
+										   </div>
+										   
+										   <!-- BEGIN SETUP -->
+										   <div id="setup_0_0" class="panel-collapse collapse a1">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SLIDE SETUP FORM -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Slide Setup
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body form">
+													 
+													  <form class="form-horizontal" role="form">
+														<div class="form-body">
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+															  <div class="col-md-6">
+																<textarea id="title-ckeditor-1" class="ckeditor form-control" name="title-ckeditor" rows="4">Slide 1</textarea>
+															  </div>
+														   </div>
+														   <div class="form-group temp-icons">
+															  <label  class="col-md-3 control-label">Template<span class="required">*</span></label>
+															  <div class="col-md-6">
+																 <a data-toggle="modal" data-target="#selectTemplateModal" href="javascript:;" class="btn btn-default pull-left" title="Select Template"><i class="temp-icon-1"></i></a>
+																 <label class='temp-label gray-text'>Visual Right</label>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Duration (seconds)</label>
+															  <div class="col-md-6">
+																 <input type="text" class="form-control" placeholder="Enter the slide duration (expected seat time for this slide)." value="10"/>
+															  </div>
+														   </div>
+														</div>
+													 </form>
+													 
+												  </div>
+												</div>
+												<!-- END SLIDE SETUP FORM -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#setup_0_0" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SLIDE SETUP</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+
+											  </div>
+										   </div>
+										   <!-- END SETUP -->
+										   
+										   <!-- BEGIN PANEL BODY -->
+										   <div id="list_0_0" class="panel-collapse collapse a2">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SLIDE COMPONENTS -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Slide Components
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body form">
+												  
+													<form class="form-horizontal" role="form">
+													
+														<!-- BEGIN COMPONENTS 1 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Text">
+															 <div class="caption">
+																<h5><strong>Text</strong></h5>
+															 </div>
+															 <div class="tools">
+																<i class="text-icon"></i>
+																<a href="" class="collapse"></a>
+															 </div>
+														  </div>
+														  <div class="portlet-body">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	<textarea id='text-ckeditor-1' class="ckeditor form-control" name="text-ckeditor" rows="4"></textarea>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 1 -->
+														
+														<!-- BEGIN COMPONENTS 2 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Visual Asset">
+															<div class="caption">
+																<h5><strong>Visual </strong> - 1 asset</h5>
+															</div>
+															<div class="tools">
+																<i class="camera-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	  <div class="table-scrollable">
+																		<table class="table table-str-border table-bordered">
+																		  <thead>
+																			<tr class="td-header">
+																			  <th colspan="8">
+																				<div class='btn-group'>
+																					<a data-toggle="modal" data-target="#searchAssetModal" class="btn btn-default" href="javascript:;" title="Find Asset and Attach to Slide"><i class="glyphicon glyphicon-new-window"></i></a>
+																					<a data-toggle="modal" data-target="#addAssetModal" class="btn btn-default" href="javascript:;" title="Upload Asset and Attach to Slide"><i class="icon-plus blue-text"></i></a>
+																					<a class="btn btn-default" href="javascript:;" title="Detach Asset"><i class="icon-minus red-text"></i></a>
+																				</div>
+																			  </th>
+																			</tr>
+																			<tr class="td-header-bottom-border">
+																			  <th></th>
+																			  <th>Asset</th>
+																			  <th>Name</th>
+																			  <th>Type</th>
+																			  <th>Dimension</th>
+																			  <th>Size</th>
+																			  <th>Version</th>
+																			  <th>Description</th>
+																			</tr>
+																		  </thead>
+																		  <tbody height="100">
+																			<tr>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			</tr>
+																		  </tbody>
+																		</table>
+																	</div>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 2 -->
+														
+														<!-- BEGIN COMPONENTS 3 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Audio Asset">
+															<div class="caption">
+																<h5><strong>Audio </strong> - 1 asset</h5>
+															</div>
+															<div class="tools">
+																<i class="audio-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	<div class="table-scrollable">
+																		<table class="table table-str-border table-bordered">
+																		  <thead>
+																			<tr class="td-header">
+																			  <th colspan="8">
+																				<div class='btn-group'>
+																					<a data-toggle="modal" data-target="#searchAAssetModal" class="btn btn-default" href="javascript:;" title="Find Asset and Attach to Slide"><i class="glyphicon glyphicon-new-window"></i></a>
+																					<a data-toggle="modal" data-target="#addAAssetModal" class="btn btn-default" href="javascript:;" title="Upload Asset and Attach to Slide"><i class="icon-plus blue-text"></i></a>
+																					<a class="btn btn-default" href="javascript:;" title="Detach Asset"><i class="icon-minus red-text"></i></a>
+																				</div>
+																			  </th>
+																			</tr>
+																			<tr class="td-header-bottom-border">
+																			  <th></th>
+																			  <th>Asset</th>
+																			  <th>Name</th>
+																			  <th>Type</th>
+																			  <th>Duration</th>
+																			  <th>Size</th>
+																			  <th>Version</th>
+																			  <th>Description</th>
+																			</tr>
+																		  </thead>
+																		  <tbody height="100">
+																			<tr>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			</tr>
+																		  </tbody>
+																		</table>
+																	</div>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 3 -->
+														
+														<!-- BEGIN COMPONENTS 4 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Video Asset">
+															<div class="caption">
+																<h5><strong>Video </strong> - 1 asset</h5>
+															</div>
+															<div class="tools">
+																<i class="video-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	<div class="table-scrollable">
+																		<table class="table table-str-border table-bordered">
+																		  <thead>
+																			<tr class="td-header">
+																			  <th colspan="8">
+																				<div class='btn-group'>
+																					<a data-toggle="modal" data-target="#searchVAssetModal" class="btn btn-default" href="javascript:;" title="Find Asset and Attach to Slide"><i class="glyphicon glyphicon-new-window"></i></a>
+																					<a data-toggle="modal" data-target="#addVAssetModal" class="btn btn-default" href="javascript:;" title="Upload Asset and Attach to Slide"><i class="icon-plus blue-text"></i></a>
+																					<a class="btn btn-default" href="javascript:;" title="Detach Asset"><i class="icon-minus red-text"></i></a>
+																				</div>
+																			  </th>
+																			</tr>
+																			<tr class="td-header-bottom-border">
+																			  <th></th>
+																			  <th>Asset</th>
+																			  <th>Name</th>
+																			  <th>Type</th>
+																			  <th>Duration</th>
+																			  <th>Size</th>
+																			  <th>Version</th>
+																			  <th>Description</th>
+																			</tr>
+																		  </thead>
+																		  <tbody height="100">
+																			<tr>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			</tr>
+																		  </tbody>
+																		</table>
+																	</div>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 4 -->
+														
+														<!-- BEGIN COMPONENTS 5 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Closed Captioning">
+															<div class="caption">
+																<h5><strong>Closed Captioning</strong></h5>
+															</div>
+															<div class="tools">
+																<i class="cc-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	 <textarea id="cc-ckeditor-1" class="ckeditor form-control" name="cc-ckeditor" rows="8"></textarea>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 5 -->
+													
+														<!-- BEGIN ACTION BUTTON -->
+														<div class="form-actions fluid">
+														   <div class="text-center">
+															  <button type="button" class="btn blue"><i class="icon-desktop"></i> Preview Slide</button>
+														   </div>
+														</div>
+														<!-- END ACTION BUTTON -->
+														
+													</form>
+													 
+												  </div>
+												</div>
+												<!-- END SLIDE COMPONENTS -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#list_0_0" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SLIDE</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+												
+											  </div>
+										   </div>
+										   <!-- END PANEL BODY -->
+										   
+										</div>
+										<!-- END SLIDE -->
+										
+										<!-- BEGIN SLIDE -->
+										<div class="panel panel-default">
+										   <div class="panel-heading">
+											  
+												<div class="holder">
+								
+													<div class="anchors move-btn">
+														<a href="javascript:;" title="Move Up" class="up">
+															<i class="icon-arrow-up"></i>
+														</a>
+													
+														<a class="down" title="Move Down" href="javascript:;">
+															<i class="icon-arrow-down"></i>
+														</a>
+													</div>
+													
+													<div class="anchors">
+														<a href="#setup_0_1" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle" title="Slide Setup">
+															<i class="icon-cog"></i>
+														</a>
+													</div>
+
+													<div class="panel-title">
+														<a href="#list_0_1" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle">
+															<i class="icon-file"></i> Slide 2
+														</a>
+													</div>
+
+													<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+														<i class="icon-remove"></i>
+													</div>
+													
+												</div>
+											  
+										   </div>
+										   
+										   <!-- BEGIN SETUP -->
+										   <div id="setup_0_1" class="panel-collapse collapse a1">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SLIDE SETUP FORM -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Slide Setup
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body form">
+													 
+													  <form class="form-horizontal" role="form">
+														<div class="form-body">
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+															  <div class="col-md-6">
+																<textarea id="title-ckeditor-2" class="ckeditor form-control" name="title-ckeditor" rows="4">Slide 2</textarea>
+															  </div>
+														   </div>
+														   <div class="form-group temp-icons">
+															  <label  class="col-md-3 control-label">Template<span class="required">*</span></label>
+															  <div class="col-md-6">
+																 <a data-toggle="modal" data-target="#selectTemplateModal" href="javascript:;" class="btn btn-default pull-left" title="Select Template"><i class="temp-icon-1"></i></a>
+																 <label class='temp-label gray-text'>Visual Right</label>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Duration (seconds)</label>
+															  <div class="col-md-6">
+																 <input type="text" class="form-control" placeholder="Enter the slide duration (expected seat time for this slide)." value="10"/>
+															  </div>
+														   </div>
+														</div>
+													 </form>
+													 
+												  </div>
+												</div>
+												<!-- END SLIDE SETUP FORM -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#setup_0_1" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SLIDE SETUP</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+												
+											  </div>
+										   </div>
+										   <!-- END SETUP -->
+										   
+										   <!-- BEGIN PANEL BODY -->
+										   <div id="list_0_1" class="panel-collapse collapse a2">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SLIDE COMPONENTS -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Slide Components
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body form">
+												  
+													<form class="form-horizontal" role="form">
+													
+														<!-- BEGIN COMPONENTS 1 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Text">
+															 <div class="caption">
+																<h5><strong>Text</strong></h5>
+															 </div>
+															 <div class="tools">
+																<i class="text-icon"></i>
+																<a href="" class="collapse"></a>
+															 </div>
+														  </div>
+														  <div class="portlet-body">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	<textarea id='text-ckeditor-2' class="ckeditor form-control" name="text-ckeditor" rows="4"></textarea>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 1 -->
+														
+														<!-- BEGIN COMPONENTS 2 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Visual Asset">
+															<div class="caption">
+																<h5><strong>Visual </strong> - 1 asset</h5>
+															</div>
+															<div class="tools">
+																<i class="camera-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	  <div class="table-scrollable">
+																		<table class="table table-str-border table-bordered">
+																		  <thead>
+																			<tr class="td-header">
+																			  <th colspan="8">
+																				<div class='btn-group'>
+																					<a data-toggle="modal" data-target="#searchAssetModal" class="btn btn-default" href="javascript:;" title="Find Asset and Attach to Slide"><i class="glyphicon glyphicon-new-window"></i></a>
+																					<a data-toggle="modal" data-target="#addAssetModal" class="btn btn-default" href="javascript:;" title="Upload Asset and Attach to Slide"><i class="icon-plus blue-text"></i></a>
+																					<a class="btn btn-default" href="javascript:;" title="Detach Asset"><i class="icon-minus red-text"></i></a>
+																				</div>
+																			  </th>
+																			</tr>
+																			<tr class="td-header-bottom-border">
+																			  <th></th>
+																			  <th>Asset</th>
+																			  <th>Name</th>
+																			  <th>Type</th>
+																			  <th>Dimension</th>
+																			  <th>Size</th>
+																			  <th>Version</th>
+																			  <th>Description</th>
+																			</tr>
+																		  </thead>
+																		  <tbody height="100">
+																			<tr>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			</tr>
+																		  </tbody>
+																		</table>
+																	</div>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 2 -->
+														
+														<!-- BEGIN COMPONENTS 3 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Audio Asset">
+															<div class="caption">
+																<h5><strong>Audio </strong> - 1 asset</h5>
+															</div>
+															<div class="tools">
+																<i class="audio-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	<div class="table-scrollable">
+																		<table class="table table-str-border table-bordered">
+																		  <thead>
+																			<tr class="td-header">
+																			  <th colspan="8">
+																				<div class='btn-group'>
+																					<a data-toggle="modal" data-target="#searchAAssetModal" class="btn btn-default" href="javascript:;" title="Find Asset and Attach to Slide"><i class="glyphicon glyphicon-new-window"></i></a>
+																					<a data-toggle="modal" data-target="#addAAssetModal" class="btn btn-default" href="javascript:;" title="Upload Asset and Attach to Slide"><i class="icon-plus blue-text"></i></a>
+																					<a class="btn btn-default" href="javascript:;" title="Detach Asset"><i class="icon-minus red-text"></i></a>
+																				</div>
+																			  </th>
+																			</tr>
+																			<tr class="td-header-bottom-border">
+																			  <th></th>
+																			  <th>Asset</th>
+																			  <th>Name</th>
+																			  <th>Type</th>
+																			  <th>Duration</th>
+																			  <th>Size</th>
+																			  <th>Version</th>
+																			  <th>Description</th>
+																			</tr>
+																		  </thead>
+																		  <tbody height="100">
+																			<tr>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			</tr>
+																		  </tbody>
+																		</table>
+																	</div>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 3 -->
+														
+														<!-- BEGIN COMPONENTS 4 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Closed Captioning">
+															<div class="caption">
+																<h5><strong>Closed Captioning</strong></h5>
+															</div>
+															<div class="tools">
+																<i class="cc-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	 <textarea id="cc-ckeditor-2" class="ckeditor form-control" name="cc-ckeditor" rows="8"></textarea>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 4 -->
+													
+														<!-- BEGIN ACTION BUTTON -->
+														<div class="form-actions fluid">
+														   <div class="text-center">
+															  <button type="button" class="btn blue"><i class="icon-desktop"></i> Preview Slide</button>
+														   </div>
+														</div>
+														<!-- END ACTION BUTTON -->
+														
+													</form>
+													 
+												  </div>
+												</div>
+												<!-- END SLIDE COMPONENTS -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#list_0_1" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SLIDE</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+												
+											  </div>
+										   </div>
+										   <!-- END PANEL BODY -->
+										   
+										</div>
+										<!-- END SLIDE -->
+										
+										<!-- BEGIN SLIDE -->
+										<div class="panel panel-default">
+										   <div class="panel-heading">
+											  
+												<div class="holder">
+								
+													<div class="anchors move-btn">
+														<a href="javascript:;" title="Move Up" class="up">
+															<i class="icon-arrow-up"></i>
+														</a>
+													
+														<a class="down" title="Move Down" href="javascript:;">
+															<i class="icon-arrow-down"></i>
+														</a>
+													</div>
+													
+													<div class="anchors">
+														<a href="#setup_0_2" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle" title="Slide Setup">
+															<i class="icon-cog"></i>
+														</a>
+													</div>
+
+													<div class="panel-title">
+														<a href="#list_0_2" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle">
+															<i class="icon-file"></i> Slide 3
+														</a>
+													</div>
+
+													<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+														<i class="icon-remove"></i>
+													</div>
+													
+												</div>
+											  
+										   </div>
+										   
+										   <!-- BEGIN SETUP -->
+										   <div id="setup_0_2" class="panel-collapse collapse a1">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SLIDE SETUP FORM -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Slide Setup
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body form">
+													 
+													  <form class="form-horizontal" role="form">
+														<div class="form-body">
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+															  <div class="col-md-6">
+																<textarea id="title-ckeditor-3" class="ckeditor form-control" name="title-ckeditor" rows="4">Slide 3</textarea>
+															  </div>
+														   </div>
+														   <div class="form-group temp-icons">
+															  <label  class="col-md-3 control-label">Template<span class="required">*</span></label>
+															  <div class="col-md-6">
+																 <a data-toggle="modal" data-target="#selectTemplateModal" href="javascript:;" class="btn btn-default pull-left" title="Select Template"><i class="temp-icon-1"></i></a>
+																 <label class='temp-label gray-text'>Visual Right</label>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Duration (seconds)</label>
+															  <div class="col-md-6">
+																 <input type="text" class="form-control" placeholder="Enter the slide duration (expected seat time for this slide)." value="10"/>
+															  </div>
+														   </div>
+														</div>
+													 </form>
+													 
+												  </div>
+												</div>
+												<!-- END SLIDE SETUP FORM -->
+
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#setup_0_2" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SLIDE SETUP</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+												
+											  </div>
+										   </div>
+										   <!-- END SETUP -->
+										   
+										   <!-- BEGIN PANEL BODY -->
+										   <div id="list_0_2" class="panel-collapse collapse a2">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SLIDE COMPONENTS -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Slide Components
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body form">
+												  
+													<form class="form-horizontal" role="form">
+													
+														<!-- BEGIN COMPONENTS 1 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Text">
+															 <div class="caption">
+																<h5><strong>Text</strong></h5>
+															 </div>
+															 <div class="tools">
+																<i class="text-icon"></i>
+																<a href="" class="collapse"></a>
+															 </div>
+														  </div>
+														  <div class="portlet-body">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	<textarea id='text-ckeditor-3' class="ckeditor form-control" name="text-ckeditor" rows="4"></textarea>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 1 -->
+														
+														<!-- BEGIN COMPONENTS 2 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Visual Asset">
+															<div class="caption">
+																<h5><strong>Visual </strong> - 1 asset</h5>
+															</div>
+															<div class="tools">
+																<i class="camera-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	  <div class="table-scrollable">
+																		<table class="table table-str-border table-bordered">
+																		  <thead>
+																			<tr class="td-header">
+																			  <th colspan="8">
+																				<div class='btn-group'>
+																					<a data-toggle="modal" data-target="#searchAssetModal" class="btn btn-default" href="javascript:;" title="Find Asset and Attach to Slide"><i class="glyphicon glyphicon-new-window"></i></a>
+																					<a data-toggle="modal" data-target="#addAssetModal" class="btn btn-default" href="javascript:;" title="Upload Asset and Attach to Slide"><i class="icon-plus blue-text"></i></a>
+																					<a class="btn btn-default" href="javascript:;" title="Detach Asset"><i class="icon-minus red-text"></i></a>
+																				</div>
+																			  </th>
+																			</tr>
+																			<tr class="td-header-bottom-border">
+																			  <th></th>
+																			  <th>Asset</th>
+																			  <th>Name</th>
+																			  <th>Type</th>
+																			  <th>Dimension</th>
+																			  <th>Size</th>
+																			  <th>Version</th>
+																			  <th>Description</th>
+																			</tr>
+																		  </thead>
+																		  <tbody height="100">
+																			<tr>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			</tr>
+																		  </tbody>
+																		</table>
+																	</div>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 2 -->
+														
+														<!-- BEGIN COMPONENTS 3 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Audio Asset">
+															<div class="caption">
+																<h5><strong>Audio </strong> - 1 asset</h5>
+															</div>
+															<div class="tools">
+																<i class="audio-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	<div class="table-scrollable">
+																		<table class="table table-str-border table-bordered">
+																		  <thead>
+																			<tr class="td-header">
+																			  <th colspan="8">
+																				<div class='btn-group'>
+																					<a data-toggle="modal" data-target="#searchAAssetModal" class="btn btn-default" href="javascript:;" title="Find Asset and Attach to Slide"><i class="glyphicon glyphicon-new-window"></i></a>
+																					<a data-toggle="modal" data-target="#addAAssetModal" class="btn btn-default" href="javascript:;" title="Upload Asset and Attach to Slide"><i class="icon-plus blue-text"></i></a>
+																					<a class="btn btn-default" href="javascript:;" title="Detach Asset"><i class="icon-minus red-text"></i></a>
+																				</div>
+																			  </th>
+																			</tr>
+																			<tr class="td-header-bottom-border">
+																			  <th></th>
+																			  <th>Asset</th>
+																			  <th>Name</th>
+																			  <th>Type</th>
+																			  <th>Duration</th>
+																			  <th>Size</th>
+																			  <th>Version</th>
+																			  <th>Description</th>
+																			</tr>
+																		  </thead>
+																		  <tbody height="100">
+																			<tr>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			</tr>
+																		  </tbody>
+																		</table>
+																	</div>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 3 -->
+														
+														<!-- BEGIN COMPONENTS 4 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Closed Captioning">
+															<div class="caption">
+																<h5><strong>Closed Captioning</strong></h5>
+															</div>
+															<div class="tools">
+																<i class="cc-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	 <textarea id="cc-ckeditor-3" class="ckeditor form-control" name="cc-ckeditor" rows="4"></textarea>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 4 -->
+													
+														<!-- BEGIN ACTION BUTTON -->
+														<div class="form-actions fluid">
+														   <div class="text-center">
+															  <button type="button" class="btn blue"><i class="icon-desktop"></i> Preview Slide</button>
+														   </div>
+														</div>
+														<!-- END ACTION BUTTON -->
+														
+													</form>
+													 
+												  </div>
+												</div>
+												<!-- END SLIDE COMPONENTS -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#list_0_2" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SLIDE</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+												
+											  </div>
+										   </div>
+										   <!-- END PANEL BODY -->
+										   
+										</div>
+										<!-- END SLIDE -->
+										
+										<!-- BEGIN SLIDE -->
+										<div class="panel panel-default">
+										   <div class="panel-heading">
+											  
+												<div class="holder">
+								
+													<div class="anchors move-btn">
+														<a href="javascript:;" title="Move Up" class="up">
+															<i class="icon-arrow-up"></i>
+														</a>
+													
+														<a class="down" title="Move Down" href="javascript:;">
+															<i class="icon-arrow-down"></i>
+														</a>
+													</div>
+													
+													<div class="anchors">
+														<a href="#setup_0_3" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle" title="Slide Setup">
+															<i class="icon-cog"></i>
+														</a>
+													</div>
+
+													<div class="panel-title">
+														<a href="#list_0_3" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle">
+															<i class="icon-file"></i> Slide 4
+														</a>
+													</div>
+
+													<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+														<i class="icon-remove"></i>
+													</div>
+													
+												</div>
+											  
+										   </div>
+										   
+										   <!-- BEGIN SETUP -->
+										   <div id="setup_0_3" class="panel-collapse collapse a1">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SLIDE SETUP FORM -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Slide Setup
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body form">
+													 
+													  <form class="form-horizontal" role="form">
+														<div class="form-body">
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+															  <div class="col-md-6">
+																<textarea id="title-ckeditor-4" class="ckeditor form-control" name="title-ckeditor" rows="4">Slide 4</textarea>
+															  </div>
+														   </div>
+														   <div class="form-group temp-icons">
+															  <label  class="col-md-3 control-label">Template<span class="required">*</span></label>
+															  <div class="col-md-6">
+																 <a data-toggle="modal" data-target="#selectTemplateModal" href="javascript:;" class="btn btn-default pull-left" title="Select Template"><i class="temp-icon-1"></i></a>
+																 <label class='temp-label gray-text'>Visual Right</label>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Duration (seconds)</label>
+															  <div class="col-md-6">
+																 <input type="text" class="form-control" placeholder="Enter the slide duration (expected seat time for this slide)." value="10"/>
+															  </div>
+														   </div>
+														</div>
+													 </form>
+													 
+												  </div>
+												</div>
+												<!-- END SLIDE SETUP FORM -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#setup_0_3" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SLIDE SETUP</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+
+											  </div>
+										   </div>
+										   <!-- END SETUP -->
+										   
+										   <!-- BEGIN PANEL BODY -->
+										   <div id="list_0_3" class="panel-collapse collapse a2">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SLIDE COMPONENTS -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Slide Components
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body form">
+												  
+													<form class="form-horizontal" role="form">
+													
+														<!-- BEGIN COMPONENTS 1 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Text">
+															 <div class="caption">
+																<h5><strong>Text</strong></h5>
+															 </div>
+															 <div class="tools">
+																<i class="text-icon"></i>
+																<a href="" class="collapse"></a>
+															 </div>
+														  </div>
+														  <div class="portlet-body">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	<textarea id='text-ckeditor-4' class="ckeditor form-control" name="text-ckeditor" rows="4"></textarea>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 1 -->
+														
+														<!-- BEGIN COMPONENTS 2 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Visual Asset">
+															<div class="caption">
+																<h5><strong>Visual </strong> - 1 asset</h5>
+															</div>
+															<div class="tools">
+																<i class="camera-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	  <div class="table-scrollable">
+																		<table class="table table-str-border table-bordered">
+																		  <thead>
+																			<tr class="td-header">
+																			  <th colspan="8">
+																				<div class='btn-group'>
+																					<a data-toggle="modal" data-target="#searchAssetModal" class="btn btn-default" href="javascript:;" title="Find Asset and Attach to Slide"><i class="glyphicon glyphicon-new-window"></i></a>
+																					<a data-toggle="modal" data-target="#addAssetModal" class="btn btn-default" href="javascript:;" title="Upload Asset and Attach to Slide"><i class="icon-plus blue-text"></i></a>
+																					<a class="btn btn-default" href="javascript:;" title="Detach Asset"><i class="icon-minus red-text"></i></a>
+																				</div>
+																			  </th>
+																			</tr>
+																			<tr class="td-header-bottom-border">
+																			  <th></th>
+																			  <th>Asset</th>
+																			  <th>Name</th>
+																			  <th>Type</th>
+																			  <th>Dimension</th>
+																			  <th>Size</th>
+																			  <th>Version</th>
+																			  <th>Description</th>
+																			</tr>
+																		  </thead>
+																		  <tbody height="100">
+																			<tr>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			</tr>
+																		  </tbody>
+																		</table>
+																	</div>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 2 -->
+														
+														<!-- BEGIN COMPONENTS 3 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Audio Asset">
+															<div class="caption">
+																<h5><strong>Audio </strong> - 1 asset</h5>
+															</div>
+															<div class="tools">
+																<i class="audio-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	<div class="table-scrollable">
+																		<table class="table table-str-border table-bordered">
+																		  <thead>
+																			<tr class="td-header">
+																			  <th colspan="8">
+																				<div class='btn-group'>
+																					<a data-toggle="modal" data-target="#searchAAssetModal" class="btn btn-default" href="javascript:;" title="Find Asset and Attach to Slide"><i class="glyphicon glyphicon-new-window"></i></a>
+																					<a data-toggle="modal" data-target="#addAAssetModal" class="btn btn-default" href="javascript:;" title="Upload Asset and Attach to Slide"><i class="icon-plus blue-text"></i></a>
+																					<a class="btn btn-default" href="javascript:;" title="Detach Asset"><i class="icon-minus red-text"></i></a>
+																				</div>
+																			  </th>
+																			</tr>
+																			<tr class="td-header-bottom-border">
+																			  <th></th>
+																			  <th>Asset</th>
+																			  <th>Name</th>
+																			  <th>Type</th>
+																			  <th>Duration</th>
+																			  <th>Size</th>
+																			  <th>Version</th>
+																			  <th>Description</th>
+																			</tr>
+																		  </thead>
+																		  <tbody height="100">
+																			<tr>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			  <td></td>
+																			</tr>
+																		  </tbody>
+																		</table>
+																	</div>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 3 -->
+														
+														<!-- BEGIN COMPONENTS 4 -->
+														<div class="portlet portlet-btn">
+														  <div class="portlet-title" title="Closed Captioning">
+															<div class="caption">
+																<h5><strong>Closed Captioning</strong></h5>
+															</div>
+															<div class="tools">
+																<i class="cc-icon"></i>
+																<a href="" class="collapse"></a>
+															</div>
+														  </div>
+														  <div class="portlet-body form">
+															<div class="form-body">
+															   <div class="form-group">
+																  <div class="col-md-offset-2 col-md-8">
+																	 <textarea id="cc-ckeditor-4" class="ckeditor form-control" name="cc-ckeditor" rows="4"></textarea>
+																  </div>
+															   </div>
+															</div>
+														  </div>
+														</div>
+														<!-- END COMPONENTS 4 -->
+													
+														<!-- BEGIN ACTION BUTTON -->
+														<div class="form-actions fluid">
+														   <div class="text-center">
+															  <button type="button" class="btn blue"><i class="icon-desktop"></i> Preview Slide</button>
+														   </div>
+														</div>
+														<!-- END ACTION BUTTON -->
+														
+													</form>
+													 
+												  </div>
+												</div>
+												<!-- END SLIDE COMPONENTS -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#list_0_3" data-parent="#lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SLIDE</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+												
+											  </div>
+										   </div>
+										   <!-- END PANEL BODY -->
+										   
+										</div>
+										<!-- END SLIDE -->
+										
+									</div>
+									<!-- END SLIDE ACCORDIONS -->
+									 
+								  </div>
+								  <div class="portlet-footer">
+									<a href="javascript:;" data-toggle="modal" data-target="#addSlideModal" title="Add Slide"><i class="icon-plus"></i> Add Slide</a>
+									<a href="javascript:;" data-toggle="modal" data-target="#importPPTModal" title="Add Slide"><i class="icon-upload"></i> Import PowerPoint</a>
+								  </div>
+								</div>
+								<!-- END SLIDES PORTLET -->
+								
+								<!-- BEGIN SUPPORT MATERIAL PORTLET-->
+								<div class="portlet">
+								  <div class="portlet-body">
+
+									<!-- BEGIN SUPPORT MATERIAL ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="mat_lesson_1">
+										
+										<!-- BEGIN SUPPORT MATERIAL -->
+										<div class="panel panel-default">
+										   <div class="panel-heading">
+											  
+												<div class="holder">
+								
+													<div class="anchors move-btn">
+														<a href="javascript:;" title="Move Up" class="up">
+															<i class="icon-arrow-up"></i>
+														</a>
+													
+														<a class="down" title="Move Down" href="javascript:;">
+															<i class="icon-arrow-down"></i>
+														</a>
+													</div>
+
+													<div class="panel-title">
+														<a href="#mat_lesson_1_setup" data-parent="#mat_lesson_1" data-toggle="collapse" class="accordion-toggle">
+															<i class="glyphicon glyphicon-file inside-icon-plus"></i> Support Material 1
+														</a>
+													</div>
+
+													<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+														<i class="icon-remove"></i>
+													</div>
+													
+												</div>
+											  
+										   </div>
+										   
+										   <!-- BEGIN SETUP -->
+										   <div id="mat_lesson_1_setup" class="panel-collapse collapse a1">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SUPPORT MATERIAL FORM -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Support Material
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body">
+												
+													<!-- BEGIN FORM -->
+													<div class="form-horizontal">
+														<div class="form-body">
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Asset Name</label>
+															  <div class="col-md-6">
+																<input type="text" class="form-control" placeholder="Enter asset name." value="Support Material 1" disabled="disabled">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Keywords</label>
+															  <div class="col-md-6">
+																<div class="bootstrap-tagsinput">
+																	<span class="tag label label-info">Document 1</span>
+																	<span class="tag label label-info">Document 2</span>
+																</div>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Description</label>
+															  <div class="col-md-6">
+																 <textarea class="form-control" rows="3" disabled="disabled">Fake description.</textarea>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label class="col-md-3 control-label">File Name</label>
+															  <div class="col-md-6">
+																 <input type="text" disabled="disabled" value="Document ABC.docx" class="form-control">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">File Path</label>
+															  <div class="col-md-6">
+																<a href="javascript:;" class="btn blue">Download</a>
+															  </div>
+														   </div>
+														</div>
+													</div>
+													<!-- END FORM -->
+														
+												  </div>
+												</div>
+												<!-- END SUPPORT MATERIAL FORM -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#mat_lesson_1_setup" data-parent="#mat_lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SUPPORT MATERIAL</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+
+											  </div>
+										   </div>
+										   <!-- END SETUP -->
+										   
+										</div>
+										<!-- END SUPPORT MATERIAL -->
+										
+										<!-- BEGIN SUPPORT MATERIAL -->
+										<div class="panel panel-default">
+										   <div class="panel-heading">
+											  
+												<div class="holder">
+								
+													<div class="anchors move-btn">
+														<a href="javascript:;" title="Move Up" class="up">
+															<i class="icon-arrow-up"></i>
+														</a>
+													
+														<a class="down" title="Move Down" href="javascript:;">
+															<i class="icon-arrow-down"></i>
+														</a>
+													</div>
+
+													<div class="panel-title">
+														<a href="#mat_lesson_2_setup" data-parent="#mat_lesson_1" data-toggle="collapse" class="accordion-toggle">
+															<i class="glyphicon glyphicon-file inside-icon-plus"></i> Support Material 2
+														</a>
+													</div>
+
+													<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+														<i class="icon-remove"></i>
+													</div>
+													
+												</div>
+											  
+										   </div>
+										   
+										   <!-- BEGIN SETUP -->
+										   <div id="mat_lesson_2_setup" class="panel-collapse collapse a1">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SUPPORT MATERIAL FORM -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Support Material
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body">
+												
+													<!-- BEGIN FORM -->
+													<div class="form-horizontal">
+														<div class="form-body">
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Asset Name</label>
+															  <div class="col-md-6">
+																<input type="text" class="form-control" placeholder="Enter asset name." value="Support Material 2" disabled="disabled">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Keywords</label>
+															  <div class="col-md-6">
+																<div class="bootstrap-tagsinput">
+																	<span class="tag label label-info">Document 1</span>
+																	<span class="tag label label-info">Document 2</span>
+																</div>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Description</label>
+															  <div class="col-md-6">
+																 <textarea class="form-control" rows="3" disabled="disabled">Fake description.</textarea>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label class="col-md-3 control-label">File Name</label>
+															  <div class="col-md-6">
+																 <input type="text" disabled="disabled" value="Document ABC.docx" class="form-control">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">File Path</label>
+															  <div class="col-md-6">
+																<a href="javascript:;" class="btn blue">Download</a>
+															  </div>
+														   </div>
+														</div>
+													</div>
+													<!-- END FORM -->
+														
+												  </div>
+												</div>
+												<!-- END SUPPORT MATERIAL FORM -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#mat_lesson_2_setup" data-parent="#mat_lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SUPPORT MATERIAL</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+
+											  </div>
+										   </div>
+										   <!-- END SETUP -->
+										   
+										</div>
+										<!-- END SUPPORT MATERIAL -->
+										
+										<!-- BEGIN SUPPORT MATERIAL -->
+										<div class="panel panel-default">
+										   <div class="panel-heading">
+											  
+												<div class="holder">
+								
+													<div class="anchors move-btn">
+														<a href="javascript:;" title="Move Up" class="up">
+															<i class="icon-arrow-up"></i>
+														</a>
+													
+														<a class="down" title="Move Down" href="javascript:;">
+															<i class="icon-arrow-down"></i>
+														</a>
+													</div>
+
+													<div class="panel-title">
+														<a href="#mat_lesson_3_setup" data-parent="#mat_lesson_1" data-toggle="collapse" class="accordion-toggle">
+															<i class="glyphicon glyphicon-file inside-icon-plus"></i> Support Material 3
+														</a>
+													</div>
+
+													<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+														<i class="icon-remove"></i>
+													</div>
+													
+												</div>
+											  
+										   </div>
+										   
+										   <!-- BEGIN SETUP -->
+										   <div id="mat_lesson_3_setup" class="panel-collapse collapse a1">
+											  <div class="panel-body">
+												
+												<!-- BEGIN SUPPORT MATERIAL FORM -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Support Material
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body">
+												
+													<!-- BEGIN FORM -->
+													<div class="form-horizontal">
+														<div class="form-body">
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Asset Name</label>
+															  <div class="col-md-6">
+																<input type="text" class="form-control" placeholder="Enter asset name." value="Support Material 3" disabled="disabled">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Keywords</label>
+															  <div class="col-md-6">
+																<div class="bootstrap-tagsinput">
+																	<span class="tag label label-info">Document 1</span>
+																	<span class="tag label label-info">Document 2</span>
+																</div>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Description</label>
+															  <div class="col-md-6">
+																 <textarea class="form-control" rows="3" disabled="disabled">Fake description.</textarea>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label class="col-md-3 control-label">File Name</label>
+															  <div class="col-md-6">
+																 <input type="text" disabled="disabled" value="Document ABC.docx" class="form-control">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">File Path</label>
+															  <div class="col-md-6">
+																<a href="javascript:;" class="btn blue">Download</a>
+															  </div>
+														   </div>
+														</div>
+													</div>
+													<!-- END FORM -->
+														
+												  </div>
+												</div>
+												<!-- END SUPPORT MATERIAL FORM -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#mat_lesson_3_setup" data-parent="#mat_lesson_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE SUPPORT MATERIAL</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+
+											  </div>
+										   </div>
+										   <!-- END SETUP -->
+										   
+										</div>
+										<!-- END SUPPORT MATERIAL -->
+										
+									</div>
+									<!-- END SUPPORT MATERIAL ACCORDIONS -->
+									 
+								  </div>
+								  <div class="portlet-footer">
+									<a href="javascript:;" data-target="#addSMModal" data-toggle="modal" title="Add Support Material"><i class="icon-plus"></i> Add Support Material</a>
+								  </div>
+								</div>
+								<!-- END SUPPORT MATERIAL PORTLET -->
+								
+								<!-- BEGIN QUIZ PORTLET -->
+								<div class="portlet">
+								  <div class="portlet-body">
+
+									<!-- BEGIN QUIZ ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="lesson_1_quiz_1">
+										
+										<!-- BEGIN QUIZ -->
+										<div class="panel panel-default">
+										   <div class="panel-heading">
+											  
+												<div class="holder">
+								
+													<div class="anchors move-btn">
+														<a href="javascript:;" title="Move Up" class="up">
+															<i class="icon-arrow-up"></i>
+														</a>
+													
+														<a class="down" title="Move Down" href="javascript:;">
+															<i class="icon-arrow-down"></i>
+														</a>
+													</div>
+													
+													<div class="anchors">
+														<a href="#lesson_1_quiz_1_policies" data-parent="#lesson_1_quiz_1" data-toggle="collapse" class="accordion-toggle" title="Quiz Setup">
+															<i class="icon-cog"></i>
+														</a>
+													</div>
+
+													<div class="panel-title">
+														<a href="#lesson_1_quiz_1_banks" data-parent="#lesson_1_quiz_1" data-toggle="collapse" class="accordion-toggle">
+															<i class="glyphicon glyphicon-file inside-icon-quiz"></i> Quiz 1
+														</a>
+													</div>
+													
+													<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+														<i class="icon-remove"></i>
+													</div>
+												
+												</div>
+											
+										   </div>
+										   
+										   <!-- BEGIN POLICIES -->
+										   <div id="lesson_1_quiz_1_policies" class="panel-collapse collapse a1">
+											  <div class="panel-body">
+												
+												<!-- BEGIN QUIZ SETUP FORM -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Quiz Setup
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body form">
+													 
+													  <form class="form-horizontal" role="form">
+														<div class="form-body">
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Number of target questions per quiz</label>
+															  <div class="col-md-6">
+																<input type="text" class="form-control" placeholder="Enter value in numeric" value="0" readonly="readonly">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Randomize questions</label>
+															  <div class="col-md-6">
+																<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Randomize answers</label>
+															  <div class="col-md-6">
+																<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Time permitted for quiz (minutes)</label>
+															  <div class="col-md-6">
+																<input type="text" class="form-control" placeholder="Enter value in numeric" value="15">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Grade questions</label>
+															  <div class="col-md-6">
+																<select class="form-control">
+																	<option>After each question is answered</option>
+																	<option>After quiz is submitted</option>
+																</select>
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Allow review after grading</label>
+															  <div class="col-md-6">
+																<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Score required to pass quiz</label>
+															  <div class="col-md-6">
+																<input type="text" class="form-control" placeholder="Enter value in numeric" value="70">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Number of attempts permitted</label>
+															  <div class="col-md-6">
+																<input type="text" class="form-control" placeholder="Enter value in numeric" value="3">
+															  </div>
+														   </div>
+														   <div class="form-group">
+															  <label  class="col-md-3 control-label">Action to take if fail to pass</label>
+															  <div class="col-md-6">
+																<select class="form-control">
+																	<option>Retake lesson</option>
+																	<option>Go to next lesson</option>
+																	<option>Lock course</option>
+																</select>
+															  </div>
+														   </div>
+														</div>
+													 </form>
+													 
+												  </div>
+												</div>
+												<!-- END QUIZ SETUP FORM -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#lesson_1_quiz_1_policies" data-parent="#lesson_1_quiz_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE QUIZ SETUP</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+
+											  </div>
+										   </div>
+										   <!-- END POLICIES -->
+										   
+										   <!-- BEGIN PANEL BODY -->
+										   <div id="lesson_1_quiz_1_banks" class="panel-collapse collapse a2">
+											  <div class="panel-body">
+												
+												<!-- BEGIN QUESTION BANKS -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Question Banks
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body">
+												  
+													<!-- BEGIN BANK PORTLET -->
+													<div class="portlet">
+													  <div class="portlet-body">
+
+														<!-- BEGIN BANK ACCORDIONS -->
+														<div class="panel-group accordion page-panel" id="lesson_1_quiz_1_bank_1">
+															
+															<!-- BEGIN BANK -->
+															<div class="panel panel-default">
+															   <div class="panel-heading">
+																  
+																	<div class="holder">
+													
+																		<div class="anchors move-btn">
+																			<a href="javascript:;" title="Move Up" class="up">
+																				<i class="icon-arrow-up"></i>
+																			</a>
+																		
+																			<a class="down" title="Move Down" href="javascript:;">
+																				<i class="icon-arrow-down"></i>
+																			</a>
+																		</div>
+																		
+																		<div class="panel-title">
+																			<a href="#lesson_1_quiz_1_bank_1_questions" data-parent="#lesson_1_quiz_1_bank_1" data-toggle="collapse" class="accordion-toggle">
+																				<i class="icon-question-bank"><i></i></i> Explain the role of experience and exploration in design.
+																			</a>
+																		</div>
+
+																		<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+																			<i class="icon-remove"></i>
+																		</div>
+																		
+																	</div>
+																  
+															   </div>
+															   
+															   <!-- BEGIN PANEL BODY -->
+															   <div id="lesson_1_quiz_1_bank_1_questions" class="panel-collapse collapse a2">
+																  <div class="panel-body">
+																	
+																	<!-- BEGIN QUESTIONS -->
+																	<div class="portlet">
+																	  <div class="portlet-title sub">
+																		 <div class="caption">
+																			Questions
+																		 </div>
+																		 <div class="tools">
+																			
+																		 </div>
+																	  </div>
+																	  <div class="portlet-body">
+																		
+																		<!-- BEGIN SETUP FORM -->
+																		<div class="heading-bottom-text">
+																			<label class="col-md-11 control-label" style="margin-top: 5px">Target number of questions to ask related to this lesson learning objective on every quiz attempt<span class="required">*</span></label>
+																			<div class="col-md-1">
+																				<input type="text" class="form-control" placeholder="Enter value in numeric" value="2">
+																			</div>
+																		</div>
+																		<!-- END SETUP FORM -->
+																		
+																		<!-- BEGIN QUESTION PORTLET -->
+																		<div class="portlet">
+																		  <div class="portlet-body">
+
+																			<!-- BEGIN QUESTION ACCORDIONS -->
+																			<div class="panel-group accordion page-panel" id="lesson_1_quiz_1_bank_1_Q1">
+																				
+																				<!-- BEGIN QUESTION PANEL -->
+																				<div class="panel panel-default">
+																				   <div class="panel-heading">
+																					  
+																						<div class="holder">
+																		
+																							<div class="anchors move-btn">
+																								<a href="javascript:;" title="Move Up" class="up">
+																									<i class="icon-arrow-up"></i>
+																								</a>
+																							
+																								<a class="down" title="Move Down" href="javascript:;">
+																									<i class="icon-arrow-down"></i>
+																								</a>
+																							</div>
+																							
+																							<div class="panel-title">
+																								<a href="#lesson_1_quiz_1_bank_1_Q1_ans" data-parent="#lesson_1_quiz_1_bank_1_Q1" data-toggle="collapse" class="accordion-toggle">
+																									<i class="icon-question-item"></i> Question - A
+																								</a>
+																							</div>
+
+																							<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+																								<i class="icon-remove"></i>
+																							</div>
+																							
+																						</div>
+																					  
+																				   </div>
+																				   
+																				   <!-- BEGIN QUESTION COMPONENT BODY -->
+																				   <div id="lesson_1_quiz_1_bank_1_Q1_ans" class="panel-collapse collapse a2">
+																					  <div class="panel-body">
+																						
+																						<!-- BEGIN QUESTION -->
+																						<div class="portlet">
+																						  <div class="portlet-title sub">
+																							 <div class="caption">
+																								Question Components
+																							 </div>
+																							 <div class="tools">
+																								
+																							 </div>
+																						  </div>
+																						  <div class="portlet-body form">
+																						  
+																							<div class="form-horizontal">
+																							
+																								<!-- BEGIN COMPONENTS 1 -->
+																								<div class="portlet portlet-btn">
+																								  <div class="portlet-title" title="Complexity">
+																									<div class="caption">
+																										<h5><strong>Complexity</strong></h5>
+																									</div>
+																									<div class="tools">
+																										<a href="" class="collapse"></a>
+																									</div>
+																								  </div>
+																								  <div class="portlet-body form">
+																									<div class="form-body">
+																									   <div class="form-group">
+																										  <div class="col-md-offset-2 col-md-8">
+																											<select class="form-control">
+																												<option>1 – Recall</option>
+																												<option>Option 2</option>
+																												<option>Option 3</option>
+																											</select>
+																										  </div>
+																									   </div>
+																									</div>
+																								  </div>
+																								</div>
+																								<!-- END COMPONENTS 1 -->
+																							
+																								<!-- BEGIN COMPONENTS 2 -->
+																								<div class="portlet portlet-btn">
+																								  <div class="portlet-title" title="Question type">
+																									<div class="caption">
+																										<h5><strong>Question type</strong></h5>
+																									</div>
+																									<div class="tools">
+																										<a href="" class="collapse"></a>
+																									</div>
+																								  </div>
+																								  <div class="portlet-body form">
+																									<div class="form-body">
+																									   <div class="form-group">
+																										  <div class="col-md-offset-2 col-md-8">
+																											<select class="form-control">
+																												<option>Multiple-choice Single Select</option>
+																												<option>Option 2</option>
+																												<option>Option 3</option>
+																											</select>
+																										  </div>
+																									   </div>
+																									</div>
+																								  </div>
+																								</div>
+																								<!-- END COMPONENTS 2 -->
+																							
+																								<!-- BEGIN COMPONENTS 3 -->
+																								<div class="portlet portlet-btn">
+																								  <div class="portlet-title" title="Question">
+																									<div class="caption">
+																										<h5><strong>Question</strong></h5>
+																									</div>
+																									<div class="tools">
+																										<a href="" class="collapse"></a>
+																									</div>
+																								  </div>
+																								  <div class="portlet-body form">
+																									<div class="form-body">
+																									   <div class="form-group">
+																										  <div class="col-md-offset-2 col-md-8">
+																											 <textarea id="q-ckeditor-1" class="ckeditor form-control" name="q-ckeditor" rows="4">Question - A</textarea>
+																										  </div>
+																									   </div>
+																									</div>
+																								  </div>
+																								</div>
+																								<!-- END COMPONENTS 3 -->
+																							
+																								<!-- BEGIN COMPONENTS 4 -->
+																								<div class="portlet portlet-btn">
+																								  <div class="portlet-title" title="Answer Choices">
+																									<div class="caption">
+																										<h5><strong>Answer Choices</strong></h5>
+																									</div>
+																									<div class="tools">
+																										<a href="" class="collapse"></a>
+																									</div>
+																								  </div>
+																								  <div class="portlet-body form">
+																									<div class="form-body">
+																									   <div class="form-group">
+																										  <div class="col-md-offset-2 col-md-8">
+																											<div class="form-list">
+																												<div>
+																													<input type="checkbox">
+																													<span>Disable answer choice randomization</span>
+																												</div>
+																											</div>
+																										  </div>
+																									   </div>
+																									   <div class="form-group">
+																										  <div class="col-md-offset-2 col-md-8">
+																											<div class="table-scrollable">
+																												<table class="table table-str-border table-bordered">
+																												  <thead>
+																													<tr class="td-header">
+																													  <th colspan="8">
+																														<div class='btn-group'>
+																															<a data-toggle="modal" data-target="#addAnsChoiceModal" class="btn btn-default" href="javascript:;" title="Add Answer Choice to Question"><i class="icon-plus blue-text"></i></a>
+																															<a class="btn btn-default" href="javascript:;" title="Delete Selected Answer Choice"><i class="icon-minus red-text"></i></a>
+																														</div>
+																													  </th>
+																													</tr>
+																													<tr class="td-header-bottom-border">
+																													  <th></th>
+																													  <th>Choice</th>
+																													  <th>Correct</th>
+																													  <th>Feedback</th>
+																													</tr>
+																												  </thead>
+																												  <tbody height="100">
+																													<tr>
+																													  <td></td>
+																													  <td></td>
+																													  <td></td>
+																													  <td></td>
+																													</tr>
+																												  </tbody>
+																												</table>
+																											</div>
+																										  </div>
+																									   </div>
+																									</div>
+																								  </div>
+																								</div>
+																								<!-- END COMPONENTS 4 -->
+																								
+																							</div>
+																							 
+																						  </div>
+																						</div>
+																						<!-- END QUESTION -->
+																						
+																						<!-- BEGIN CLOSE BUTTON -->
+																						<div class="footer">
+																							<a href="#lesson_1_quiz_1_bank_1_Q1_ans" data-parent="#lesson_1_quiz_1_bank_1_Q1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE QUESTION</a>
+																						</div>
+																						<!-- END CLOSE BUTTON -->
+																						
+																					  </div>
+																				   </div>
+																				   <!-- END QUESTION COMPONENT BODY -->
+																				   
+																				</div>
+																				<!-- END QUESTION PANEL -->
+																				
+																			</div>
+																			<!-- END QUESTION ACCORDIONS -->
+																			 
+																		  </div>
+																		  <div class="portlet-footer">
+																			<a data-target="#addQuestionModal" data-toggle="modal" title="Add Question"><i class="icon-plus"></i> Add Question</a>
+																		  </div>
+																		</div>
+																		<!-- END QUESTION PORTLET -->
+																		 
+																	  </div>
+																	</div>
+																	<!-- END QUESTIONS -->
+																	
+																	<!-- BEGIN CLOSE BUTTON -->
+																	<div class="footer">
+																		<a href="#lesson_1_quiz_1_bank_1_questions" data-parent="#lesson_1_quiz_1_bank_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE QUESTION BANK</a>
+																	</div>
+																	<!-- END CLOSE BUTTON -->
+																	
+																  </div>
+															   </div>
+															   <!-- END PANEL BODY -->
+															   
+															</div>
+															<!-- END BANK -->
+															
+														</div>
+														<!-- END BANK ACCORDIONS -->
+														 
+													  </div>
+													</div>
+													<!-- END BANK PORTLET -->
+													
+												  </div>
+												</div>
+												<!-- END QUESTION BANKS -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#lesson_1_quiz_1_banks" data-parent="#lesson_1_quiz_1" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE QUIZ</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+												
+											  </div>
+										   </div>
+										   <!-- END PANEL BODY -->
+										
+										</div>
+										<!-- END QUIZ -->
+										
+									</div>
+									<!-- END QUIZ ACCORDIONS -->
+									 
+								  </div>
+								  <div class="portlet-footer">
+									<a href="javascript:;" data-target="#addQuizModal" data-toggle="modal" title="Add Quiz"><i class="icon-plus"></i> Add Quiz</a>
+								  </div>
+								</div>
+								<!-- END QUIZ PORTLET -->
+								
+								<!-- BEGIN CLOSE BUTTON -->
+								<div class="footer">
+									<a href="#list_0" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE LESSON</a>
+								</div>
+								<!-- END CLOSE BUTTON -->
+								
+							  </div>
+						   </div>
+						   <!-- END PANEL BODY -->
+						   
+						</div>
+						<!-- END LESSON -->
+						
+						<!-- BEGIN LESSON -->
+						<div class="panel panel-default">
+						   <div class="panel-heading">
+							
+								<div class="holder">
+								
+									<div class="anchors move-btn">
+										<a href="javascript:;" title="Move Up" class="up">
+											<i class="icon-arrow-up"></i>
+										</a>
+									
+										<a class="down" title="Move Down" href="javascript:;">
+											<i class="icon-arrow-down"></i>
+										</a>
+									</div>
+									
+									<div class="anchors">
+										<a href="#setup_1" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle" title="Lesson Setup">
+											<i class="icon-cog"></i>
+										</a>
+									</div>
+
+									<div class="panel-title">
+										<a href="#list_1" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle">
+											<i class="icon-folder-open"></i> Lesson 2
+										</a>
+									</div>
+
+									<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+										<i class="icon-remove"></i>
+									</div>
+									
+								</div>
+							
+						   </div>
+						   
+						   <!-- BEGIN PANEL SETUP FORM -->
+						   <div id="setup_1" class="panel-collapse collapse bg-gray-2 a1">
+							  <div class="panel-body">
+								
+								<!-- BEGIN LESSON SETUP FORM -->
+								<div class="portlet">
+								  <div class="portlet-title" title="Lesson Setup">
+									 <div class="caption">
+										Lesson Setup
+									 </div>
+									 <div class="tools">
+										<!-- <a href="" class="expand"></a> -->
+									 </div>
+								  </div>
+								  <div class="portlet-body form">
+								
+									<!-- BEGIN FORM -->
+									<form class="form-horizontal" role="form">
+										<div class="form-body">
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+											  <div class="col-md-6">
+												 <input type="text" class="form-control"  placeholder="Enter lesson title." value="Lesson 2"/>
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Developer Notes</label>
+											  <div class="col-md-6">
+												 <textarea class="form-control" rows="3">Fake description for a mockup flow testing.</textarea>
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">
+												Lesson Learning Objectives
+											  </label>
+											  <div class="col-md-6">
+												What are the 3-5 key things your learners should be able to do at the end of this lesson? Add these things as lesson learning objective.
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <div class="col-md-offset-3 col-md-6">
+												<div class="table-scrollable">
+													<table class="table table-bordered">
+													  <thead>
+														<tr class="td-header">
+														  <th colspan="2">
+															<div class='btn-group'>
+																<a class="btn btn-default" href="javascript:;" onclick="APP.LLO(this,true)" title="Add lesson learning objective"><i class="icon-plus blue-text"></i></a>
+																<a class="btn btn-default" href="javascript:;" title="Delete" onclick="APP.LLO(this,false)"><i class="icon-minus red-text"></i></a>
+															</div>
+														  </th>
+														</tr>
+														<tr class="td-header-bottom-border bg-gray-2">
+														  <th width="10"><input type="checkbox" class="checker" onclick="APP.CHECKBOX(this,true)" /></th>
+														  <th>Type lesson learning objective.</th>
+														</tr>
+													  </thead>
+													  <tbody>
+														
+													  </tbody>
+													</table>
+												</div>
+											  </div>
+										   </div>
+										</div>
+									</form>
+									<!-- END FORM -->
+									
+								  </div>
+								</div>
+								<!-- END LESSON SETUP FORM -->
+							
+								<!-- BEGIN CLOSE BUTTON -->
+								<div class="footer">
+									<a href="#setup_1" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE LESSON SETUP</a>
+								</div>
+								<!-- END CLOSE BUTTON -->
+								
+							  </div>
+						   </div>
+						   <!-- END PANEL SETUP FORM -->
+						   
+						   <!-- BEGIN PANEL BODY -->
+						   <div id="list_1" class="panel-collapse collapse bg-gray-2 a2">
+							  <div class="panel-body">
+								
+								<!-- BEGIN SLIDES PORTLET -->
+								<div class="portlet">
+								  <div class="portlet-title">
+									 <div class="caption">
+										Lesson Components
+									 </div>
+									 <div class="tools">
+										
+									 </div>
+								  </div>
+								  <div class="portlet-body">
+
+									<!-- BEGIN SLIDE ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="lesson_2">
+										
+									</div>
+									<!-- END SLIDE ACCORDIONS -->
+									 
+								  </div>
+								  <div class="portlet-footer">
+									<a href="javascript:;" data-toggle="modal" data-target="#addSlideModal" title="Add Slide"><i class="icon-plus"></i> Add Slide</a>
+									<a href="javascript:;" data-toggle="modal" data-target="#importPPTModal" title="Add Slide"><i class="icon-upload"></i> Import PowerPoint</a>
+								  </div>
+								</div>
+								<!-- END SLIDES PORTLET -->
+								
+								<!-- BEGIN SUPPROT MATERIAL PORTLET-->
+								<div class="portlet">
+								  <div class="portlet-body">
+
+									<!-- BEGIN SUPPROT MATERIAL ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="mat_lesson_2">
+										
+									</div>
+									<!-- END SUPPROT MATERIAL ACCORDIONS -->
+									 
+								  </div>
+								  <div class="portlet-footer">
+									<a href="javascript:;" data-target="#addSMModal" data-toggle="modal" title="Add Support Material"><i class="icon-plus"></i> Add Support Material</a>
+								  </div>
+								</div>
+								<!-- END SUPPROT MATERIAL PORTLET -->
+								
+								<!-- BEGIN QUIZ PORTLET-->
+								<div class="portlet">
+								  <div class="portlet-body">
+
+									<!-- BEGIN QUIZ ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="quiz_lesson_2">
+										
+									</div>
+									<!-- END QUIZ ACCORDIONS -->
+									 
+								  </div>
+								  <div class="portlet-footer">
+									<a href="javascript:;" data-target="#addQuizModal" data-toggle="modal" title="Add Quiz"><i class="icon-plus"></i> Add Quiz</a>
+								  </div>
+								</div>
+								<!-- END QUIZ PORTLET -->
+								
+								<!-- BEGIN CLOSE BUTTON -->
+								<div class="footer">
+									<a href="#list_1" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE LESSON</a>
+								</div>
+								<!-- END CLOSE BUTTON -->
+								
+							  </div>
+						   </div>
+						   <!-- END PANEL BODY -->
+						   
+						</div>
+						<!-- END LESSON -->
+						
+						<!-- BEGIN LESSON -->
+						<div class="panel panel-default">
+						   <div class="panel-heading">
+							
+								<div class="holder">
+								
+									<div class="anchors move-btn">
+										<a href="javascript:;" title="Move Up" class="up">
+											<i class="icon-arrow-up"></i>
+										</a>
+									
+										<a class="down" title="Move Down" href="javascript:;">
+											<i class="icon-arrow-down"></i>
+										</a>
+									</div>
+									
+									<div class="anchors">
+										<a href="#setup_2" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle" title="Lesson Setup">
+											<i class="icon-cog"></i>
+										</a>
+									</div>
+
+									<div class="panel-title">
+										<a href="#list_2" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle">
+											<i class="icon-folder-open"></i> Lesson 3
+										</a>
+									</div>
+
+									<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+										<i class="icon-remove"></i>
+									</div>
+									
+								</div>
+							
+						   </div>
+						   
+						   <!-- BEGIN PANEL SETUP FORM -->
+						   <div id="setup_2" class="panel-collapse collapse bg-gray-2 a1">
+							  <div class="panel-body">
+								
+								<!-- BEGIN LESSON SETUP FORM -->
+								<div class="portlet">
+								  <div class="portlet-title" title="Lesson Setup">
+									 <div class="caption">
+										Lesson Setup
+									 </div>
+									 <div class="tools">
+										<!-- <a href="" class="expand"></a> -->
+									 </div>
+								  </div>
+								  <div class="portlet-body form">
+								
+									<!-- BEGIN FORM -->
+									<form class="form-horizontal" role="form">
+										<div class="form-body">
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+											  <div class="col-md-6">
+												 <input type="text" class="form-control"  placeholder="Enter lesson title." value="Lesson 3"/>
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Developer Notes</label>
+											  <div class="col-md-6">
+												 <textarea class="form-control" rows="3">Fake description for a mockup flow testing.</textarea>
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">
+												Lesson Learning Objectives
+											  </label>
+											  <div class="col-md-6">
+												What are the 3-5 key things your learners should be able to do at the end of this lesson? Add these things as lesson learning objective.
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <div class="col-md-offset-3 col-md-6">
+												<div class="table-scrollable">
+													<table class="table table-bordered">
+													  <thead>
+														<tr class="td-header">
+														  <th colspan="2">
+															<div class='btn-group'>
+																<a class="btn btn-default" href="javascript:;" onclick="APP.LLO(this,true)" title="Add lesson learning objective"><i class="icon-plus blue-text"></i></a>
+																<a class="btn btn-default" href="javascript:;" title="Delete" onclick="APP.LLO(this,false)"><i class="icon-minus red-text"></i></a>
+															</div>
+														  </th>
+														</tr>
+														<tr class="td-header-bottom-border bg-gray-2">
+														  <th width="10"><input type="checkbox" class="checker" onclick="APP.CHECKBOX(this,true)" /></th>
+														  <th>Type lesson learning objective.</th>
+														</tr>
+													  </thead>
+													  <tbody>
+														
+													  </tbody>
+													</table>
+												</div>
+											  </div>
+										   </div>
+										</div>
+									</form>
+									<!-- END FORM -->
+									
+								  </div>
+								</div>
+								<!-- END LESSON SETUP FORM -->
+							
+								<!-- BEGIN CLOSE BUTTON -->
+								<div class="footer">
+									<a href="#setup_2" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE LESSON SETUP</a>
+								</div>
+								<!-- END CLOSE BUTTON -->
+								
+							  </div>
+						   </div>
+						   <!-- END PANEL SETUP FORM -->
+						   
+						   <!-- BEGIN PANEL BODY -->
+						   <div id="list_2" class="panel-collapse collapse bg-gray-2 a2">
+							  <div class="panel-body">
+								
+								<!-- BEGIN SLIDES PORTLET -->
+								<div class="portlet">
+								  <div class="portlet-title">
+									 <div class="caption">
+										Lesson Components
+									 </div>
+									 <div class="tools">
+										
+									 </div>
+								  </div>
+								  <div class="portlet-body">
+
+									<!-- BEGIN SLIDE ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="slides_2_0">
+										
+										
+									</div>
+									<!-- END SLIDE ACCORDIONS -->
+									 
+								  </div>
+								  <div class="portlet-footer">
+									<a href="javascript:;" data-toggle="modal" data-target="#addSlideModal" title="Add Slide"><i class="icon-plus"></i> Add Slide</a>
+									<a href="javascript:;" data-toggle="modal" data-target="#importPPTModal" title="Add Slide"><i class="icon-upload"></i> Import PowerPoint</a>
+								  </div>
+								</div>
+								<!-- END SLIDES PORTLET -->
+								
+								<!-- BEGIN SUPPROT MATERIAL PORTLET-->
+								<div class="portlet">
+								  <div class="portlet-body">
+
+									<!-- BEGIN SUPPROT MATERIAL ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="mat_lesson_3">
+										
+									</div>
+									<!-- END SUPPROT MATERIAL ACCORDIONS -->
+									 
+								  </div>
+								  <div class="portlet-footer">
+									<a href="javascript:;" data-target="#addSMModal" data-toggle="modal" title="Add Support Material"><i class="icon-plus"></i> Add Support Material</a>
+								  </div>
+								</div>
+								<!-- END SUPPROT MATERIAL PORTLET -->
+								
+								<!-- BEGIN QUIZ PORTLET-->
+								<div class="portlet">
+								  <div class="portlet-body">
+
+									<!-- BEGIN QUIZ ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="quiz_lesson_3">
+										
+									</div>
+									<!-- END QUIZ ACCORDIONS -->
+									 
+								  </div>
+								  <div class="portlet-footer">
+									<a href="javascript:;" data-target="#addQuizModal" data-toggle="modal" title="Add Quiz"><i class="icon-plus"></i> Add Quiz</a>
+								  </div>
+								</div>
+								<!-- END QUIZ PORTLET -->
+								
+								<!-- BEGIN CLOSE BUTTON -->
+								<div class="footer">
+									<a href="#list_2" data-parent="#lessons_accordion_0" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE LESSON</a>
+								</div>
+								<!-- END CLOSE BUTTON -->
+								
+							  </div>
+						   </div>
+						   <!-- END PANEL BODY -->
+						   
+						</div>
+						<!-- END LESSON -->
+						
+					</div>
+					<!-- END LESSON ACCORDIONS -->
+					
+					<!-- BEGIN ACTION BUTTONS -->
+					<div class="panel-group">
+						<div class="add-btns">
+							<a data-toggle="modal" data-target="#addLessonModal" href="" title="Add Lesson"><i class="icon-plus"></i> Add Lesson</a>
+						</div>
+					</div>
+					<!-- END ACTION BUTTONS -->
+					
+					<!-- BEGIN FINAL EXAM ACCORDIONS -->
+					<div class="panel-group accordion" id="exam_accordion_0">
+					
+						<!-- BEGIN EXAM -->
+						<div class="panel panel-default">
+						   <div class="panel-heading">
+							
+								<div class="holder">
+								
+									<div class="anchors move-btn">
+										<a href="javascript:;" title="Move Up" class="up">
+											<i class="icon-arrow-up"></i>
+										</a>
+									
+										<a class="down" title="Move Down" href="javascript:;">
+											<i class="icon-arrow-down"></i>
+										</a>
+									</div>
+									
+									<div class="anchors">
+										<a href="#exam_setup_0" data-parent="#exam_accordion_0" data-toggle="collapse" class="accordion-toggle" title="Final Exam Setup">
+											<i class="icon-cog"></i>
+										</a>
+									</div>
+
+									<div class="panel-title">
+										<a href="#exam_list_0" data-parent="#exam_accordion_0" data-toggle="collapse" class="accordion-toggle">
+											<i class="glyphicon glyphicon-file inside-icon-exam"></i> Final Exam 1
+										</a>
+									</div>
+
+									<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+										<i class="icon-remove"></i>
+									</div>
+									
+								</div>
+							
+						   </div>
+						   
+						   <!-- BEGIN PANEL SETUP -->
+						   <div id="exam_setup_0" class="panel-collapse collapse bg-gray-2 a1">
+							  <div class="panel-body">
+								
+								<!-- BEGIN FORM -->
+								<div class="portlet">
+								  <div class="portlet-title">
+									 <div class="caption">
+										Final Exam Setup
+									 </div>
+									 <div class="tools">
+										
+									 </div>
+								  </div>
+								  <div class="portlet-body form">
+									 
+									<form class="form-horizontal" role="form">
+										<div class="form-body">
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Number of target questions per exam</label>
+											  <div class="col-md-6">
+												<input type="text" class="form-control" placeholder="Enter value in numeric" value="0" readonly="readonly">
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Randomize questions</label>
+											  <div class="col-md-6">
+												<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Randomize answers</label>
+											  <div class="col-md-6">
+												<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Time permitted for exam (minutes)</label>
+											  <div class="col-md-6">
+												<input type="text" class="form-control" placeholder="Enter value in numeric" value="15">
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Grade questions</label>
+											  <div class="col-md-6">
+												<select class="form-control">
+													<option>After each question is answered</option>
+													<option>After exam is submitted</option>
+												</select>
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Allow review after grading</label>
+											  <div class="col-md-6">
+												<input type="checkbox" class="form-chkbox" value="option1" checked="checked">
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Score required to pass exam</label>
+											  <div class="col-md-6">
+												<input type="text" class="form-control" placeholder="Enter value in numeric" value="70">
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Number of attempts permitted</label>
+											  <div class="col-md-6">
+												<input type="text" class="form-control" placeholder="Enter value in numeric" value="3">
+											  </div>
+										   </div>
+										   <div class="form-group">
+											  <label  class="col-md-3 control-label">Action to take if fail to pass</label>
+											  <div class="col-md-6">
+												<select class="form-control">
+													<option>Retake course</option>
+													<option>Go to next lesson</option>
+													<option>Lock course</option>
+												</select>
+											  </div>
+										   </div>
+										</div>
+									</form>
+									 
+								  </div>
+								</div>
+								<!-- END FORM -->
+												
+								<!-- BEGIN CLOSE BUTTON -->
+								<div class="footer">
+									<a href="#exam_setup_0" data-parent="#exam_accordion_0" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE FINAL EXAM SETUP</a>
+								</div>
+								<!-- END CLOSE BUTTON -->
+								
+							  </div>
+						   </div>
+						   <!-- END PANEL SETUP -->
+						   
+						   <!-- BEGIN PANEL BODY -->
+						   <div id="exam_list_0" class="panel-collapse collapse bg-gray-2 a2">
+							  <div class="panel-body">
+								
+								<!-- BEGIN FORM -->
+								<div class="portlet">
+								  <div class="portlet-title">
+									 <div class="caption">
+										Question Banks
+									 </div>
+									 <div class="tools">
+										
+									 </div>
+								  </div>
+								  <div class="portlet-body">
+									
+									<!-- BEGIN BANK ACCORDIONS -->
+									<div class="panel-group accordion page-panel" id="exam_0_banks">
+										
+										<!-- BEGIN BANK -->
+										<div class="panel panel-default">
+										   <div class="panel-heading">
+											  
+												<div class="holder">
+								
+													<div class="anchors move-btn">
+														<a href="javascript:;" title="Move Up" class="up">
+															<i class="icon-arrow-up"></i>
+														</a>
+													
+														<a class="down" title="Move Down" href="javascript:;">
+															<i class="icon-arrow-down"></i>
+														</a>
+													</div>
+													
+													<div class="panel-title">
+														<a href="#exam_0_bank_0" data-parent="#exam_0_banks" data-toggle="collapse" class="accordion-toggle">
+															<i class="icon-question-bank"><i></i></i> Lesson Name
+														</a>
+													</div>
+
+													<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+														<i class="icon-remove"></i>
+													</div>
+													
+												</div>
+											  
+										   </div>
+										   
+										   <!-- BEGIN PANEL BODY -->
+										   <div id="exam_0_bank_0" class="panel-collapse collapse a2">
+											  <div class="panel-body">
+												
+												<!-- BEGIN QUESTIONS -->
+												<div class="portlet">
+												  <div class="portlet-title sub">
+													 <div class="caption">
+														Questions
+													 </div>
+													 <div class="tools">
+														
+													 </div>
+												  </div>
+												  <div class="portlet-body">
+													
+													<!-- BEGIN SETUP FORM -->
+													<div class="heading-bottom-text">
+														<label class="col-md-11 control-label" style="margin-top: 5px">Target number of questions to ask related to this lesson on every exam attempt<span class="required">*</span></label>
+														<div class="col-md-1">
+															<input type="text" class="form-control" placeholder="Enter value in numeric" value="2">
+														</div>
+													</div>
+													<!-- END SETUP FORM -->
+													
+													<!-- BEGIN QUESTION PORTLET -->
+													<div class="portlet">
+													  <div class="portlet-body">
+
+														<!-- BEGIN QUESTION ACCORDIONS -->
+														<div class="panel-group accordion page-panel" id="exam_0_bank_0_questions">
+															
+															<!-- BEGIN QUESTION PANEL -->
+															<div class="panel panel-default">
+															   <div class="panel-heading">
+																  
+																	<div class="holder">
+													
+																		<div class="anchors move-btn">
+																			<a href="javascript:;" title="Move Up" class="up">
+																				<i class="icon-arrow-up"></i>
+																			</a>
+																		
+																			<a class="down" title="Move Down" href="javascript:;">
+																				<i class="icon-arrow-down"></i>
+																			</a>
+																		</div>
+																		
+																		<div class="panel-title">
+																			<a href="#exam_0_bank_0_question_0" data-parent="#exam_0_bank_0_questions" data-toggle="collapse" class="accordion-toggle">
+																				<i class="icon-question-item"></i> Question - A
+																			</a>
+																		</div>
+
+																		<div class="remove-btn" title="Delete" onclick="remove_panel(this)">
+																			<i class="icon-remove"></i>
+																		</div>
+																		
+																	</div>
+																  
+															   </div>
+															   
+															   <!-- BEGIN QUESTION COMPONENT BODY -->
+															   <div id="exam_0_bank_0_question_0" class="panel-collapse collapse a2">
+																  <div class="panel-body">
+																	
+																	<!-- BEGIN QUESTION -->
+																	<div class="portlet">
+																	  <div class="portlet-title sub">
+																		 <div class="caption">
+																			Question Components
+																		 </div>
+																		 <div class="tools">
+																			
+																		 </div>
+																	  </div>
+																	  <div class="portlet-body form">
+																	  
+																		<div class="form-horizontal">
+																		
+																			<!-- BEGIN COMPONENTS 1 -->
+																			<div class="portlet portlet-btn">
+																			  <div class="portlet-title" title="Complexity">
+																				<div class="caption">
+																					<h5><strong>Complexity</strong></h5>
+																				</div>
+																				<div class="tools">
+																					<a href="" class="collapse"></a>
+																				</div>
+																			  </div>
+																			  <div class="portlet-body form">
+																				<div class="form-body">
+																				   <div class="form-group">
+																					  <div class="col-md-offset-2 col-md-8">
+																						<select class="form-control">
+																							<option>1 – Recall</option>
+																							<option>Option 2</option>
+																							<option>Option 3</option>
+																						</select>
+																					  </div>
+																				   </div>
+																				</div>
+																			  </div>
+																			</div>
+																			<!-- END COMPONENTS 1 -->
+																		
+																			<!-- BEGIN COMPONENTS 2 -->
+																			<div class="portlet portlet-btn">
+																			  <div class="portlet-title" title="Question type">
+																				<div class="caption">
+																					<h5><strong>Question type</strong></h5>
+																				</div>
+																				<div class="tools">
+																					<a href="" class="collapse"></a>
+																				</div>
+																			  </div>
+																			  <div class="portlet-body form">
+																				<div class="form-body">
+																				   <div class="form-group">
+																					  <div class="col-md-offset-2 col-md-8">
+																						<select class="form-control">
+																							<option>Multiple-choice Single Select</option>
+																							<option>Option 2</option>
+																							<option>Option 3</option>
+																						</select>
+																					  </div>
+																				   </div>
+																				</div>
+																			  </div>
+																			</div>
+																			<!-- END COMPONENTS 2 -->
+																		
+																			<!-- BEGIN COMPONENTS 3 -->
+																			<div class="portlet portlet-btn">
+																			  <div class="portlet-title" title="Question">
+																				<div class="caption">
+																					<h5><strong>Question</strong></h5>
+																				</div>
+																				<div class="tools">
+																					<a href="" class="collapse"></a>
+																				</div>
+																			  </div>
+																			  <div class="portlet-body form">
+																				<div class="form-body">
+																				   <div class="form-group">
+																					  <div class="col-md-offset-2 col-md-8">
+																						 <textarea id="exam-q-ckeditor-1" class="ckeditor form-control" name="q-ckeditor" rows="4">Question - A</textarea>
+																					  </div>
+																				   </div>
+																				</div>
+																			  </div>
+																			</div>
+																			<!-- END COMPONENTS 3 -->
+																		
+																			<!-- BEGIN COMPONENTS 4 -->
+																			<div class="portlet portlet-btn">
+																			  <div class="portlet-title" title="Answer Choices">
+																				<div class="caption">
+																					<h5><strong>Answer Choices</strong></h5>
+																				</div>
+																				<div class="tools">
+																					<a href="" class="collapse"></a>
+																				</div>
+																			  </div>
+																			  <div class="portlet-body form">
+																				<div class="form-body">
+																				   <div class="form-group">
+																					  <div class="col-md-offset-2 col-md-8">
+																						<div class="form-list">
+																							<div>
+																								<input type="checkbox">
+																								<span>Disable answer choice randomization</span>
+																							</div>
+																						</div>
+																					  </div>
+																				   </div>
+																				   <div class="form-group">
+																					  <div class="col-md-offset-2 col-md-8">
+																						<div class="table-scrollable">
+																							<table class="table table-str-border table-bordered">
+																							  <thead>
+																								<tr class="td-header">
+																								  <th colspan="8">
+																									<div class='btn-group'>
+																										<a data-toggle="modal" data-target="#addAnsChoiceModal" class="btn btn-default" href="javascript:;" title="Add Answer Choice to Question"><i class="icon-plus blue-text"></i></a>
+																										<a class="btn btn-default" href="javascript:;" title="Delete Selected Answer Choice"><i class="icon-minus red-text"></i></a>
+																									</div>
+																								  </th>
+																								</tr>
+																								<tr class="td-header-bottom-border">
+																								  <th></th>
+																								  <th>Choice</th>
+																								  <th>Correct</th>
+																								  <th>Feedback</th>
+																								</tr>
+																							  </thead>
+																							  <tbody height="100">
+																								<tr>
+																								  <td></td>
+																								  <td></td>
+																								  <td></td>
+																								  <td></td>
+																								</tr>
+																							  </tbody>
+																							</table>
+																						</div>
+																					  </div>
+																				   </div>
+																				</div>
+																			  </div>
+																			</div>
+																			<!-- END COMPONENTS 4 -->
+																			
+																		</div>
+																		 
+																	  </div>
+																	</div>
+																	<!-- END QUESTION -->
+																	
+																	<!-- BEGIN CLOSE BUTTON -->
+																	<div class="footer">
+																		<a href="#exam_0_bank_0_question_0" data-parent="#exam_0_bank_0_questions" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE QUESTION</a>
+																	</div>
+																	<!-- END CLOSE BUTTON -->
+																	
+																  </div>
+															   </div>
+															   <!-- END QUESTION COMPONENT BODY -->
+															   
+															</div>
+															<!-- END QUESTION PANEL -->
+															
+														</div>
+														<!-- END QUESTION ACCORDIONS -->
+														 
+													  </div>
+													  <div class="portlet-footer">
+														<a data-target="#addQuestionModal" data-toggle="modal" title="Add Question"><i class="icon-plus"></i> Add Question</a>
+													  </div>
+													</div>
+													<!-- END QUESTION PORTLET -->
+													 
+												  </div>
+												</div>
+												<!-- END QUESTIONS -->
+												
+												<!-- BEGIN CLOSE BUTTON -->
+												<div class="footer">
+													<a href="#exam_0_bank_0" data-parent="#exam_0_banks" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE QUESTION BANK</a>
+												</div>
+												<!-- END CLOSE BUTTON -->
+												
+											  </div>
+										   </div>
+										   <!-- END PANEL BODY -->
+										   
+										</div>
+										<!-- END BANK -->
+										
+									</div>
+									<!-- END BANK ACCORDIONS -->
+									
+								  </div>
+								</div>
+								<!-- END FORM -->
+								
+								<!-- BEGIN CLOSE BUTTON -->
+								<div class="footer">
+									<a href="#exam_list_0" data-parent="#exam_accordion_0" data-toggle="collapse" class="accordion-toggle collapsed">CLOSE FINAL EXAM</a>
+								</div>
+								<!-- END CLOSE BUTTON -->
+								
+							  </div>
+						   </div>
+						   <!-- END PANEL BODY -->
+						   
+						</div>
+						<!-- END EXAM -->
+						
+					</div>
+					<!-- END FINAL EXAM ACCORDIONS -->
+
+					<!-- BEGIN ACTION BUTTONS -->
+					<div class="panel-group">
+						<div class="add-btns">
+							<a href="javascript:;" data-target="#addExamModal" data-toggle="modal" title="Add Final Exam"><i class="icon-plus"></i> Add Final Exam</a>
+						</div>
+					</div>
+					<!-- END ACTION BUTTONS -->
+					
+					<!-- BEGIN ACTION BUTTONS -->
+					<div class="panel-group">
+						<button type="button" class="btn blue hide" title="Save" onclick="APP.SAVE_COURSE()"><i class="icon-save"></i> Save</button>
+					</div>
+					<!-- END ACTION BUTTONS -->
+					
+                </div>
+                <!-- END MAIN CONTENT -->
+				
+            </div>
+            <!-- Workspace End -->
+        </div>
+        <!-- END MAIN CONTENT -->
+        
+    </div>
+	
+	<script>
+		$(document).ready(function ()
+		{
+			//	BEGIN APP **************************************************************
+			APP.PLACEHOLDER_FIX();
+			APP.EDIT_OR_VIEW_TOGGLE();
+			APP.LEFT_NAV.init("CLOSE","nav_accordion_1");
+			//APP.LEFT_NAV_COURSE_OUTLINE('course_structure_1');
+			APP.ACCORDION_MOVEABLE();
+			APP.BODY_COLLAPSES("CLOSE");
+			
+			APP.CKEDITOR("title-ckeditor-model", "TITLE");
+			APP.CKEDITOR("title-ckeditor-1", "TITLE");
+			APP.CKEDITOR("title-ckeditor-2", "TITLE");
+			APP.CKEDITOR("title-ckeditor-3", "TITLE");
+			APP.CKEDITOR("title-ckeditor-4", "TITLE");
+			
+			APP.CKEDITOR("cc-ckeditor-1", "STANDARD");
+			APP.CKEDITOR("cc-ckeditor-2", "STANDARD");
+			APP.CKEDITOR("cc-ckeditor-3", "STANDARD");
+			APP.CKEDITOR("cc-ckeditor-4", "STANDARD");
+			
+			APP.CKEDITOR("text-ckeditor-1", "TEXT");
+			APP.CKEDITOR("text-ckeditor-2", "TEXT");
+			APP.CKEDITOR("text-ckeditor-3", "TEXT");
+			APP.CKEDITOR("text-ckeditor-4", "TEXT");
+			
+			APP.CKEDITOR("q-ckeditor-1", "STANDARD");
+			APP.CKEDITOR("q-ckeditor-2", "STANDARD");
+			APP.CKEDITOR("exam-q-ckeditor-1", "STANDARD");
+			
+			APP.CKEDITOR("ans-ckeditor-1", "ANSWER_CHOICE");
+			APP.CKEDITOR("feedback-ckeditor-1", "ANSWER_CHOICE");
+			
+			APP.ACCORDION_EVENT("#lessons_accordion_0");
+			APP.MODAL_EVENT(".modal");
+			
+			APP.LOADING_BTN("#search-btn-1");
+			APP.LOADING_BTN_RESET("#accept-btn-1","#search-btn-1");
+			APP.MODE_INIT("#atr_mode");
+			
+			APP.BOTTOM_BAR();
+			
+			/*APP.APPLY_ROUNDED_CORNERS();
+			APP.DATAGRID('#sample_1',true,false,true,true);*/
+			//	END APP **************************************************************
+		});
+		
+		/*function table_minus_plus(CASE)
+		{
+			switch(CASE){
+				case "PLUS":
+					//window.open("new_slide.html","_self");
+					break;
+				case "MINUS":
+					
+					break;
+			}
+		}*/
+	</script>
+</body>
+</html>

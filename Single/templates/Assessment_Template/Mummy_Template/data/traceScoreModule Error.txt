@@ -1,0 +1,62 @@
+length: 5, id: 5
+
+<p>Question_6_1</p>
+
+<p>Question_7_1</p>
+
+<p>Question_8_1</p>
+
+<p>Question_9_1</p><p> </p>
+
+<p>Question_10_1</p>
+
+length: 5, id: 7
+
+<p>Question_1_1</p>
+
+<p>Question_2_1</p>
+
+<p>Question_3_1</p>
+
+<p>Question_4_1</p>
+
+<p>Question_5_1</p>
+
+length: 5, id: 8
+
+<p>Question_11_1</p>
+
+<p>Question_12_1</p>
+
+<p>Question_13_1</p>
+
+<p>Question_14_1</p>
+
+<p>question_15_1</p>
+
+
+topicSets = [5,7,8]
+
+questionArray[6 to 10][n] = 5
+:
+:
+:
+questionArray[1 to 6][n] = 7
+:
+:
+:
+questionArray[10 to 15][n] = 8
+
+
+
+runtime checking
+
+get topic id from questionArray e.g. 7
+
+findIndex (7,topicSets)
+
+	7 = 5
+	7 = 7 return loop = 1
+	7 = 8
+
+saveQ = [ , questionArray , ]

@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Dashboard</title>
+
+	<!-- BEGIN CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/plugins/threesixty/styles.css" />
+
+		<!-- BEGIN PAGE SPECIFIC CSS -->
+		<!-- <link rel="stylesheet" type="text/css" href="assets/plugins/aciTree/css/aciTree.css" />
+		<link rel="stylesheet" type="text/css" href='assets/plugins/toggle-switch-master/css/toggleswitch.css' />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/DT_bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" /> -->
+		<!-- END PAGE SPECIFIC CSS -->
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style-metronic.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/header.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- END CSS -->
+	
+    <!-- BEGIN SCRIPTS -->
+    <script type="text/javascript" src="assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/html5shiv.js"></script>
+    <script type="text/javascript" src="assets/plugins/respond.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/BrowserDetect.js"></script>
+	
+		<!-- BEGIN PAGE LEVEL PLUGINS -->
+		<!-- <script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciPlugin.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.dom.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.core.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.selectable.js"></script>
+		<script type='text/javascript' src='assets/plugins/toggle-switch-master/js/jquery.toggleswitch.min.js'></script>
+		<script type='text/javascript' src='assets/plugins/jquery.corner.js'></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+		<script type='text/javascript' src="assets/scripts/table-managed.js"></script>
+		<script type="text/javascript" src="assets/plugins/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script> -->
+		<!-- END PAGE LEVEL PLUGINS -->
+	
+    <script type='text/javascript' src="assets/scripts/core.js"></script>
+	<!-- END SCRIPTS -->
+    
+</head>
+
+<body>
+    <div class="wrapper">
+			
+        <!-- Header Begin -->
+        <div class="header-content">
+		
+            <!-- Top Bar Begin -->
+            <div class="push-down">
+                <div class="container-fluid">
+                    <div class="pull-left logo"></div>
+                    <ul class="top-right-nav">
+                        <li class="nav-ph">888-360-8764</li>
+                        <li class="divider"></li>
+                        <li class="support-a"><a href="javascript:;">Support</a></li>
+                        <li class="divider"></li>
+                        <li><i style="font-size: 18px" class="icon threesixty-chat-now"></i> <a href="javascript:;">Chat Now</a></li>
+                        <li class="divider"></li>
+						<li><i class="glyphicon glyphicon-shopping-cart"></i> <a href="javascript:;">Cart <span class="badge"><strong>2</strong></span></a></li>
+						<li class="divider"></li>
+						<li>
+							<div class="btn-group db-box-2">
+								<div class="pull-left mode-label">Manager</div>
+								<i class="pull-left lady-icon dp"></i>
+								<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+									<span class="caret"></span>
+								</button>
+								<ul role="menu" class="dropdown-menu dropdown-menu-right">
+									<li><a href="#">My Profile</a></li>
+									<li><a href="index.html">Log Out</a></li>
+									<li class="divider"></li>
+									<li><a id="lnr_mode" href="../LMS/dashboard-1.html">Learner</a></li>
+									<li><a id="mgr_mode" href="../LMS/dashboard-2.html">Manager</a></li>
+									<li><a id="ins_mode" href="javascript:;" onclick="APP.MODE_CHANGE(this);">Instructor</a></li>
+									<li><a id="atr_mode" href="../Single/dashboard.html" >Author</a></li>
+									<li><a id="acr_mode" href="javascript:;" onclick="APP.MODE_CHANGE(this);">Accreditation</a></li>
+									<li><a id="admin_mode" href="javascript:;" onclick="APP.MODE_CHANGE(this);">Administrator</a></li>
+								</ul>
+							</div>
+						</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+            			
+            <!-- Navigation Bar Begin -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+				
+                  <!-- Brand and toggle get grouped for better mobile display -->
+					<a class="btn btn-lg header-menu" data-toggle="collapse" data-target="#header-navbar-collapse"><i class="icon-reorder"></i></a>
+					
+					<ul id="header-navbar-collapse" class="nav collapse">
+					
+						<!-- Courses -->
+						<li class="dropdown columns-3 tab-inside z-depth-1">
+						  <a data-toggle="dropdown" class="dropdown-toggle fix-dropdown-a" href="javascript:;" title="Courses">Courses <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							
+							<div class="head">
+								<i><a href="javascript:;">Our Most Popular Products</a></i>
+								&nbsp;&nbsp; | &nbsp;&nbsp;
+								<i><a href="http://www.360training.com/SubjectsAllView?catalogId=10051&amp;langId=-1&amp;storeId=21701">View All</a></i>
+							</div>
+							
+							<div role="tabpanel" class="inside-dropdown">
+
+							  <!-- Nav tabs -->
+							  <ul class="nav nav-tabs" role="tablist">
+								<li role="categories" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><i class="icon-home"></i></a></li>
+								<li role="categories"><a href="#num" aria-controls="num" role="tab" data-toggle="tab">#</a></li>
+								<li role="categories"><a href="#a" aria-controls="a" role="tab" data-toggle="tab">A</a></li>
+								<li role="categories"><a href="#b" aria-controls="b" role="tab" data-toggle="tab">B</a></li>
+								<li role="categories"><a href="#c" aria-controls="c" role="tab" data-toggle="tab">C</a></li>
+								<li role="categories"><a href="#x" aria-controls="d" role="tab" data-toggle="tab">D</a></li>
+								<li role="categories"><a href="#x" aria-controls="e" role="tab" data-toggle="tab">E</a></li>
+								<li role="categories"><a href="#x" aria-controls="f" role="tab" data-toggle="tab">F</a></li>
+								<li role="categories"><a href="#x" aria-controls="g" role="tab" data-toggle="tab">G</a></li>
+								<li role="categories"><a href="#x" aria-controls="h" role="tab" data-toggle="tab">H</a></li>
+								<li role="categories"><a href="#x" aria-controls="i" role="tab" data-toggle="tab">I</a></li>
+								<li role="categories"><a href="#x" aria-controls="j" role="tab" data-toggle="tab">J</a></li>
+								<li role="categories"><a href="#x" aria-controls="k" role="tab" data-toggle="tab">K</a></li>
+								<li role="categories"><a href="#x" aria-controls="x" role="tab" data-toggle="tab">..</a></li>
+							  </ul>
+
+							  <!-- Tab panes -->
+							  <div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="home">
+									<div class="row">
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com/food-beverage-programs?searchTerm=food+safety+manager+training+with+exam">Food Safety Manager Training with Exam <span>»</span></a></li>
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com/handling-conflict-employees-guide-personal-effectiveness?searchTerm=handling+conflict+an+employees+guide">HANDLING CONFLICT AN EMPLOYEES' GUIDE <span>»</span></a></li>
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com/osha-safety-certification/osha-10-and-30-outreach-training?searchTerm=osha+10+&amp;+30+outreach+training">OSHA 10 &amp; 30 OUTREACH TRAINING <span>»</span></a></li>
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com/cosmetology-education/texas-cosmetology-ce/texas-4-hour-esthetician-ce-hc-cos-esten?searchTerm=4+hour+esthetician+package">4 HOUR ESTHETICIAN PACKAGE <span>»</span></a></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com/insurance-education/texas-insurance-prelicensing/tx-insurance-life-health-ultimate-package?searchTerm=ultimate+success+licensing+package+life+and+health">ULTIMATE SUCCESS LICENSING PACKAGE LIFE AND HEALTH <span>»</span></a></li>
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com/environmental-health-safety/forklift-heavy-equipment?searchTerm=rigging,+lifting+and+elevated+work+surfaces">RIGGING, LIFTING AND ELEVATED WORK SURFACES <span>»</span></a></li>
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com//ProductDisplay?urlRequestType=Base&amp;catalogId=10051&amp;categoryId=&amp;productId=414733&amp;errorViewName=ProductDisplayErrorView&amp;urlLangId=-1&amp;langId=-1&amp;top_category=&amp;parent_category_rn=&amp;storeId=21701&amp;searchTerm=retail+pharmacy+technician+with+csr">RETAIL PHARMACY TECHNICIAN WITH csr <span>»</span></a></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<ul class="multi-column-dropdown">
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com/ethics-fraud-tx?searchTerm=ethics+and+fraud">ETHICS AND FRAUD <span>»</span></a></li>
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com/ProductDisplay?urlRequestType=Base&amp;catalogId=10051&amp;categoryId=&amp;productId=368216&amp;errorViewName=ProductDisplayErrorView&amp;urlLangId=-1&amp;langId=-1&amp;top_category=&amp;parent_category_rn=&amp;storeId=21701&amp;searchTerm=power+plant+control+room+operator">Power plant control room operator <span>»</span></a></li>
+												<li><i class="icon-plus"></i> <a href="http://www.360training.com/medical-transcription?searchTerm=medical+transcription">MEDICAL TRANSCRIPTION <span>»</span></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="num">num...</div>
+								<div role="tabpanel" class="tab-pane" id="a">a...</div>
+								<div role="tabpanel" class="tab-pane" id="b">b...</div>
+								<div role="tabpanel" class="tab-pane" id="x">...</div>
+							  </div>
+
+							</div>
+							
+						  </ul>
+						</li>
+						
+						<!-- Library Subscriptions -->
+						<li class="dropdown columns-3 z-depth-1">
+						  <a data-toggle="dropdown" class="dropdown-toggle fix-dropdown-a" href="javascript:;" title="Library Subscriptions">Library Subscriptions <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<div class="head">
+								<i><a href="http://www.360training.com/library-subscriptions">Library Subscriptions and Group Enrollments</a></i>
+								 &nbsp;&nbsp; | &nbsp;&nbsp;
+								<i><a href="http://www.360training.com/library-subscriptions">View All</a></i>
+							</div>
+							<div class="row">
+								<div class="col-sm-4">
+									<ul class="multi-column-dropdown">
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/business-skills-library">Business Skills (3)</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/healthcare-education-library">Healthcare Education (8)</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/power-and-utilities-solutions-library">Power and Utilities Solutions (2)</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<ul class="multi-column-dropdown">
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/environmental-health-safety-library">Environmental Health and Safety (2)</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/hr-ethics-compliance-library">HR Ethics and Compliance (4)</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/trades-and-engineering-library">Trades and Engineering (14)</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<ul class="multi-column-dropdown">
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/food-beverage-programs-library">Food and Beverage Programs (3)</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/industrial-skills-library">Industrial Skills (7)</a></li>
+									</ul>
+								</div>
+							</div>
+							
+						  </ul>
+						</li>
+						
+						<!-- Industries -->
+						<li class="dropdown columns-3 z-depth-1">
+						  <a data-toggle="dropdown" class="dropdown-toggle fix-dropdown-a" href="javascript:;" title="Industries">Industries <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<div class="head">
+								<i>All Industries</i>
+							</div>
+							<div class="row">
+								<div class="col-sm-4">
+									<ul class="multi-column-dropdown">
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/business-skills">Business Skills</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/environmental-health-safety">Environmental Health and Safety</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/healthcare-education">Healthcare Education</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/insurance-education">Insurance Education</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/quality-management">Quality Management Education</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<ul class="multi-column-dropdown">
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/career-training">Career Training</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/financial-services-education">Financial Services Education</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/hr-ethics-compliance">HR, Ethics &amp; Compliance</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/it-certification">IT Certification</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/real-estate-education">Real Estate Education</a></li>
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<ul class="multi-column-dropdown">
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/cosmetology-education">Cosmetology Education</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/food-beverage-programs">Food and Beverage Programs</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/industrial-skills">Industrial Skills</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/power-and-utilities">Power and Utilities</a></li>
+										<li><i class="icon-plus"></i> <a href="http://www.360training.com/trades-and-technical-education">Trades and Engineering</a></li>
+									</ul>
+								</div>
+							</div>
+							
+						  </ul>
+						</li>
+						
+						<!-- Business -->
+						<li class="dropdown columns-1 z-depth-1">
+						  <a data-toggle="dropdown" class="dropdown-toggle fix-dropdown-a" href="javascript:;" title="Business">Business <b class="caret"></b></a>
+						  <ul class="dropdown-menu dropdown-menu-right text-center">
+							<div class="head">
+								<a href="http://www.360training.com/enterprise/" class="businees-a"><img alt="" src="assets/img/ico-trng-panel-corporate-7a.png"></a>
+								<h3 class="blue-text">Business</h3>
+							</div>
+							<div class="row">
+								<p>Access enterprise compliance <br> and learning solutions featuring subscriptions to key libraries.</p>
+								<a class="btn blue" href="http://www.360training.com/enterprise/">Get Your Solutions</a>
+								<br/><br/>
+							</div>
+						  </ul>
+						</li>
+						
+						<!-- Search 
+						<li class="search-box">
+							<form action="search_course.html" role="search" class="pull-left" title="Search">
+							  <div class="pull-left">
+									<input type="text" value="" placeholder="Search Courses" class="form-control field">
+							  </div>
+							  <div class="pull-right">
+								<button type="submit" class="btn btn-default search-btn"><i class="search-icon"></i></button>
+							  </div>
+							</form>
+						</li> -->
+						
+						<!-- New Search -->
+						<li style="margin: 8px 10px">
+							<div class="input-group" style="padding-left: 10px">
+								<input type="text" class="form-control" placeholder="Search Courses">
+								<span class="input-group-addon"><button class="btn default"><i class="icon-search"></i></button></span>
+							</div>
+						</li>
+						
+					</ul>
+                </div>
+            </nav>
+            <!-- Navigation Bar End -->
+			
+        </div>
+        <!-- Header End -->
+        
+        <!-- Main Content Begin -->
+        <div class="main-content">
+            
+            <!-- Workspace Begin -->
+            <div id="contentHolder" class="content-holder">
+			
+				<!-- BEGIN BREADCRUMB BAR CONTENT -->
+                <div>
+                	<!-- Breadcrumb -->
+                    <div class="col-xs-12">
+                        <ol class="breadcrumb">
+                        	<li>Dashboard</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- END BEGIN BREADCRUMB BAR CONTENT -->
+				
+                <div class="clearfix"></div>
+
+                <!-- BEGIN PAGE CONTENT -->
+                <div class="page-content">
+					
+					<h1>Welcome, First Name</h1>
+					
+					<div id="learner-portlet">
+					
+						<!-- BEGIN LERNER MODE -->
+						<div class="portlet">
+							<div class="portlet-title">
+								<div class="caption">
+									<h2></h2>
+								</div>
+							</div>
+							<div class="portlet-body">
+							
+								<div class="d-tiles">
+									<div class="d-tiles-cell">
+										<div class="d-tile vertical md-width md-height">
+											<i class="icon threesixty-books"></i>
+											<label>Go to Courses</label>
+										</div>
+									</div>
+									<div class="d-tiles-cell" style="max-width:400px">
+										<div class="d-tile vertical">
+											<i class="icon threesixty-certificate"></i>
+											<label>Print Certificates</label>
+										</div>
+										
+										<div class="d-tile vertical">
+											<i class="icon threesixty-reviews"></i>
+											<label>Review Transcript</label>
+										</div>
+										
+										<!-- <div class="d-tile vertical">
+											<i class="icon-question-sign"></i>
+											<label>Get Help</label>
+										</div> -->
+										
+										<div class="d-tile vertical">
+											<i class="icon threesixty-coffee-cup"></i>
+											<label>FREE Courses</label>
+										</div>
+										
+										<!-- <div class="d-tile vertical">
+											<i class="icon threesixty-shop"></i>
+											<label>Shop</label>
+										</div> -->
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<!-- END LERNER MODE -->
+					
+					</div>
+				
+					<div id="manager-portlet">
+					
+						<!-- BEGIN MANAGER MODE -->
+						<div class="portlet">
+							<div class="portlet-title">
+								<div class="caption">
+									<h2>Manage Learners</h2>
+								</div>
+							</div>
+							<div class="portlet-body">
+							
+								<div class="d-tiles">
+									<div>
+										<div class="d-tile horizontal md-width">
+											<i class="icon threesixty-contact-add-2"></i>
+											<label>Add <br><br>Users</label>
+										</div>
+										<div class="d-tile horizontal md-width">
+											<i class="icon threesixty-online-assessment"></i>
+											<label>Enroll <br><br>Users</label>
+										</div>
+										<div class="d-tile horizontal md-width">
+											<i class="icon threesixty-report"></i>
+											<label>Run <br><br>Reports</label>
+										</div>
+									</div>
+									<div>
+										<div class="d-tile vertical">
+											<i class="icon threesixty-coffee-cup"></i>
+											<label>FREE Courses</label>
+										</div>
+										<!-- <div class="d-tile vertical">
+											<i class="icon threesixty-classroom"></i>
+											<label>Create Classroom</label>
+										</div>
+										<div class="d-tile vertical">
+											<i class="icon threesixty-webinar"></i>
+											<label>Create Webinar Course</label>
+										</div>
+										 <div class="d-tile vertical">
+											<i class="icon threesixty-shop"></i>
+											<label>Shop</label>
+										</div>
+										<div class="d-tile vertical">
+											<i class="icon-question-sign"></i>
+											<label>Get Help</label>
+										</div> -->
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<!-- END MANAGER MODE -->
+						
+						<!-- BEGIN LEARN MODE -->
+						<div class="portlet">
+							<div class="portlet-title">
+								<div class="caption">
+									<h2>Learn</h2>
+								</div>
+							</div>
+							<div class="portlet-body">
+								<div class="d-tiles">
+									<div class="d-tile vertical">
+										<i class="icon threesixty-books"></i>
+										<label>Go to Courses</label>
+									</div>
+									<div class="d-tile vertical">
+										<i class="icon threesixty-certificate"></i>
+										<label>Print Certificates</label>
+									</div>
+									<div class="d-tile vertical">
+										<i class="icon threesixty-reviews"></i>
+										<label>Review Transcript</label>
+									</div>
+									
+								</div>
+								
+							</div>
+						</div>
+						<!-- END LEARN MODE -->
+					
+					</div>
+					
+                </div>
+                <!-- END PAGE CONTENT -->
+				
+            </div>
+            <!-- Workspace End -->
+			
+        </div>
+        <!-- Main Content End -->
+        
+		<!-- Footer Begin -->
+		<!-- <div class="footer-content">
+			<div class="body">
+				<ul>
+					<li class="col-sm-offset-1 col-sm-2">About Us
+						<ul>
+							<li><a href="javascript:;">History</a></li>
+							<li><a href="javascript:;">Our Culture</a></li>
+							<li><a href="javascript:;">Careers</a></li>
+							<li><a href="javascript:;">Our Clients</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">Company
+						<ul>
+							<li><a href="javascript:;">Message from CEO</a></li>
+							<li><a href="javascript:;">Executive Team</a></li>
+							<li><a href="javascript:;">Advisory Board Members</a></li>
+							<li><a href="javascript:;">Accreditation Overview</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">Connect with Us
+						<ul>
+							<li><a href="javascript:;">Contact Us</a></li>
+							<li><a href="javascript:;">Support</a></li>
+							<li><a href="javascript:;">Corporate Solutions</a></li>
+							<li><a href="javascript:;">Author Solutions</a></li>
+							<li><a href="javascript:;">Become a Reseller</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">Blogs & Media
+						<ul>
+							<li><a href="javascript:;">360 Blog</a></li>
+							<li><a href="javascript:;">Enterprise Blog</a></li>
+							<li><a href="javascript:;">Authors Blog</a></li>
+							<li><a href="javascript:;">AsiaPac Blog</a></li>
+							<li><a href="javascript:;">Press Releases</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">International
+						<ul>
+							<li><a href="javascript:;">AsiaPac</a></li>
+							<li><a href="javascript:;">North America</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="footer">
+				<div class="col-xs-8">® 2014 360training.com. All rights reserved.</div>
+				<div class="col-xs-4 text-right">
+					<a target="_blank" href="http://www.facebook.com/360training"><i class="icon-facebook"></i></a>
+					<a target="_blank" href="http://twitter.com/#!/360training"><i class="icon-twitter"></i></a>
+					<a target="_blank" href="http://www.linkedin.com/company/360training"><i class="icon-linkedin"></i></a>
+					<a target="_blank" href="http://plus.google.com/u/0/?tab=wX#104888494914299325457/posts"><i class="icon-google-plus"></i></a>
+				</div>
+			</div>
+		</div> -->
+		<!-- Footer End -->
+    </div>
+	
+	<!-- <div class="loading"></div> -->
+	
+	<script>
+		$(document).ready(function ()
+		{
+			$('.inside-dropdown').on('click', '.nav-tabs a', function(){
+				$(this).closest('.dropdown').addClass('dontClose');
+			})
+
+			$('.tab-inside').on('hide.bs.dropdown', function(e) {
+				if ( $(this).hasClass('dontClose') ){
+					e.preventDefault();
+				}
+				$(this).removeClass('dontClose');
+			});
+			
+			
+			//	BEGIN APP **************************************************************
+			APP.PLACEHOLDER_FIX();
+			APP.MODE_INIT("#lnr_mode");
+			/*APP.PARALLAX();
+			APP.PRELOAD();
+			APP.EDIT_OR_VIEW_TOGGLE();
+			APP.LEFT_NAV.init();
+			APP.LEFT_NAV_COURSE_OUTLINE();
+			APP.BODY_COLLAPSES();
+			APP.APPLY_ROUNDED_CORNERS();
+			APP.CKEDITOR("title-ckeditor", "TITLE");
+			APP.CKEDITOR("cc-ckeditor", "CC");
+			APP.CKEDITOR("text-ckeditor", "TEXT");
+			APP.DATAGRID('#sample_1',true,true,true,true);*/
+			//	END APP **************************************************************
+		});
+	</script>
+</body>
+</html>

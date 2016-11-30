@@ -1,0 +1,86 @@
+<!-- BEGIN HTML -->
+<div class="modal-header">
+	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	<h3 class="modal-title" id="dynamic-modal-label">
+		
+		Upload Visual Asset and Attach to Slide
+		
+	</h3>
+</div>
+<div class="modal-body">
+
+	<!-- BEGIN FORM -->
+	<div class="form-horizontal" role="form">
+		<div class="form-body">
+		   <div class="form-group">
+			  <label  class="col-md-3 control-label">Asset Name<span class="required">*</span></label>
+			  <div class="col-md-6">
+				<input type="text" class="form-control"  placeholder="Enter asset name.">
+			  </div>
+		   </div>
+		   <div class="form-group">
+			  <label  class="col-md-3 control-label">Keywords</label>
+			  <div class="col-md-6">
+				<input type="text" class="form-control" data-role="tagsinput" placeholder="Enter keywords.">
+			  </div>
+		   </div>
+		   <div class="form-group">
+			  <label  class="col-md-3 control-label">Description</label>
+			  <div class="col-md-6">
+				 <textarea class="form-control" rows="3"></textarea>
+			  </div>
+		   </div>
+		   <div class="form-group temp-icons">
+			  <label  class="col-md-3 control-label">Asset Type</label>
+			  <div class="col-md-6">
+				 <label class='temp-label gray-text'>Image (JPG)</label>
+				 <!-- <select class="form-control">
+					<option>Image</option>
+					<option>Movie Clip</option>
+					<option>Flash Object</option>
+				 </select> -->
+			  </div>
+		   </div>
+		   <div class="form-group">
+			  <label  class="col-md-3 control-label">File Path<span class="required">*</span></label>
+			  <div class="col-md-6">
+				 <div class="fileupload fileupload-new" data-provides="fileupload">
+					<span class="btn blue btn-file">
+					<span class="fileupload-new"><i class="glyphicon glyphicon-paperclip"></i> Browser</span>
+					<span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+					<input type="file" class="default" />
+					</span>
+					<span class="fileupload-preview" style="margin-left:5px;"></span>
+					<a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; margin-left:5px;"></a>
+				 </div>
+			  </div>
+		   </div>
+		   <div class="form-group">
+			  <label  class="col-md-3 control-label"></label>
+			  <div class="col-md-6">
+				 <div class="checkbox-list">
+					<label>
+					<input type="checkbox" class="form-chkbox"> Attach this asset to this slide.
+					</label>
+					<label>
+					<input type="checkbox" class="form-chkbox"> Attach this asset to this course's asset group.
+					</label>
+				 </div>
+			  </div>
+		   </div>
+		</div>
+	</div>
+	<!-- END FORM -->
+	
+</div>
+<div class="modal-footer">
+	<button type="button" class="btn blue" onclick="TEMPLATE.RETURN_DYNAMIC_MODAL('Asset Name','1','path/asset')">Accept</button>
+	<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+</div>
+<!-- END HTML -->
+
+<!-- BEGIN SCRIPT -->
+<script>
+	APP.TAGS_INPUT();
+</script>
+<!-- END SCRIPT -->

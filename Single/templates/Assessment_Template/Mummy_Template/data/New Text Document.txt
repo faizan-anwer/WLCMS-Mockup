@@ -1,0 +1,104 @@
+topics = [ , , ]
+
+
+topicSets = [ 1, 2, 3]
+
+
+
+topicTitle_0 = Group A
+
+topicTitle_1 = Group B
+
+topicTitle_2 = Group C
+
+
+
+
+
+slotArr = [Q1_1,Q1_2,Q1_3,Q1_4]
+
+
+xmlSlotTopic = 3
+
+
+topicID = getIndexID( xmlSlotTopic , topicSets )
+
+
+getIndexID (3, [1, 2, 3] ){
+
+	3 == 1
+
+	3 == 2
+
+	3 == 3
+
+	return 3;
+}
+
+
+topicID = 3;
+
+
+topics = [ , , slotArr ]
+
+--------------------------------------
+
+fromElmID
+toElmID
+topicID
+
+loop ++++++ topics.length
+
+
+	f = 0
+	
+	fromElmID = 0
+	toElmID += 5+0 (Ans 5)
+
+	if rang(0, 0, 5) = true
+	
+		topicID = 0
+
+
+	++++++++++++
+
+
+	f = 1
+	
+	fromElmID = 5
+	toElmID += 5+5 (Ans 15)
+
+	if rang(1, 5, 15) = false
+	
+		topicID = 0
+
+	++++++++++++
+
+
+
+	f = 2
+	
+	fromElmID = 5
+	toElmID += 5+5 (Ans 5)
+
+	if rang(1, 5, 10) = false
+	
+		topicID = 0
+
+	++++++++++++
+
+
+	if saveQ[0] == underfined
+
+		saveQ[0] = []
+
+	saveQ[0] = [Q1]
+
+
+
+
+
+
+IDEA:
+
+Conceptually framework is using here just like a bridge but rapid tool gives facilitate of rider, which is great deal but that would not part of this framework. That would be of the template development.

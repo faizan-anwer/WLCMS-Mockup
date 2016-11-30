@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+
+	<!-- BEGIN CSS -->
+    <link rel="stylesheet" type="text/css" href="../../../assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/plugins/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/plugins/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../../assets/plugins/iosOverlay-js/css/iosOverlay.css" />
+	<link rel="stylesheet" type="text/css" href="../../../assets/plugins/threesixty/styles.css" />
+
+		<!-- BEGIN SLIDE SPECIFIC CSS -->
+		<link rel="stylesheet" type="text/css" href="../../../assets/plugins/aciTree/css/aciTree.css" />
+		<link rel="stylesheet" type="text/css" href='../../../assets/plugins/toggle-switch-master/css/toggleswitch.css' />
+		<link rel="stylesheet" type="text/css" href="../../../assets/plugins/data-tables/DT_bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../../../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" />
+		<link rel="stylesheet" type="text/css" href="../../../assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" />
+		<!-- END SLIDE SPECIFIC CSS -->
+	
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style-metronic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/header.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- END CSS -->
+	
+    <!-- BEGIN SCRIPTS -->
+    <script type="text/javascript" src="../../../assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../assets/plugins/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="../../../assets/plugins/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../assets/plugins/html5shiv.js"></script>
+    <script type="text/javascript" src="../../../assets/plugins/respond.min.js"></script>
+	<script type="text/javascript" src="../../../assets/plugins/BrowserDetect.js"></script>
+	<script type="text/javascript" src="../../../assets/plugins/iosOverlay-js/js/iosOverlay.js"></script>
+	<script type="text/javascript" src="../../../assets/plugins/iosOverlay-js/js/spin.min.js"></script>
+
+		<!-- BEGIN SLIDE LEVEL PLUGINS -->
+		<script type="text/javascript" src="../../../assets/plugins/aciTree/js/jquery.aciPlugin.min.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/aciTree/js/jquery.aciTree.dom.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/aciTree/js/jquery.aciTree.core.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/aciTree/js/jquery.aciTree.selectable.js"></script>
+		<script type='text/javascript' src='../../../assets/plugins/toggle-switch-master/js/jquery.toggleswitch.min.js'></script>
+		<script type='text/javascript' src='../../../assets/plugins/jquery.corner.js'></script>
+		<script type="text/javascript" src="../../../assets/plugins/data-tables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/data-tables/DT_bootstrap.js"></script>
+		<script type='text/javascript' src="../../../assets/scripts/table-managed.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+		<script type="text/javascript" src="../../../assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+		<!-- END SLIDE LEVEL PLUGINS -->
+	
+    <script type='text/javascript' src="../../../assets/scripts/core.js"></script>
+	<script type='text/javascript' src="../../../assets/scripts/template.js"></script>
+	<!-- END SCRIPTS -->
+	
+	<script src="data/dbString.js" language="javascript" type="text/javascript"></script>
+	<script src="js/form/w_XMLParser.js" language="javascript" type="text/javascript"></script>
+	
+<script language="javascript" type="text/javascript">
+
+
+// ********************************************	XML Transformation into XSL
+function populateXml(sid){
+	
+	$(document).ready(function() {
+	
+		TEMPLATE.SID = sid;
+		TEMPLATE.IS_NEW = true;
+		
+		// =======================================================
+		//	FOR TESTING
+		// =======================================================
+		if(document.getElementById('txtXml').value != "undefined" && document.getElementById('txtXml').value != null && document.getElementById('txtXml').value != ""){
+			xmlSampleData = document.getElementById('txtXml').value;
+			TEMPLATE.IS_NEW = false;
+		}
+		
+		// =======================================================
+		//	FOR LIVE
+		// =======================================================
+		/*if(TEMPLATE.DATA != '')
+		{
+			xmlSampleData = TEMPLATE.DATA;
+			TEMPLATE.IS_NEW = false;
+		}*/
+		
+		TEMPLATE.DATA = $.parseXML(xmlSampleData);
+		$(TEMPLATE.DATA).find("root").attr("sid",sid);
+		
+		TEMPLATE.LOAD_XML("xml/w_IB.xsl",getBackXSL);
+	});
+}
+
+function getBackXSL (xsl){
+	var chk1 = typeof (XSLTProcessor) == "undefined"; // All browsers
+	var chk2 = typeof (TEMPLATE.DATA.transformNode) != "undefined"; // IE 8 Only
+	//var chk3 = typeof (window.ActiveXObject) != "undefined"; // IE 9 and above
+	
+	if(chk1)
+	{
+		if(chk2)
+		{
+			document.getElementById("inputform_"+TEMPLATE.SID).innerHTML = TEMPLATE.DATA.transformNode(xsl);
+		}
+		else
+		{
+			var xslt = new ActiveXObject("Msxml2.XSLTemplate");
+			var xslDoc = new ActiveXObject("Msxml2.FreeThreadedDOMDocument");
+
+			xslDoc.load(xsl);
+			xslt.stylesheet = xslDoc;
+
+			var xslProc = xslt.createProcessor();
+			xslProc.input = TEMPLATE.DATA;
+			xslProc.transform();
+			document.getElementById("inputform_"+TEMPLATE.SID).innerHTML = xslProc.output;
+		}
+	}
+	else
+	{
+		var xsltProcessor = new XSLTProcessor();
+		var xmls = new XMLSerializer();
+		xsltProcessor.importStylesheet(xsl);
+		var xmlDoc2 = xsltProcessor.transformToDocument(TEMPLATE.DATA);
+		document.getElementById("inputform_"+TEMPLATE.SID).innerHTML = xmls.serializeToString(xmlDoc2);
+	}
+	
+	APP.BODY_COLLAPSES("CLOSE");
+	
+	APP.CKEDITOR("insText_"+TEMPLATE.SID, "TITLE");
+	TEMPLATE.CKEDITOR_BLUR("insText_"+TEMPLATE.SID,"_p1");
+	
+	TEMPLATE.DM_GARBAGE_CLEANER();
+	TEMPLATE.FIX_HTML_TAGS($("#inputform_"+TEMPLATE.SID).find(".dropText"));
+	TEMPLATE.FIX_HTML_TAGS($("#inputform_"+TEMPLATE.SID).find(".draggableObject"));
+	TEMPLATE.FIX_HTML_TAGS($("#inputform_"+TEMPLATE.SID).find(".feedback"));
+	TEMPLATE.FIX_HTML_TAGS($("#inputform_"+TEMPLATE.SID).find(".hint"));
+	
+	if(!TEMPLATE.IS_NEW)
+	{
+		TEMPLATE.GREEN_ICON($("#slide_"+TEMPLATE.SID+"_p1"),true);
+		
+		if($("#inputform_"+TEMPLATE.SID).find(".promptAudio").children().length > 1)
+		{
+			TEMPLATE.GREEN_ICON($("#slide_"+TEMPLATE.SID+"_p2"),true);
+			var $btns = $("#inputform_"+TEMPLATE.SID).find(".promptAudio").parent().find(".td-header > th > .btn-group");
+			$btns.find(".upload").addClass("disabled");
+			$btns.find(".find").addClass("disabled");
+			$btns.find(".detach").removeClass("disabled");
+		}
+		TEMPLATE.GREEN_ICON($("#slide_"+TEMPLATE.SID+"_p3"),true);
+		
+		$("#inputform_"+TEMPLATE.SID).find(".detach.disabled.must").removeClass("disabled");
+		
+		var length = $("#inputform_"+TEMPLATE.SID).find(".options").children().length;
+		TEMPLATE.LIMIT_CHECK_ROW($("#inputform_"+TEMPLATE.SID).find(".upload.cond"),length,5);
+	}
+}
+
+</script>
+
+<!-- <link href="css/IB_Form.css" rel="stylesheet" type="text/css"></link> -->
+</head>
+<body>
+	
+	<!-- BEGIN MODALS -->
+	<div class="modals">
+		
+		<!-- BEGIN DYNAMIC -->
+		<div class="modal fade" id="dynamicModal" tabindex="-1" role="dialog" aria-labelledby="dynamic-modal-label" aria-hidden="true">
+		  <div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			  
+			  <!-- Dynamic Content -->
+			  
+			</div>
+		  </div>
+		</div>
+		<!-- END DYNAMIC -->
+		
+		<!-- BEGIN CONFIRMATION -->
+		<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmation-label" aria-hidden="true">
+		  <div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h3 class="modal-title" id="confirmation-label">
+					
+					<!-- Dynamic Title -->
+					
+				</h3>
+			  </div>
+			  <div class="modal-body">
+			
+				<!-- Dynamic Message -->
+				
+			  </div>
+			  <div class="modal-footer">
+			  
+				<!-- Dynamic Action Buttons -->
+				
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- END CONFIRMATION -->
+		
+	</div>
+	<!-- END MODALS -->
+	
+	<!-- <div id="loader"></div> -->
+    <div id="inputform_1234"></div>
+	<input style="display:none;" type="text" id="txtXml" value=""/>
+    <div>
+		<button style="display:none;" id="btnGet" onclick="setXml();">btnGet</button>
+    </div>
+    <div>
+		<button style="display:none;" id="btnSet" onclick="populateXml('1234');">btnSet</button>
+    </div>
+</body>
+<script src="js/test.js" language="javascript" type="text/javascript"></script>
+</html>

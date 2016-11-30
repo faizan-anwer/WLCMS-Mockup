@@ -1,0 +1,512 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Classroom Overview</title>
+
+	<!-- BEGIN CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/plugins/threesixty/styles.css" />
+
+		<!-- BEGIN PAGE SPECIFIC CSS -->
+		<link rel="stylesheet" type="text/css" href="assets/plugins/aciTree/css/aciTree.css" />
+		<link rel="stylesheet" type="text/css" href='assets/plugins/toggle-switch-master/css/toggleswitch.css' />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/DT_bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" />
+		<!-- END PAGE SPECIFIC CSS -->
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style-metronic.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/header.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- END CSS -->
+	
+    <!-- BEGIN SCRIPTS -->
+    <script type="text/javascript" src="assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/html5shiv.js"></script>
+    <script type="text/javascript" src="assets/plugins/respond.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/BrowserDetect.js"></script>
+	
+		<!-- BEGIN PAGE LEVEL PLUGINS -->
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciPlugin.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.dom.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.core.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.selectable.js"></script>
+		<script type='text/javascript' src='assets/plugins/toggle-switch-master/js/jquery.toggleswitch.min.js'></script>
+		<script type='text/javascript' src='assets/plugins/jquery.corner.js'></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+		<script type='text/javascript' src="assets/scripts/table-managed.js"></script>
+		<script type="text/javascript" src="assets/plugins/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+		<!-- END PAGE LEVEL PLUGINS -->
+	
+    <script type='text/javascript' src="assets/scripts/core.js"></script>
+	<!-- END SCRIPTS -->
+    
+</head>
+
+<body>
+    <div class="wrapper">
+		
+		<!-- BEGIN MESSAGE BAR -->
+		<div class="messages">
+			<!-- <div class="msg" id="contentSaveMsg">
+				<div class="alert alert-success alert-dismissible" role="alert">
+				  <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				  <strong>Success!</strong> The content has been saved.
+				</div>
+			</div> -->
+		</div>
+		<!-- END MESSAGE BAR -->
+		
+        <!-- Header Begin -->
+        <div class="header-content">
+            
+			<!-- Top Bar Begin -->
+            <div class="push-down">
+                <div class="container-fluid">
+                    <div class="pull-left logo"></div>
+                    <ul class="top-right-nav">
+                        <li class="nav-ph">888-360-8764</li>
+                        <li class="divider"></li>
+                        <li class="support-a"><a href="javascript:;">Support</a></li>
+                        <li class="divider"></li>
+                        <li><i style="font-size: 18px" class="icon threesixty-chat-now"></i> <a href="javascript:;">Chat Now</a></li>
+                        <li class="divider"></li>
+						<li><i class="glyphicon glyphicon-shopping-cart"></i> <a href="javascript:;">Cart <span class="badge"><strong>2</strong></span></a></li>
+						<li class="divider"></li>
+						<li>
+							<div class="btn-group db-box-2">
+								<div class="pull-left mode-label">Manager</div>
+								<i class="pull-left lady-icon dp"></i>
+								<button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+									<span class="caret"></span>
+								</button>
+								<ul role="menu" class="dropdown-menu dropdown-menu-right">
+									<li><a href="#">My Profile</a></li>
+									<li><a href="index.html">Log Out</a></li>
+									<li class="divider"></li>
+									<li><a id="lnr_mode" href="../LMS/dashboard-1.html">Learner</a></li>
+									<li><a id="mgr_mode" href="../LMS/dashboard-2.html">Manager</a></li>
+									<li><a id="ins_mode" href="javascript:;" onclick="APP.MODE_CHANGE(this);">Instructor</a></li>
+									<li><a id="atr_mode" href="../Single/dashboard.html" >Author</a></li>
+									<li><a id="acr_mode" href="javascript:;" onclick="APP.MODE_CHANGE(this);">Accreditation</a></li>
+									<li><a id="admin_mode" href="javascript:;" onclick="APP.MODE_CHANGE(this);">Administrator</a></li>
+								</ul>
+							</div>
+						</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+            
+            <!-- Navigation Bar Begin -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+				
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="btn btn-lg header-menu" data-toggle="collapse" data-target="#header-navbar-collapse"><i class="icon-reorder"></i></a>
+					
+					<ul class="nav collapse" id="header-navbar-collapse">
+					
+						<!-- Store -->
+						<li class="dropdown">
+						  <a title="Store" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons store-icon"></div><span>Store</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="../Authoring_Program/author-starter.html">Free Software and Packages</a></li>
+							<li><a href="../Authoring_Program/author-lcms-software.html">Course Creation Software and Upgrades</a></li>
+							<li><a href="../Authoring_Program/author-lms-software.html">Learning Management Software and Upgrades</a></li>
+							<li><a href="../Authoring_Program/author-storefront-software.html">eCommerce Store Software and Upgrades</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Create -->
+						<li class="dropdown">
+						  <a title="Create" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons create-icon"></div><span>Create</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="javascript:;" style="padding:10px">Overview to Creation Options</a></li>
+							<li class="dropdown-cat">Account-free Courses</li>
+							<li><a href="http://www.360training.com/authoring-program/submit-webinar-course/">Submit a Webinar Course</a></li>
+							<li><a href="http://www.360training.com/authoring-program/submit-classroom-course/">Submit a Classroom Course</a></li>
+							<li class="dropdown-cat">Account-based Courses</li>
+							<li><a href="javascript:;">Create an Online Course</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Manage -->
+						<li class="dropdown">
+						  <a title="Manage" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons manage-icon"></div><span>Manage</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="javascript:;">Author Account</a></li>
+							<li><a href="javascript:;">Global Royalty Report</a></li>
+							<li><a href="javascript:;">Global Revenue Share Report</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Community -->
+						<li class="dropdown">
+						  <a title="Community" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons community-icon"></div><span>Community</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li class="dropdown-cat">Support</li>
+							<li><a href="../Authoring_Program/support.html">Application Support</a></li>
+
+
+							<li class="dropdown-cat">FAQs</li>
+							<li><a href="../Authoring_Program/faqs.html">Software Purchases and Terms</a></li>
+							<li><a href="../Authoring_Program/faqs.html">More About Tools</a></li>
+							<li><a href="../Authoring_Program/faqs.html">Life as a 360 Author</a></li>
+							<li><a href="../Authoring_Program/faqs.html">Managing Your Own Storefront</a></li>
+
+
+							<li class="dropdown-cat">Community</li>
+							<li><a href="../Authoring_Program/news.html">What’s New</a></li>
+							<li><a href="../Authoring_Program/whitepapers.html">Whitepapers</a></li>
+							<li><a href="../Authoring_Program/blogs.html">Blogs</a></li>
+							<li><a href="https://www.facebook.com/pages/360trainingcom-Authoring/378754678842234">Facebook</a></li>
+							<li><a href="https://twitter.com/360trainingAuth">Twitter</a></li>
+							<li><a href="../Authoring_Program/showcase.html">Showcase</a></li>
+							<li><a href="../Authoring_Program/opportunities.html">Opportunities</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Search -->
+						<li class="search-box">
+							<form title="Search" class="pull-left" role="search" action="search_course.html">
+							  <div class="pull-left">
+									<input type="text" class="form-control field" placeholder="Search Authored Courses" value="">
+							  </div>
+							  <div class="pull-right">
+								<button class="btn btn-default search-btn" type="submit"><i class="search-icon"></i></button>
+							  </div>
+							</form>
+							
+							<div class="pull-left advance-search">
+								<a href="search_course.html" title="Advanced Search"><i></i><span>Advanced Search</span></a>
+							</div>
+						</li>
+                    
+					</ul>
+                </div>
+            </nav>
+            <!-- Navigation Bar End -->
+			
+        </div>
+        <!-- Header End -->
+        
+        <!-- Main Content Begin -->
+        <div class="main-content">
+		
+            <!-- Left Panel Begin -->
+            <div id="leftNavPanel" class="left-nav-panel">
+                <div class="thumb-btn">
+                    <a class="collapse-btn-icon" onClick="toggle_leftNavPanel()"></a>
+                </div>
+                
+                <div class="list-holder indicator">
+                    <ul class="list-group only-icon-panel">
+
+                        <!-- Overview -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group" id="nav_accordion_0c">
+                                <i class="glyphicon glyphicon-book"></i>
+                                <span>Overview</span>
+                            </a>
+                        </li>
+						
+						<!-- Classroom -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group open-sign" id="nav_accordion_1c">
+                                <i class="glyphicon glyphicon-list-alt"></i>
+                                <span>Classroom</span>
+                                <b></b>
+                            </a>
+                            
+                            <ul class="list-sub-group">
+                                <li class="list-group-item">
+                                    <a href="classroom_schedule.html">
+                                        <i></i>
+                                        <span>Schedule</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+								<li class="list-group-item">
+                                    <a href="classroom_instructor.html">
+                                        <i></i>
+                                        <span>Instructor</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="classroom_setup.html">
+                                        <i></i>
+                                        <span>Classroom Setup</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+						
+                        <!-- Settings -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group" id="nav_accordion_2c">
+                                <i class="icon-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        
+                        <!-- Publishing -->
+                        <li class="list-group-item">
+                            <a class="btn-sub-group open-sign" id="nav_accordion_3c">
+                                <i class="glyphicon glyphicon-download-alt"></i>
+                                <span>Publishing</span>
+                                <b></b>
+                            </a>
+                            
+                            <ul class="list-sub-group">
+                                <li class="list-group-item">
+                                    <a href="classroom_availability.html">
+                                        <i></i>
+                                        <span>Set Availability</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+								<li class="list-group-item">
+                                    <a href="classroom_marketing.html">
+                                        <i></i>
+                                        <span>Set Marketing</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="classroom_pricing.html">
+                                        <i></i>
+                                        <span>Set Pricing</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+								<li class="list-group-item">
+                                    <a href="classroom_publish.html">
+                                        <i></i>
+                                        <span>Publish Course</span>
+                                        <b></b>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                         
+                    </ul>
+                </div>
+            </div>
+            <!-- Left Panel End -->
+            
+            <!-- Workspace Begin -->
+            <div id="contentHolder" class="content-holder">
+			
+				<!-- BEGIN BREADCRUMB BAR CONTENT -->
+                <div>
+                	<!-- Breadcrumb -->
+                    <div class="col-xs-8">
+                        <ol class="breadcrumb">
+                        	<li><a href="../Authoring_Program/">Author, Teach, and Sell</a></li>
+                        	<li><a href="dashboard.html">Dashboard</a></li>
+							<li><a href="course_type.html">Create</a></li>
+                            <li>My Classroom (1234567890)</li>
+                        </ol>
+                    </div>
+					
+					<!-- Edit/View Toggle 
+                    <div class="col-xs-4 zero-right-padding">
+                        <span class="pull-right">
+                        	<input type='checkbox' name='VEToggle' id='VEToggle' value='1' class='toggleswitch' checked='checked' />
+                        </span>
+                    </div> -->
+                </div>
+                <!-- END BEGIN BREADCRUMB BAR CONTENT -->
+				
+                <div class="clearfix"></div>
+
+                <!-- BEGIN PAGE CONTENT -->
+                <div class="page-content">
+				
+				   <!-- BEGIN PAGE HEADINGS -->
+				   <div class="portlet">
+					<div class="portlet-body">
+						<div class="page-heading">
+							<div class="col-xs-12 zero-padding">
+								<h1>Overview</h1>
+								<!-- <div>
+									<a href="javascript:;" title="Best Practice">BEST PRACTICE</a>
+								</div> -->
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				   </div>
+                   <!-- END PAGE HEADINGS -->
+				   
+				   <!-- BEGIN SUMMARY FORM PORTLET -->
+                   <div class="portlet">
+                      <div class="portlet-body form">
+                         <form class="form-horizontal" role="form">
+                            <div class="form-body">
+                               <div class="form-group">
+                                  <label  class="col-md-3 control-label">Title<span class="required">*</span></label>
+                                  <div class="col-md-6">
+                                     <input type="text" class="form-control" value="My Classroom" placeholder="Enter course title.">
+                                  </div>
+                               </div>
+							   <div class="form-group">
+								   <label class="col-md-3 control-label gray-text" style="font-weight: normal;">Course ID</label>
+								   <div class="col-md-6">
+									  <input type="text" value="1234567890" disabled="disabled" class="form-control gray-text">
+								   </div>
+							   </div>
+							   <div class="form-group">
+								   <label class="col-md-3 control-label gray-text" style="font-weight: normal;">Publish Status</label>
+								   <div class="col-md-6">
+										<div class="input-group">
+											<input type="text" value="Not Published" disabled="disabled" class="form-control gray-text">
+											<span class="input-group-addon addon2"><i class="icon-exclamation" style="color: #ffb848"></i></span>
+										</div>
+								   </div>
+							   </div>
+							   <div class="form-group">
+								   <label class="col-md-3 control-label gray-text" style="font-weight: normal;">Course Status</label>
+								   <div class="col-md-6">
+									  <div class="input-group">
+											<input type="text" value="Active" disabled="disabled" class="form-control gray-text">
+											<span class="input-group-addon addon2"><i class="icon-ok green-text"></i></span>
+									  </div>
+								   </div>
+							   </div>
+							   <div class="form-group">
+								   <label class="col-md-3 control-label gray-text" style="font-weight: normal;">Course Rating</label>
+								   <div class="col-md-6">
+									  <div class="input-group">
+											<input type="text" value="Pending" disabled="disabled" class="form-control gray-text">
+											<span class="input-group-addon addon2"><i class="icon-exclamation" style="color: #ffb848"></i></span>
+									  </div>
+								   </div>
+							   </div>
+                               <div class="form-group">
+                                  <label class="col-md-3 control-label">Description<span class="required">*</span></label>
+                                  <div class="col-md-6">
+                                     <textarea class="form-control" rows="3" placeholder="Enter words or phrases that help describe the course.">Course Description</textarea>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label class="col-md-3 control-label">Language<span class="required">*</span></label>
+                                  <div class="col-md-6">
+                                     <select  class="form-control">
+                                        <option>English</option>
+                                        <option>Spanish</option>
+                                     </select>
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label class="col-md-3 control-label">Duration (Hours)</label>
+                                  <div class="col-md-6">
+                                     <input type="text" class="form-control" placeholder="Enter course duration." value="2.0">
+                                  </div>
+                               </div>
+                               <div class="form-group">
+                                  <label class="col-md-3 control-label">Keywords</label>
+                                  <div class="col-md-6">
+                                     <input type="text" class="form-control" data-role="tagsinput" placeholder="Enter keywords." value="Test Course">
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="form-actions fluid">
+                               <div class="col-md-offset-3 col-md-9">
+                                  <button type="button" class="btn blue" onclick="APP.SAVE_OVERVIEW()">Save</button>
+                                  <button type="button" class="btn default">Cancel</button>                              
+                               </div>
+                            </div>
+                         </form>
+                      </div>
+                   </div>
+                   <!-- END SUMMARY FORM PORTLET -->
+                   
+                </div>
+                <!-- END PAGE CONTENT -->
+            </div>
+            <!-- Workspace End -->
+        </div>
+        <!-- Main Content End -->
+        
+    </div>
+	
+	<script>
+		$(document).ready(function ()
+		{
+			//	BEGIN APP **************************************************************
+			APP.PLACEHOLDER_FIX();
+			APP.EDIT_OR_VIEW_TOGGLE();
+			APP.LEFT_NAV.init("OPEN","nav_accordion_0c");
+			APP.MODE_INIT("#atr_mode");
+			//	STATES (blank,done,at,missed)
+			APP.STEPS_INDICATOR.INIT({
+				"overview":{
+					"_status":"done"
+				},
+				"classroom":{
+					"_status":"at",
+					"_children":{
+						"schedule":{
+							"_status":"blank"
+						},
+						"instructor":{
+							"_status":"blank"
+						},
+						"setup":{
+							"_status":"blank"
+						}
+					}
+				},
+				"settings":{
+					"_status":"blank"
+				},
+				"publishing":{
+					"_status":"blank",
+					"_children":{
+						"availability":{
+							"_status":"blank"
+						},
+						"marketing":{
+							"_status":"blank"
+						},
+						"pricing":{
+							"_status":"blank"
+						},
+						"publish":{
+							"_status":"blank"
+						}
+					}
+				}
+			});
+			
+			/*APP.LEFT_NAV_COURSE_OUTLINE();
+			APP.BODY_COLLAPSES();
+			APP.APPLY_ROUNDED_CORNERS();
+			APP.CKEDITOR("title-ckeditor", "TITLE");
+			APP.CKEDITOR("cc-ckeditor", "CC");
+			APP.CKEDITOR("text-ckeditor", "TEXT");
+			APP.DATAGRID('#sample_1',true,true,true,true);*/
+			//	END APP **************************************************************
+		});
+	</script>
+</body>
+</html>

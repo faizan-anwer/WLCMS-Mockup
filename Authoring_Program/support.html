@@ -1,0 +1,539 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Application Support</title>
+
+	<!-- BEGIN CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/plugins/threesixty/styles.css" />
+	
+		<!-- BEGIN PAGE SPECIFIC CSS -->
+		<!--
+		<link rel="stylesheet" type="text/css" href="assets/plugins/aciTree/css/aciTree.css" />
+		<link rel="stylesheet" type="text/css" href='assets/plugins/toggle-switch-master/css/toggleswitch.css' />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/DT_bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css" />
+		-->
+		<link rel="stylesheet" type="text/css" href="assets/css/pages/pricing-tables.css" />
+		<!-- END PAGE SPECIFIC CSS -->
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style-metronic.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/header.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- END CSS -->
+	
+    <!-- BEGIN SCRIPTS -->
+    <script type="text/javascript" src="assets/plugins/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/html5shiv.js"></script>
+    <script type="text/javascript" src="assets/plugins/respond.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/BrowserDetect.js"></script>
+	
+		<!-- BEGIN PAGE LEVEL PLUGINS -->
+		<script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+		<!-- 
+		<script type="text/javascript" src="assets/plugins/skrollr/skrollr.js"></script>
+		<script type="text/javascript" src="assets/plugins/imagesloaded.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciPlugin.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.dom.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.core.js"></script>
+		<script type="text/javascript" src="assets/plugins/aciTree/js/jquery.aciTree.selectable.js"></script>
+		<script type='text/javascript' src='assets/plugins/toggle-switch-master/js/jquery.toggleswitch.min.js'></script>
+		<script type='text/javascript' src='assets/plugins/jquery.corner.js'></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+		<script type='text/javascript' src="assets/scripts/table-managed.js"></script>
+		<script type="text/javascript" src="assets/plugins/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="assets/plugins/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+		-->
+		<!-- END PAGE LEVEL PLUGINS -->
+	
+    <script type='text/javascript' src="assets/scripts/core.js"></script>
+	<!-- END SCRIPTS -->
+    
+</head>
+
+<body>
+    <div class="wrapper">
+		
+		<!-- Preload Images Begin
+		<div id="preload">
+	       	<img src="assets/img/bcg_slide-1.png">
+	       	<img src="assets/img/bcg_slide-2.jpg">
+	       	<img src="assets/img/bcg_slide-3.jpg">
+	       	<img src="assets/img/bcg_slide-4.jpg">
+       	</div>
+		Preload Images End -->
+		
+        <!-- Header Begin -->
+        <div class="header-content">
+		
+            <!-- Top Bar Begin -->
+            <div class="push-down">
+                <div class="container-fluid">
+                    <div class="pull-left logo"></div>
+                    <ul class="top-right-nav">
+                        <li class="nav-ph">888-360-8764</li>
+                        <li class="divider"></li>
+                        <li class="support-a"><a href="javascript:;">Support</a></li>
+                        <li class="divider"></li>
+                        <li><i style="font-size: 18px" class="icon threesixty-chat-now"></i> <a href="javascript:;">Chat Now</a></li>
+                        <li class="divider"></li>
+						<li><i class="glyphicon glyphicon-shopping-cart"></i> <a href="javascript:;">Cart <span class="badge"><strong>2</strong></span></a></li>
+						<li class="divider"></li>
+						<li>
+							<a href="../Single/">Log In</a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+			
+            <!-- Navigation Bar Begin -->
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+				
+                  <!-- Brand and toggle get grouped for better mobile display -->
+					<a class="btn btn-lg header-menu" data-toggle="collapse" data-target="#header-navbar-collapse"><i class="icon-reorder"></i></a>
+					
+					<ul class="nav collapse" id="header-navbar-collapse">
+						
+						<!-- Go To 
+						<li class="dropdown">
+						  <a title="Go To" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons goto-icon"></div><span>Go To</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li class="dropdown-cat">Website</li>
+							<li><a href="http://www.360training.com/">Home – U.S.</a></li>
+							<li><a href="http://www.360training.com/apac/">Home – Asia Pacific</a></li>
+							<li><a href="http://www.360training.com/enterprise/">Corporate</a></li>
+							<li><a href="http://www.360training.com/authoring-program/">Author and Teach</a></li>
+							<li><a href="http://www.360training.com/partner-program/">Partner</a></li>
+						  </ul>
+						</li> -->
+						
+						<!-- Store -->
+						<li class="dropdown">
+						  <a title="Store" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons store-icon"></div><span>Store</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<!-- <li><a href="value_prop.html">Author and Trainer Solutions</a></li> -->
+							<li><a href="author-starter.html">Free Software and Packages</a></li>
+							<li><a href="author-lcms-software.html">Course Creation Software and Upgrades</a></li>
+							<li><a href="author-lms-software.html">Learning Management Software and Upgrades</a></li>
+							<li><a href="author-storefront-software.html">eCommerce Store Software and Upgrades</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Create 
+						<li class="dropdown">
+						  <a title="Create" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons create-icon"></div><span>Create</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="javascript:;" style="padding:10px">Overview to Creation Options</a></li>
+							<li class="dropdown-cat">Account-free Courses</li>
+							<li><a href="http://www.360training.com/authoring-program/submit-webinar-course/">Submit a Webinar Course</a></li>
+							<li><a href="http://www.360training.com/authoring-program/submit-classroom-course/">Submit a Classroom Course</a></li>
+							<li class="dropdown-cat">Account-based Courses</li>
+							<li><a href="javascript:;">Create an Online Course</a></li>
+						  </ul>
+						</li> -->
+						
+						<!-- Manage 
+						<li class="dropdown">
+						  <a title="Manage" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons manage-icon"></div><span>Manage</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li><a href="javascript:;">Author Account</a></li>
+							<li><a href="javascript:;">Global Royalty Report</a></li>
+							<li><a href="javascript:;">Global Revenue Share Report</a></li>
+						  </ul>
+						</li> -->
+						
+						<!-- Community -->
+						<li class="dropdown">
+						  <a title="Community" href="javascript:;" class="dropdown-toggle fix-dropdown-a" data-toggle="dropdown"><div class="nav-icons community-icon"></div><span>Community</span> <b class="caret"></b></a>
+						  <ul class="dropdown-menu">
+							<li class="dropdown-cat">Support</li>
+							<!-- <li><a href="https://player.360training.com/ICP4/CoursePlayerPreviewer.aspx?COURSEID=74692&VARIANT=En-US&BRANDCODE=DEFAULT&PREVIEW=true&SESSION=bd5d5a7d-7fad-4203-b185-72d00247f2af">Video Tutorials</a></li>
+							<li><a href="https://player.360training.com/ICPFilesystem/LCMSManual/LCMS_Training_Manual_v124.pdf">User Guides</a></li> -->
+							<li><a href="support.html">Application Support</a></li>
+
+
+							<li class="dropdown-cat">FAQs</li>
+							<li><a href="faqs.html">Software Purchases and Terms</a></li>
+							<li><a href="faqs.html">More About Tools</a></li>
+							<li><a href="faqs.html">Life as a 360 Author</a></li>
+							<li><a href="faqs.html">Managing Your Own Storefront</a></li>
+
+
+							<li class="dropdown-cat">Community</li>
+							<li><a href="news.html">What’s New</a></li>
+							<li><a href="../Authoring_Program/whitepapers.html">Whitepapers</a></li>
+							<li><a href="blogs.html">Blogs</a></li>
+							<li><a href="https://www.facebook.com/pages/360trainingcom-Authoring/378754678842234">Facebook</a></li>
+							<li><a href="https://twitter.com/360trainingAuth">Twitter</a></li>
+							<li><a href="showcase.html">Showcase</a></li>
+							<li><a href="opportunities.html">Opportunities</a></li>
+						  </ul>
+						</li>
+						
+						<!-- Search 
+						<li class="search-box">
+							<form title="Search" class="pull-left" role="search" action="search_course.html">
+							  <div class="pull-left">
+									<input type="text" class="form-control field" placeholder="Search Authored Courses" value="">
+							  </div>
+							  <div class="pull-right">
+								<button class="btn btn-default search-btn" type="submit"><i class="search-icon"></i></button>
+							  </div>
+							</form>
+							
+							<div class="pull-left advance-search">
+								<a href="javascript:;" title="Advanced Search"><i></i><span>Advanced Search</span></a>
+							</div>
+						</li> -->
+                    
+					</ul>
+                </div>
+            </nav>
+            <!-- Navigation Bar End -->
+			
+        </div>
+        <!-- Header End -->
+        
+        <!-- Main Content Begin -->
+        <div class="main-content">
+            
+            <!-- Workspace Begin -->
+            <div id="contentHolder" class="content-holder">
+			
+				<!-- BEGIN BREADCRUMB BAR CONTENT -->
+                <div>
+                	<!-- Breadcrumb -->
+                    <div class="col-xs-12">
+                        <ol class="breadcrumb">
+                        	<li><a href="../Authoring_Program/">Author, Teach, and Sell</a></li>
+							<li>Application Support</li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- END BEGIN BREADCRUMB BAR CONTENT -->
+				
+                <div class="clearfix"></div>
+
+                <!-- BEGIN PAGE CONTENT -->
+                <div class="page-content">
+				
+					<!-- BEGIN TOP CONTENT -->
+					<div class="container-fluid">
+						<h1>Application Support</h1>
+						<h2>Software Quick Start Movies</h2>
+						<hr/>
+					</div>
+					<!-- END TOP CONTENT -->
+					
+					<!-- BEGIN SECTION -->
+					<ul class="list-unstyled row zero-margin">
+						
+						<!-- BEGIN DESCRIPTION -->
+						<li class="col-sm-8 zero-left-padding">
+							
+							<p>Check out these movies to jump start your experience with 360training software! New support movies are added as they are developed.</p>
+														
+							<br>
+							<!-- BEGIN PORTLET -->
+							<div class="portlet">
+							  <div class="portlet-body text-center">
+								
+								<div>
+									
+									<a href="#" class="big-icon-btn" style="width:220px">
+										<h4>LCMS</h4><hr class="zero-top-margin">
+										<h3>Course Creation</h3>
+										<h4>movies</h4>
+									</a>
+
+									<a href="#" class="big-icon-btn" style="width:220px">
+										<h4>LCMS</h4><hr class="zero-top-margin">
+										<h3>Learner</h3>
+										<h4>movies</h4>
+									</a>
+
+									<a href="#" class="big-icon-btn" style="width:220px">
+										<h4>LCMS</h4><hr class="zero-top-margin">
+										<h3>Training Manager</h3>
+										<h4>movies</h4>
+									</a>
+									
+								</div>
+								
+							  </div>
+							</div>
+							<!-- END PORTLET -->
+
+							<br>
+							<!-- BEGIN PORTLET -->
+							<div class="portlet">
+							  <div class="portlet-title">
+								 <div class="caption">
+									Software Manuals
+								 </div>
+								 <div class="tools">
+									  
+								 </div>
+							  </div>
+							  <div class="portlet-body">
+								
+								<p>The LCMS manuals for the course creation features you have purchased can be found under the <strong>Help</strong> menu in the LCMS application.</p>
+								
+								<p>The LMS manuals for modes to which you have access can be found while in Learner Mode via the <strong>My Dashboard</strong> Tutorial widget.</p>
+								
+							  </div>
+							</div>
+							<!-- END PORTLET -->
+							
+							<br>
+							<!-- BEGIN PORTLET -->
+							<div class="portlet">
+							  <div class="portlet-title">
+								 <div class="caption">
+									Software Training
+								 </div>
+								 <div class="tools">
+									  
+								 </div>
+							  </div>
+							  <div class="portlet-body">
+								
+								<ul>
+								  <li><a class="anchor" href="http://www.360training.com/authoring-program/lcms-training">LCMS Training</a></li>
+								  <li><a class="anchor" href="http://www.360training.com/authoring-program/lms-training">LMS Training</a></li>
+								  <li><a class="anchor" href="http://www.360training.com/authoring-program/storefront-training">Storefront Training</a></li>
+								</ul>
+								
+							  </div>
+							</div>
+							<!-- END PORTLET -->
+							
+							<br>
+							<!-- BEGIN PORTLET -->
+							<div class="portlet">
+							  <div class="portlet-title">
+								 <div class="caption">
+									Consultation and Development
+								 </div>
+								 <div class="tools">
+									  
+								 </div>
+							  </div>
+							  <div class="portlet-body">
+								
+								<ul>
+								  <li><a class="anchor" href="http://www.360training.com/authoring-program/instructional-design-consulting">Instructional Design Consulting</a></li>
+								  <li><a class="anchor" href="http://www.360training.com/authoring-program/custom-course">Assistance Developing Custom Courses</a></li>
+								  <li><a class="anchor" href="http://www.360training.com/authoring-program/market-strategy">Market Strategy Training</a></li>
+								  <li><a class="anchor" href="http://www.360training.com/authoring-program/libraries-integration">360 Libraries and Custom Integration</a></li>
+								</ul>
+								
+							  </div>
+							</div>
+							<!-- END PORTLET -->
+							
+							<br>
+							<!-- BEGIN PORTLET -->
+							<div class="portlet">
+							  <div class="portlet-title">
+								 <div class="caption">
+									Other Resources
+								 </div>
+								 <div class="tools">
+									  
+								 </div>
+							  </div>
+							  <div class="portlet-body">
+								
+								<ul>
+								  <li><a class="anchor" target="_blank" href="http://www.360trainingsupport.com/">Technical Support</a>. This site includes system checks, help for login and technical issues, as well as maintenance notices.</li>
+								  <li><a class="anchor" href="http://www.360training.com/authoring-program/author-faq">360 Author FAQs</a></li>
+								</ul>
+								
+							  </div>
+							</div>
+							<!-- END PORTLET -->							
+							<br>
+							
+						</li>
+						<!-- END DESCRIPTION -->
+						
+						<!-- BEGIN LEFT PANEL -->
+						<li class="col-sm-4">
+														
+							<!-- BEGIN PORTLET -->
+							<div class="portlet panel-box-2">
+							  <div class="portlet-title">
+								 <div class="caption">Question?</div>
+								 <div class="tools">
+									  
+								 </div>
+							  </div>
+							  <div class="portlet-body form">
+								 <form class="form-horizontal" role="form">
+									<div class="form-body">
+									   <div class="form-group">
+										  <div>
+											 <input type="text" class="form-control" placeholder="First Name">
+										  </div>
+									   </div>
+									   <div class="form-group">
+										  <div>
+											 <input type="text" class="form-control" placeholder="Last Name">
+										  </div>
+									   </div>
+									   <div class="form-group">
+										  <div>
+											 <input type="text" class="form-control" placeholder="Email">
+										  </div>
+									   </div>
+									   <div class="form-group">
+										  <div class="small">Application</div>
+										  <div>
+											 <select class="form-control">
+												<option></option>
+												<option>Course Creation (LCMS)</option>
+												<option>Learning Management (LMS)</option>
+												<option>Storefront (SF)</option>
+												<option>Other</option>
+											 </select>
+										  </div>
+									   </div>
+									   <div class="form-group">
+										  <div class="small">
+											Question About Using This Application.
+										  </div>
+										  <div>
+											 <textarea class="form-control" rows="3"></textarea>
+										  </div>
+									   </div>
+									</div>
+									<div class="form-actions fluid">
+									   <div class="text-right">
+										  <button type="button" class="btn blue">Submit</button>
+									   </div>
+									</div>
+								 </form>
+							  </div>
+						   </div>
+						    <!-- END PORTLET -->
+						   
+						</li>
+						<!-- END LEFT PANEL -->
+						
+					</ul>
+					<!-- END SECTION -->
+					
+					<hr/>
+					
+                </div>
+                <!-- END PAGE CONTENT -->
+				
+            </div>
+            <!-- Workspace End -->
+        </div>
+        <!-- Main Content End -->
+        
+		<!-- Footer Begin -->
+		<div class="footer-content">
+			<div class="body">
+				<ul>
+					<li class="col-sm-offset-1 col-sm-2">About Us
+						<ul>
+							<li><a href="javascript:;">History</a></li>
+							<li><a href="javascript:;">Our Culture</a></li>
+							<li><a href="javascript:;">Careers</a></li>
+							<li><a href="javascript:;">Our Clients</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">Company
+						<ul>
+							<li><a href="javascript:;">Message from CEO</a></li>
+							<li><a href="javascript:;">Executive Team</a></li>
+							<li><a href="javascript:;">Advisory Board Members</a></li>
+							<li><a href="javascript:;">Accreditation Overview</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">Connect with Us
+						<ul>
+							<li><a href="javascript:;">Contact Us</a></li>
+							<li><a href="javascript:;">Support</a></li>
+							<li><a href="javascript:;">Corporate Solutions</a></li>
+							<li><a href="javascript:;">Author Solutions</a></li>
+							<li><a href="javascript:;">Become a Reseller</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">Blogs & Media
+						<ul>
+							<li><a href="javascript:;">360 Blog</a></li>
+							<li><a href="javascript:;">Enterprise Blog</a></li>
+							<li><a href="javascript:;">Authors Blog</a></li>
+							<li><a href="javascript:;">AsiaPac Blog</a></li>
+							<li><a href="javascript:;">Press Releases</a></li>
+						</ul>
+					</li>
+					<li class="col-sm-2">International
+						<ul>
+							<li><a href="javascript:;">AsiaPac</a></li>
+							<li><a href="javascript:;">North America</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="footer">
+				<div class="col-xs-8">© 2014 360training.com. All rights reserved.</div>
+				<div class="col-xs-4 text-right">
+					<a target="_blank" href="http://www.facebook.com/360training"><i class="icon-facebook"></i></a>
+					<a target="_blank" href="http://twitter.com/#!/360training"><i class="icon-twitter"></i></a>
+					<a target="_blank" href="http://www.linkedin.com/company/360training"><i class="icon-linkedin"></i></a>
+					<a target="_blank" href="http://plus.google.com/u/0/?tab=wX#104888494914299325457/posts"><i class="icon-google-plus"></i></a>
+				</div>
+			</div>
+		</div>
+		<!-- Footer End -->
+    </div>
+	
+	<!-- <div class="loading"></div> -->
+	
+	<script>
+		$(document).ready(function ()
+		{
+			//	BEGIN APP **************************************************************
+			APP.PLACEHOLDER_FIX();
+			//APP.APPLY_ROUNDED_CORNERS();
+			
+			//$('.spinner').spinner();
+			
+			/*APP.PARALLAX();
+			APP.PRELOAD();
+			APP.EDIT_OR_VIEW_TOGGLE();
+			APP.LEFT_NAV.init();
+			APP.LEFT_NAV_COURSE_OUTLINE();
+			APP.BODY_COLLAPSES();
+			APP.APPLY_ROUNDED_CORNERS();
+			APP.CKEDITOR("title-ckeditor", "TITLE");
+			APP.CKEDITOR("cc-ckeditor", "CC");
+			APP.CKEDITOR("text-ckeditor", "TEXT");
+			APP.DATAGRID('#sample_1',true,true,true,true);*/
+			//	END APP **************************************************************
+		});
+		
+		
+	</script>
+</body>
+</html>
